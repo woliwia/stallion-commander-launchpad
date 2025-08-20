@@ -259,11 +259,11 @@ export const BenefitsSection = () => {
             </div>
             
             {/* Women Satisfaction Reactions */}
-            <div className="flex justify-center mt-6 -mx-4">
+            <div className="flex justify-center mt-6">
               <img 
                 src={womenSatisfactionCollage}
                 alt="Multiple women showing expressions of intense satisfaction and pleasure"
-                className="w-full h-auto object-cover rounded-lg shadow-lg"
+                className="w-full max-w-2xl h-auto object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
