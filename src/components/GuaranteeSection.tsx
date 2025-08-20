@@ -56,7 +56,7 @@ export const GuaranteeSection = () => {
             
             {/* CTA */}
             <div className="text-center">
-              <Link to="/order">
+              <Link to="/order" onClick={() => window.scrollTo(0, 0)}>
                 <Button variant="hero" size="xl" className="mb-4">
                   RUSH MY ORDER
                 </Button>
