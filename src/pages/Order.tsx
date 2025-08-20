@@ -98,6 +98,17 @@ const Order = () => {
                   
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold text-foreground mb-2">{pkg.name}</h3>
+                    
+                    {/* Bottle Visual */}
+                    <div className="flex justify-center items-center gap-2 mb-4">
+                      {[...Array(pkg.bottles)].map((_, i) => (
+                        <div key={i} className="w-8 h-12 bg-gradient-primary rounded-sm relative">
+                          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-3 h-2 bg-gradient-primary rounded-t-sm"></div>
+                        </div>
+                      ))}
+                      <span className="ml-2 text-sm font-semibold text-primary">{pkg.bottles} Bottle{pkg.bottles > 1 ? 's' : ''}</span>
+                    </div>
+                    
                     <div className="mb-4">
                       <span className="text-3xl font-black text-foreground">${pkg.price}</span>
                       <span className="text-lg text-muted-foreground line-through ml-2">${pkg.originalPrice}</span>
