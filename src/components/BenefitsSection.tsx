@@ -228,6 +228,64 @@ export const BenefitsSection = () => {
             </div>
           </div>
         </div>
+        
+        {/* Health Mechanisms Section */}
+        <div className="mt-12 sm:mt-16">
+          <div className="bg-gradient-card border border-border rounded-2xl p-6 sm:p-8 md:p-12">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground text-center mb-8 sm:mb-12">
+              HOW STALLION COMMANDER
+              <span className="block bg-gradient-primary bg-clip-text text-transparent">
+                TRANSFORMS YOUR BODY
+              </span>
+            </h3>
+            
+            <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
+              {/* Health of the Corpora Cavernosa */}
+              <div className="bg-card border border-border rounded-xl p-6">
+                <div className="bg-primary/10 w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                  <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                </div>
+                <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3">Health of the Corpora Cavernosa</h4>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  Stallion Commander increases blood flow into the corpora cavernosa, allowing more blood flow to the penis and to produce more intense and longer-lasting erections.
+                </p>
+              </div>
+              
+              {/* Cell Regeneration */}
+              <div className="bg-card border border-border rounded-xl p-6">
+                <div className="bg-primary/10 w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                  <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                </div>
+                <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3">Cell Regeneration</h4>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  To maximize the expansion of the corpora cavernosa, which helps generate impressive erections, your body must produce new cells more quickly. So Stallion Commander Vitality Enrichment is loaded in anti-oxidants, proven to assist in the formation of new tissue.
+                </p>
+              </div>
+              
+              {/* Hormonal Balance */}
+              <div className="bg-card border border-border rounded-xl p-6">
+                <div className="bg-primary/10 w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                  <Target className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                </div>
+                <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3">Hormonal Balance</h4>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  Stallion Commander also increases the concentration of the hormone, testosterone, mainly responsible for the male sex drive and influence the power of erections and quality of orgasms.
+                </p>
+              </div>
+              
+              {/* Vitality Booster */}
+              <div className="bg-card border border-border rounded-xl p-6">
+                <div className="bg-primary/10 w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                  <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                </div>
+                <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3">Vitality Booster</h4>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  Stallion Commander is loaded with substances that give extra energy so that you can enjoy your new power and virility all night.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
