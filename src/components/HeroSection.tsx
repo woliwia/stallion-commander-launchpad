@@ -21,7 +21,7 @@ export const HeroSection = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-gradient-card border border-border px-4 py-2 rounded-full">
               <Trophy className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-foreground">#1 Male Enhancement Formula</span>
+              <span className="text-sm font-medium text-foreground">Male Vitality Formula</span>
             </div>
             
             {/* Main Headline */}
