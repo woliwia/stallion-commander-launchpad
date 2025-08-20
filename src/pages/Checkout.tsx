@@ -93,35 +93,35 @@ const Checkout = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             {/* Order Summary */}
-            <Card className="p-4 md:p-6 lg:p-8 bg-card border-2 border-border">
-              <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6">Order Summary</h2>
+            <Card className="p-4 md:p-5 bg-card border-2 border-border h-fit">
+              <h2 className="text-lg md:text-xl font-bold text-foreground mb-4">Order Summary</h2>
               
               {/* Package Details */}
-              <div className="space-y-4 mb-6">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <div className="border-2 border-blue-500 rounded-lg p-3 bg-blue-50/10">
+              <div className="space-y-3 mb-4">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <div className="border-2 border-blue-500 rounded-lg p-2 bg-blue-50/10 flex-shrink-0">
                       <img 
                         src={getImageSrc()}
                         alt={getImageAlt()}
-                        className="w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 object-contain drop-shadow-lg"
+                        className="w-16 h-16 md:w-20 md:h-20 object-contain drop-shadow-lg"
                         loading="lazy"
                       />
                     </div>
-                    <div>
-                      <h3 className="font-bold text-foreground text-lg">{selectedPackage.name}</h3>
+                    <div className="min-w-0">
+                      <h3 className="font-bold text-foreground text-base md:text-lg">{selectedPackage.name}</h3>
                       <p className="text-sm text-muted-foreground">{selectedPackage.bottles} Bottle{selectedPackage.bottles > 1 ? 's' : ''}</p>
                     </div>
                   </div>
                   {selectedPackage.popular && (
-                    <div className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold">
+                    <div className="bg-primary text-primary-foreground px-2 py-1 rounded-full text-xs font-bold flex-shrink-0">
                       MOST POPULAR
                     </div>
                   )}
                 </div>
 
                 {/* Price Breakdown */}
-                <div className="bg-muted/50 p-4 rounded-lg space-y-3">
+                <div className="bg-muted/50 p-3 rounded-lg space-y-2">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Price per bottle:</span>
                     <div className="text-right">
@@ -142,10 +142,10 @@ const Checkout = () => {
                     <span className="font-semibold text-primary">FREE</span>
                   </div>
                   <Separator />
-                  <div className="flex justify-between text-base">
+                  <div className="flex justify-between">
                     <span className="font-bold text-foreground">Total:</span>
                     <div className="text-right">
-                      <span className="font-black text-foreground text-xl">${selectedPackage.price}</span>
+                      <span className="font-black text-foreground text-lg">${selectedPackage.price}</span>
                       <div className="text-sm text-destructive font-semibold">
                         You save ${selectedPackage.savings}!
                       </div>
@@ -154,12 +154,12 @@ const Checkout = () => {
                 </div>
 
                 {/* Features */}
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-foreground">Included:</h4>
+                <div className="space-y-1 mt-3">
+                  <h4 className="font-semibold text-foreground text-sm">Included:</h4>
                   <ul className="space-y-1">
                     {selectedPackage.features.map((feature, index) => (
-                      <li key={index} className="text-sm text-muted-foreground flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                      <li key={index} className="text-xs text-muted-foreground flex items-center gap-2">
+                        <div className="w-1 h-1 bg-primary rounded-full flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
