@@ -241,7 +241,7 @@ export const BenefitsSection = () => {
               <img 
                 src={vascularDiagram}
                 alt="Vascular Enhancement Diagram showing improved blood flow and vein enlargement"
-                className="max-w-full h-auto rounded-lg shadow-lg"
+                className="w-full max-w-md sm:max-w-lg h-auto rounded-lg shadow-lg"
               />
             </div>
             <div className="grid sm:grid-cols-2 gap-6 text-center">
