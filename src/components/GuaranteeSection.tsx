@@ -58,7 +58,7 @@ export const GuaranteeSection = () => {
             <div className="text-center">
               <Link to="/order">
                 <Button variant="hero" size="xl" className="mb-4">
-                  CLAIM YOUR RISK-FREE TRIAL
+                  RUSH MY ORDER
                 </Button>
               </Link>
               <p className="text-sm text-muted-foreground">
