@@ -1,5 +1,6 @@
 import { Battery, Brain, Heart, Zap, Shield, Target } from "lucide-react";
 import vascularDiagram from "@/assets/vascular-enhancement-diagram.png";
+import surprisedWoman from "@/assets/surprised-woman-face.png";
 
 const benefits = [
   {
@@ -253,6 +254,15 @@ export const BenefitsSection = () => {
                 <h4 className="font-bold text-foreground mb-2">AFTER</h4>
                 <p className="text-sm text-muted-foreground">Enhanced circulation with enlarged veins, increased blood flow, and improved turgidity</p>
               </div>
+            </div>
+            
+            {/* Surprised Woman Reaction */}
+            <div className="flex justify-center mt-6">
+              <img 
+                src={surprisedWoman}
+                alt="Beautiful woman with surprised and delighted expression"
+                className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover shadow-lg border-4 border-primary/20"
+              />
             </div>
           </div>
           
