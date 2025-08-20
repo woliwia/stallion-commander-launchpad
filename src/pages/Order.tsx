@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Shield, Star, Clock, Award, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import productImage from "@/assets/stallion-commander-bottle.jpg";
+import productImage from "@/assets/health-commander-bottle.png";
 
 const packages = [
   {
@@ -145,7 +145,7 @@ const Order = () => {
               <div className="text-center mb-6">
                 <img 
                   src={productImage} 
-                  alt="Stallion Commander" 
+                  alt="Health Commander Male Formula" 
                   className="w-32 mx-auto mb-4"
                 />
                 <h3 className="font-bold text-foreground mb-2">Stallion Commander</h3>
