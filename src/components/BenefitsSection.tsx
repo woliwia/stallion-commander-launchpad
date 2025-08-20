@@ -1,6 +1,6 @@
 import { Battery, Brain, Heart, Zap, Shield, Target } from "lucide-react";
 import vascularDiagram from "@/assets/vascular-enhancement-diagram.png";
-import womenOrgasmicSmiles from "@/assets/women-orgasmic-smiles.png";
+import expandedCouplesBeautyBar from "@/assets/expanded-couples-beauty-bar.png";
 import diverseOrgasmicBeautyBar from "@/assets/diverse-orgasmic-beauty-bar.png";
 
 const benefits = [
@@ -84,9 +84,9 @@ export const BenefitsSection = () => {
         {/* Beauty Bar Collage */}
         <div className="mt-12 sm:mt-16 -mx-4">
           <img 
-            src={diverseOrgasmicBeautyBar}
-            alt="Diverse beautiful women with blonde, brunette, and red hair showing orgasmic pleasure expressions"
-            className="w-full h-auto object-cover max-h-64"
+            src={expandedCouplesBeautyBar}
+            alt="Happy couples - middle-aged men with beautiful women including blondes showing satisfaction and confidence"
+            className="w-full h-auto object-cover"
           />
         </div>
         
@@ -270,8 +270,8 @@ export const BenefitsSection = () => {
             {/* Women Orgasmic Reactions */}
             <div className="flex justify-center">
               <img 
-                src={womenOrgasmicSmiles}
-                alt="Multiple women showing expressions of intense orgasmic pleasure and satisfaction"
+                src={diverseOrgasmicBeautyBar}
+                alt="Diverse beautiful women with blonde, brunette, and red hair showing orgasmic pleasure expressions"
                 className="w-full max-w-xl h-24 sm:h-32 object-cover rounded-lg shadow-lg"
               />
             </div>
