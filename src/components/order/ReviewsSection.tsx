@@ -45,16 +45,16 @@ const ReviewsSection = () => {
       
       <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {reviews.map((review, index) => (
-          <Card key={index} className="p-6 bg-gradient-card border border-border hover:shadow-premium transition-all duration-300">
+          <Card key={index} className="p-6 bg-gradient-card border border-border hover:shadow-premium transition-all duration-300 flex flex-col h-full">
             <div className="flex items-center gap-1 mb-4">
               {[...Array(review.rating)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-primary text-primary" />
               ))}
             </div>
             
-            <p className="text-foreground mb-4 leading-relaxed">"{review.review}"</p>
+            <p className="text-foreground mb-4 leading-relaxed flex-grow">"{review.review}"</p>
             
-            <div className="border-t border-border pt-4">
+            <div className="border-t border-border pt-4 mt-auto">
               <div className="font-semibold text-foreground">{review.name}</div>
               <div className="text-sm text-muted-foreground">Age {review.age} • {review.location}</div>
             </div>
