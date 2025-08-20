@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Shield, Star, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
-import productImage from "@/assets/stallion-commander-bottle.jpg";
+import coupleImage from "@/assets/couple-hero-image.jpg";
 import heroImage from "@/assets/confident-man.jpg";
 
 export const HeroSection = () => {
@@ -82,9 +82,9 @@ export const HeroSection = () => {
           <div className="relative animate-scale-in">
             <div className="relative z-10 bg-gradient-card p-8 rounded-2xl border border-border shadow-premium">
               <img 
-                src={productImage} 
-                alt="Stallion Commander Premium Male Enhancement Supplement" 
-                className="w-full max-w-md mx-auto drop-shadow-2xl"
+                src={coupleImage} 
+                alt="Confident mature man with beautiful woman - Stallion Commander results" 
+                className="w-full max-w-md mx-auto drop-shadow-2xl rounded-lg"
               />
               
               {/* Floating Elements */}
