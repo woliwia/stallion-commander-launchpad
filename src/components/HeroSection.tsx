@@ -85,7 +85,7 @@ export const HeroSection = () => {
               />
               
               {/* Floating Elements */}
-              <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-primary text-primary-foreground px-2 sm:px-4 py-1 sm:py-2 rounded-full font-bold animate-glow-pulse text-xs sm:text-sm">
+              <div className="absolute top-2 sm:top-4 -right-2 sm:-right-4 bg-primary text-primary-foreground px-2 sm:px-4 py-1 sm:py-2 rounded-full font-bold animate-glow-pulse text-xs sm:text-sm">
                 LIMITED TIME
               </div>
               <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-card border border-border px-2 sm:px-4 py-1 sm:py-2 rounded-full font-semibold text-xs sm:text-sm">
