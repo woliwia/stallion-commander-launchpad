@@ -43,7 +43,7 @@ export const BenefitsSection = () => {
       
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-8">
+        <div className="text-center max-w-4xl mx-auto mb-6">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-6">
             EXPERIENCE THE
             <span className="block bg-gradient-primary bg-clip-text text-transparent">

@@ -29,13 +29,13 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section className="py-8 bg-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
       
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-6">
             REAL MEN,
             <span className="block bg-gradient-primary bg-clip-text text-transparent">
@@ -48,7 +48,7 @@ export const TestimonialsSection = () => {
         </div>
         
         {/* Testimonials Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 gap-8 mb-10">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}

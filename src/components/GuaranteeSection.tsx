@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const GuaranteeSection = () => {
   return (
-    <section className="py-20 bg-gradient-card relative">
+    <section className="py-8 bg-gradient-card relative">
       <div className="container mx-auto px-4 relative">
         <div className="max-w-5xl mx-auto">
           {/* Main Guarantee Card */}
