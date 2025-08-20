@@ -262,7 +262,7 @@ export const BenefitsSection = () => {
             <div className="text-center mt-6 mb-4">
               <h3 className="text-2xl sm:text-3xl font-black text-foreground">
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  RESULTS DON'T LIE
+                  RESULTS DON'T LIE - JUST ASK HER
                 </span>
               </h3>
             </div>
