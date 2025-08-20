@@ -85,6 +85,90 @@ export const BenefitsSection = () => {
             <span className="font-semibold text-primary text-sm sm:text-base">Backed by Science • Proven Results</span>
           </div>
         </div>
+        
+        {/* Scientific Explanation Section */}
+        <div className="mt-12 sm:mt-16">
+          <div className="bg-card border border-border rounded-2xl p-6 sm:p-8 md:p-12">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground text-center mb-8 sm:mb-12">
+              THE SCIENCE BEHIND
+              <span className="block bg-gradient-primary bg-clip-text text-transparent">
+                STALLION POWER
+              </span>
+            </h3>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {/* Ingredient 1 */}
+              <div className="text-center">
+                <div className="bg-primary/10 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <Zap className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />
+                </div>
+                <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">L-Arginine</h4>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  Increases nitric oxide production, improving blood flow and oxygen delivery to muscles for enhanced performance and energy.
+                </p>
+              </div>
+              
+              {/* Ingredient 2 */}
+              <div className="text-center">
+                <div className="bg-primary/10 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <Brain className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />
+                </div>
+                <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">Tribulus Terrestris</h4>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  Naturally supports testosterone levels and enhances libido through its active compound protodioscin.
+                </p>
+              </div>
+              
+              {/* Ingredient 3 */}
+              <div className="text-center">
+                <div className="bg-primary/10 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <Heart className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />
+                </div>
+                <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">Maca Root</h4>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  Rich in adaptogenic compounds that boost stamina, reduce fatigue, and support overall vitality and endurance.
+                </p>
+              </div>
+            </div>
+            
+            {/* Scientific Process Flow */}
+            <div className="mt-8 sm:mt-12">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center">
+                <div className="flex flex-col items-center">
+                  <div className="bg-gradient-to-r from-primary to-primary/70 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-2 sm:mb-3">
+                    <span className="text-white font-bold text-lg sm:text-xl">1</span>
+                  </div>
+                  <span className="text-sm sm:text-base font-semibold text-foreground">Absorption</span>
+                  <span className="text-xs sm:text-sm text-muted-foreground">Active compounds enter bloodstream</span>
+                </div>
+                
+                <div className="hidden md:block text-primary">
+                  <Target className="w-6 h-6 rotate-90" />
+                </div>
+                
+                <div className="flex flex-col items-center">
+                  <div className="bg-gradient-to-r from-primary to-primary/70 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-2 sm:mb-3">
+                    <span className="text-white font-bold text-lg sm:text-xl">2</span>
+                  </div>
+                  <span className="text-sm sm:text-base font-semibold text-foreground">Circulation</span>
+                  <span className="text-xs sm:text-sm text-muted-foreground">Enhanced blood flow begins</span>
+                </div>
+                
+                <div className="hidden md:block text-primary">
+                  <Target className="w-6 h-6 rotate-90" />
+                </div>
+                
+                <div className="flex flex-col items-center">
+                  <div className="bg-gradient-to-r from-primary to-primary/70 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-2 sm:mb-3">
+                    <span className="text-white font-bold text-lg sm:text-xl">3</span>
+                  </div>
+                  <span className="text-sm sm:text-base font-semibold text-foreground">Results</span>
+                  <span className="text-xs sm:text-sm text-muted-foreground">Peak performance achieved</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
