@@ -87,7 +87,7 @@ const Order = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-6">
               {packages.map((pkg) => (
-                <Card key={pkg.id} className={`relative p-6 bg-card border-2 hover:shadow-premium transition-all duration-300 ${
+                <Card key={pkg.id} className={`relative p-8 bg-card border-2 hover:shadow-premium transition-all duration-300 ${
                   pkg.popular ? 'border-primary shadow-glow' : 'border-border hover:border-primary/50'
                 }`}>
                   {pkg.popular && (
@@ -100,24 +100,24 @@ const Order = () => {
                     <h3 className="text-xl font-bold text-foreground mb-2">{pkg.name}</h3>
                     
                     {/* Product Images */}
-                    <div className="flex justify-center items-center mb-4">
+                    <div className="flex justify-center items-center mb-6">
                       {pkg.bottles === 1 ? (
                         <img 
                           src={productImage} 
                           alt="Health Commander Male Formula - Single Bottle" 
-                          className="w-16 h-20 object-contain"
+                          className="w-32 h-40 object-contain drop-shadow-lg"
                         />
                       ) : pkg.bottles === 3 ? (
                         <img 
                           src={commanderPackImage} 
                           alt="Health Commander Male Formula - Buy 2 Get 1 FREE" 
-                          className="w-32 h-24 object-contain"
+                          className="w-48 h-36 object-contain drop-shadow-lg"
                         />
                       ) : (
                         <img 
                           src={ultimatePackImage} 
                           alt="Health Commander Male Formula - Buy 3 Get 3 FREE" 
-                          className="w-40 h-32 object-contain"
+                          className="w-56 h-44 object-contain drop-shadow-lg"
                         />
                       )}
                     </div>
