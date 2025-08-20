@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import OrderHeader from "@/components/order/OrderHeader";
+import CountdownTimer from "@/components/order/CountdownTimer";
 import LimitedTimeOffer from "@/components/order/LimitedTimeOffer";
 import PackageCard from "@/components/order/PackageCard";
 import TrustBadges from "@/components/order/TrustBadges";
@@ -48,6 +49,8 @@ const Order = () => {
       <OrderHeader />
 
       <div className="container mx-auto px-4 py-6 md:py-12">
+        <CountdownTimer />
+        
         {/* Page Header */}
         <div className="text-center mb-8 md:mb-12">
           <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-foreground mb-4 md:mb-6 leading-tight">
