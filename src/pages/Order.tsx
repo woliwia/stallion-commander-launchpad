@@ -4,6 +4,9 @@ import CountdownTimer from "@/components/order/CountdownTimer";
 import LimitedTimeOffer from "@/components/order/LimitedTimeOffer";
 import PackageCard from "@/components/order/PackageCard";
 import TrustBadges from "@/components/order/TrustBadges";
+import BeforeAfterSection from "@/components/order/BeforeAfterSection";
+import ReviewsSection from "@/components/order/ReviewsSection";
+import Footer from "@/components/order/Footer";
 
 // Lazy load images for better performance
 const productImage = "/src/assets/health-commander-bottle.png";
@@ -82,7 +85,11 @@ const Order = () => {
         </div>
 
         <TrustBadges />
+        <BeforeAfterSection />
+        <ReviewsSection />
       </div>
+      
+      <Footer />
     </div>
   );
 };
