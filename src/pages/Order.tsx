@@ -49,11 +49,10 @@ const packages = [
 const Order = () => {
   return (
     <div className="min-h-screen bg-gradient-dark">
+      <CountdownTimer />
       <OrderHeader />
 
       <div className="container mx-auto px-4 py-6 md:py-12">
-        <CountdownTimer />
-        
         {/* Page Header */}
         <div className="text-center mb-8 md:mb-12">
           <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-foreground mb-4 md:mb-6 leading-tight">
