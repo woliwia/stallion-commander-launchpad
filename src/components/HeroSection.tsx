@@ -14,7 +14,7 @@ export const HeroSection = () => {
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       
-      <div className="relative container mx-auto px-4 py-8 sm:py-12 md:py-16 lg:py-20">
+      <div className="relative container mx-auto px-4 py-4 sm:py-6 md:py-8 lg:py-12">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6 sm:space-y-8 animate-slide-up">
