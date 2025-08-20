@@ -1,7 +1,7 @@
 import { Battery, Brain, Heart, Zap, Shield, Target } from "lucide-react";
 import vascularDiagram from "@/assets/vascular-enhancement-diagram.png";
 import expandedCouplesBeautyBar from "@/assets/expanded-couples-beauty-bar.png";
-import circularWomenFaces from "@/assets/circular-women-faces.png";
+import differentWomenSquareBar from "@/assets/different-women-square-bar.png";
 
 const benefits = [
   {
@@ -270,8 +270,8 @@ export const BenefitsSection = () => {
             {/* Women Orgasmic Reactions */}
             <div className="flex justify-center -mx-4">
               <img 
-                src={circularWomenFaces}
-                alt="Diverse beautiful women in circular frames showing mix of pleasurable expressions and confident smiles"
+                src={differentWomenSquareBar}
+                alt="Different beautiful women showing orgasmic faces and satisfied smiles in horizontal bar format"
                 className="w-full h-32 sm:h-40 object-cover rounded-lg shadow-lg"
               />
             </div>
