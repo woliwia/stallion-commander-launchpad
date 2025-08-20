@@ -105,19 +105,19 @@ const Order = () => {
                         <img 
                           src={productImage} 
                           alt="Health Commander Male Formula - Single Bottle" 
-                          className="w-32 h-40 object-contain drop-shadow-lg"
+                          className="w-56 h-56 object-contain drop-shadow-lg"
                         />
                       ) : pkg.bottles === 3 ? (
                         <img 
                           src={commanderPackImage} 
                           alt="Health Commander Male Formula - Buy 2 Get 1 FREE" 
-                          className="w-48 h-36 object-contain drop-shadow-lg"
+                          className="w-56 h-56 object-contain drop-shadow-lg"
                         />
                       ) : (
                         <img 
                           src={ultimatePackImage} 
                           alt="Health Commander Male Formula - Buy 3 Get 3 FREE" 
-                          className="w-56 h-44 object-contain drop-shadow-lg"
+                          className="w-56 h-56 object-contain drop-shadow-lg"
                         />
                       )}
                     </div>
