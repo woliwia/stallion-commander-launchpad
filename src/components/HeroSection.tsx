@@ -1,0 +1,106 @@
+import { Button } from "@/components/ui/button";
+import { Shield, Star, Trophy } from "lucide-react";
+import { Link } from "react-router-dom";
+import productImage from "@/assets/stallion-commander-bottle.jpg";
+import heroImage from "@/assets/confident-man.jpg";
+
+export const HeroSection = () => {
+  return (
+    <section className="relative min-h-screen bg-gradient-dark overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-card opacity-90" />
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-20"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      />
+      
+      <div className="relative container mx-auto px-4 py-16 lg:py-24">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="space-y-8 animate-slide-up">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-gradient-card border border-border px-4 py-2 rounded-full">
+              <Trophy className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-foreground">#1 Male Enhancement Formula</span>
+            </div>
+            
+            {/* Main Headline */}
+            <div className="space-y-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight">
+                UNLEASH YOUR
+                <span className="block bg-gradient-primary bg-clip-text text-transparent">
+                  STALLION POWER
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground font-medium">
+                The ultimate male performance enhancer that transforms ordinary men into unstoppable forces
+              </p>
+            </div>
+            
+            {/* Benefits */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[
+                { icon: Star, text: "Explosive Energy" },
+                { icon: Shield, text: "Enhanced Performance" },
+                { icon: Trophy, text: "Supreme Confidence" }
+              ].map((benefit, index) => (
+                <div key={index} className="flex items-center gap-3 bg-card border border-border p-4 rounded-lg">
+                  <benefit.icon className="w-5 h-5 text-primary" />
+                  <span className="font-semibold text-foreground">{benefit.text}</span>
+                </div>
+              ))}
+            </div>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Link to="/order">
+                <Button variant="hero" size="xl" className="w-full sm:w-auto">
+                  CLAIM YOUR POWER NOW
+                </Button>
+              </Link>
+              <Button variant="premium" size="xl" className="w-full sm:w-auto">
+                Learn More
+              </Button>
+            </div>
+            
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-border">
+              <div className="flex items-center gap-2">
+                <Shield className="w-5 h-5 text-primary" />
+                <span className="text-sm text-muted-foreground">90-Day Guarantee</span>
+              </div>
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                ))}
+                <span className="text-sm text-muted-foreground ml-2">4.9/5 (2,847 reviews)</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Right Content - Product Image */}
+          <div className="relative animate-scale-in">
+            <div className="relative z-10 bg-gradient-card p-8 rounded-2xl border border-border shadow-premium">
+              <img 
+                src={productImage} 
+                alt="Stallion Commander Premium Male Enhancement Supplement" 
+                className="w-full max-w-md mx-auto drop-shadow-2xl"
+              />
+              
+              {/* Floating Elements */}
+              <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full font-bold animate-glow-pulse">
+                LIMITED TIME
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-card border border-border px-4 py-2 rounded-full font-semibold">
+                FREE SHIPPING
+              </div>
+            </div>
+            
+            {/* Background Glow */}
+            <div className="absolute inset-0 bg-primary opacity-20 blur-3xl -z-10" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
