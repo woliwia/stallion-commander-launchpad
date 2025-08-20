@@ -35,7 +35,7 @@ const benefits = [
 
 export const BenefitsSection = () => {
   return (
-    <section className="py-20 bg-gradient-card relative">
+    <section className="py-12 bg-gradient-card relative">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(45_100%_65%)_1px,transparent_1px)] [background-size:24px_24px]" />
@@ -43,7 +43,7 @@ export const BenefitsSection = () => {
       
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-6">
             EXPERIENCE THE
             <span className="block bg-gradient-primary bg-clip-text text-transparent">
