@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import stallionLogo from "@/assets/stallion-commander-logo.jpg";
 
 const Header = () => {
   return (
@@ -7,7 +8,7 @@ const Header = () => {
         <div className="flex items-center justify-center">
           <Link to="/" className="hover:opacity-80 transition-opacity">
             <img 
-              src="/lovable-uploads/f9ce52ad-c78c-4944-af1b-113437c845d3.png"
+              src={stallionLogo}
               alt="Stallion Commander Logo"
               className="h-8 sm:h-10 md:h-12 lg:h-16 xl:h-20 w-auto max-w-full px-2"
             />
