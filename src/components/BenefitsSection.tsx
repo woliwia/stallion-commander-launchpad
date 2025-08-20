@@ -59,18 +59,18 @@ export const BenefitsSection = () => {
         </div>
         
         {/* Benefits Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {benefits.map((benefit, index) => (
             <div 
               key={index} 
-              className="bg-card border border-border p-6 sm:p-8 rounded-xl hover:bg-gradient-card hover:shadow-premium transition-all duration-300 group animate-slide-up"
+              className="bg-card border border-border p-4 sm:p-6 lg:p-8 rounded-xl hover:bg-gradient-card hover:shadow-premium transition-all duration-300 group animate-slide-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="bg-primary/10 w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary/20 transition-colors">
-                <benefit.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+              <div className="bg-primary/10 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-xl flex items-center justify-center mb-3 sm:mb-4 lg:mb-6 group-hover:bg-primary/20 transition-colors">
+                <benefit.icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-primary" />
               </div>
               
-              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">
+              <h3 className="text-base sm:text-lg lg:text-xl font-bold text-foreground mb-2 sm:mb-3 lg:mb-4">
                 {benefit.title}
               </h3>
               
@@ -82,11 +82,13 @@ export const BenefitsSection = () => {
         </div>
         
         {/* Beauty Bar Collage */}
-        <div className="mt-12 sm:mt-16 -mx-4">
+        <div className="mt-8 sm:mt-12 -mx-4">
           <img 
             src={diverseAppearancesBeautyBar}
             alt="Beautiful women with diverse appearances and ethnicities showing confidence and satisfaction"
-            className="w-full h-32 sm:h-40 md:h-48 object-cover"
+            className="w-full h-24 sm:h-32 md:h-40 lg:h-48 object-cover"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         
@@ -244,7 +246,9 @@ export const BenefitsSection = () => {
               <img 
                 src={vascularDiagram}
                 alt="Vascular Enhancement Diagram showing improved blood flow and vein enlargement"
-                className="w-full max-w-md sm:max-w-lg h-auto rounded-lg shadow-lg"
+                className="w-full max-w-xs sm:max-w-md md:max-w-lg h-auto rounded-lg shadow-lg"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="grid sm:grid-cols-2 gap-6 text-center">
@@ -272,7 +276,9 @@ export const BenefitsSection = () => {
               <img 
                 src={fullFaceSurprisedOrgasmBar}
                 alt="Women showing full faces with mix of surprised and orgasmic expressions"
-                className="w-full h-32 sm:h-40 object-cover rounded-lg shadow-lg"
+                className="w-full h-24 sm:h-28 md:h-32 lg:h-40 object-cover rounded-lg shadow-lg"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
