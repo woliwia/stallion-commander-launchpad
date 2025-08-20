@@ -1,4 +1,5 @@
 import { Battery, Brain, Heart, Zap, Shield, Target } from "lucide-react";
+import vascularDiagram from "@/assets/vascular-enhancement-diagram.png";
 
 const benefits = [
   {
@@ -231,6 +232,30 @@ export const BenefitsSection = () => {
         
         {/* Health Mechanisms Section */}
         <div className="mt-12 sm:mt-16">
+          {/* Vascular Enhancement Graphics */}
+          <div className="bg-card border border-border rounded-2xl p-6 sm:p-8 mb-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-center text-foreground mb-6">
+              VASCULAR ENHANCEMENT PROCESS
+            </h3>
+            <div className="flex justify-center mb-6">
+              <img 
+                src={vascularDiagram}
+                alt="Vascular Enhancement Diagram showing improved blood flow and vein enlargement"
+                className="max-w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="grid sm:grid-cols-2 gap-6 text-center">
+              <div className="bg-gradient-card p-4 rounded-lg">
+                <h4 className="font-bold text-foreground mb-2">BEFORE</h4>
+                <p className="text-sm text-muted-foreground">Normal circulation with restricted blood flow and limited vascular capacity</p>
+              </div>
+              <div className="bg-gradient-card p-4 rounded-lg">
+                <h4 className="font-bold text-foreground mb-2">AFTER</h4>
+                <p className="text-sm text-muted-foreground">Enhanced circulation with enlarged veins, increased blood flow, and improved turgidity</p>
+              </div>
+            </div>
+          </div>
+          
           <div className="bg-gradient-card border border-border rounded-2xl p-6 sm:p-8 md:p-12">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground text-center mb-8 sm:mb-12">
               HOW STALLION COMMANDER
