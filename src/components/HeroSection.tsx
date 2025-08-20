@@ -17,7 +17,7 @@ export const HeroSection = () => {
       <div className="relative container mx-auto px-4 pb-4 sm:pb-6 md:pb-8 lg:pb-12">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6 sm:space-y-8 animate-slide-up">
+          <div className="space-y-4 sm:space-y-5 animate-slide-up">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-gradient-card border border-border px-3 sm:px-4 py-2 rounded-full">
               <Trophy className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
