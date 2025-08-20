@@ -82,10 +82,8 @@ const Order = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-4 gap-8">
-          {/* Packages */}
-          <div className="lg:col-span-3">
-            <div className="grid md:grid-cols-3 gap-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6">
               {packages.map((pkg) => (
                 <Card key={pkg.id} className={`relative p-6 bg-card border-2 hover:shadow-premium transition-all duration-300 ${
                   pkg.popular ? 'border-primary shadow-glow' : 'border-border hover:border-primary/50'
@@ -99,12 +97,15 @@ const Order = () => {
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold text-foreground mb-2">{pkg.name}</h3>
                     
-                    {/* Bottle Visual */}
+                    {/* Product Images */}
                     <div className="flex justify-center items-center gap-2 mb-4">
                       {[...Array(pkg.bottles)].map((_, i) => (
-                        <div key={i} className="w-8 h-12 bg-gradient-primary rounded-sm relative">
-                          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-3 h-2 bg-gradient-primary rounded-t-sm"></div>
-                        </div>
+                        <img 
+                          key={i} 
+                          src={productImage} 
+                          alt="Health Commander Male Formula" 
+                          className="w-12 h-16 object-contain"
+                        />
                       ))}
                       <span className="ml-2 text-sm font-semibold text-primary">{pkg.bottles} Bottle{pkg.bottles > 1 ? 's' : ''}</span>
                     </div>
@@ -137,49 +138,6 @@ const Order = () => {
                 </Card>
               ))}
             </div>
-          </div>
-
-          {/* Order Summary Sidebar */}
-          <div className="lg:col-span-1">
-            <Card className="p-6 bg-gradient-card border border-border sticky top-24">
-              <div className="text-center mb-6">
-                <img 
-                  src={productImage} 
-                  alt="Health Commander Male Formula" 
-                  className="w-32 mx-auto mb-4"
-                />
-                <h3 className="font-bold text-foreground mb-2">Stallion Commander</h3>
-                <div className="flex items-center justify-center gap-1 mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                  ))}
-                  <span className="text-sm text-muted-foreground ml-2">(2,847 reviews)</span>
-                </div>
-              </div>
-              
-              <div className="space-y-4 mb-6">
-                <div className="flex items-center gap-2">
-                  <Shield className="w-4 h-4 text-primary" />
-                  <span className="text-sm text-foreground">90-Day Money Back Guarantee</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary" />
-                  <span className="text-sm text-foreground">Free Worldwide Shipping</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Award className="w-4 h-4 text-primary" />
-                  <span className="text-sm text-foreground">FDA Registered Facility</span>
-                </div>
-              </div>
-              
-              <div className="bg-primary/10 border border-primary/20 p-4 rounded-lg">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary mb-1">50,000+</div>
-                  <div className="text-sm text-foreground">Satisfied Customers</div>
-                </div>
-              </div>
-            </Card>
-          </div>
         </div>
 
         {/* Trust Badges */}
