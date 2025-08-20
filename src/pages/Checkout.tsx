@@ -19,6 +19,11 @@ interface Package {
   features: string[];
 }
 
+// Product images
+const productImage = "/src/assets/health-commander-bottle.png";
+const commanderPackImage = "/src/assets/commander-pack-3bottles.png";
+const ultimatePackImage = "/src/assets/ultimate-pack-6bottles.png";
+
 const Checkout = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -46,6 +51,18 @@ const Checkout = () => {
 
   const pricePerBottle = Math.round(selectedPackage.price / selectedPackage.bottles);
   const originalPricePerBottle = Math.round(selectedPackage.originalPrice / selectedPackage.bottles);
+
+  const getImageSrc = () => {
+    if (selectedPackage.bottles === 1) return productImage;
+    if (selectedPackage.bottles === 3) return commanderPackImage;
+    return ultimatePackImage;
+  };
+
+  const getImageAlt = () => {
+    if (selectedPackage.bottles === 1) return "Health Commander Male Formula - Single Bottle";
+    if (selectedPackage.bottles === 3) return "Health Commander Male Formula - Buy 2 Get 1 FREE";
+    return "Health Commander Male Formula - Buy 3 Get 3 FREE";
+  };
 
   return (
     <div className="min-h-screen bg-gradient-dark">
@@ -82,9 +99,17 @@ const Checkout = () => {
               {/* Package Details */}
               <div className="space-y-4 mb-6">
                 <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="font-bold text-foreground text-lg">{selectedPackage.name}</h3>
-                    <p className="text-sm text-muted-foreground">{selectedPackage.bottles} Bottle{selectedPackage.bottles > 1 ? 's' : ''}</p>
+                  <div className="flex items-center gap-4">
+                    <img 
+                      src={getImageSrc()}
+                      alt={getImageAlt()}
+                      className="w-16 h-16 md:w-20 md:h-20 object-contain drop-shadow-lg"
+                      loading="lazy"
+                    />
+                    <div>
+                      <h3 className="font-bold text-foreground text-lg">{selectedPackage.name}</h3>
+                      <p className="text-sm text-muted-foreground">{selectedPackage.bottles} Bottle{selectedPackage.bottles > 1 ? 's' : ''}</p>
+                    </div>
                   </div>
                   {selectedPackage.popular && (
                     <div className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold">
