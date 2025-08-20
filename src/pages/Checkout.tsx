@@ -100,12 +100,14 @@ const Checkout = () => {
               <div className="space-y-4 mb-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <img 
-                      src={getImageSrc()}
-                      alt={getImageAlt()}
-                      className="w-16 h-16 md:w-20 md:h-20 object-contain drop-shadow-lg"
-                      loading="lazy"
-                    />
+                    <div className="border-2 border-blue-500 rounded-lg p-3 bg-blue-50/10">
+                      <img 
+                        src={getImageSrc()}
+                        alt={getImageAlt()}
+                        className="w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 object-contain drop-shadow-lg"
+                        loading="lazy"
+                      />
+                    </div>
                     <div>
                       <h3 className="font-bold text-foreground text-lg">{selectedPackage.name}</h3>
                       <p className="text-sm text-muted-foreground">{selectedPackage.bottles} Bottle{selectedPackage.bottles > 1 ? 's' : ''}</p>
