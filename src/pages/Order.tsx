@@ -87,7 +87,7 @@ const Order = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-6">
               {packages.map((pkg) => (
-                <Card key={pkg.id} className={`relative p-8 bg-card border-2 hover:shadow-premium transition-all duration-300 ${
+                <Card key={pkg.id} className={`relative p-8 bg-card border-2 hover:shadow-premium transition-all duration-300 flex flex-col ${
                   pkg.popular ? 'border-primary shadow-glow' : 'border-border hover:border-primary/50'
                 }`}>
                   {pkg.popular && (
@@ -134,7 +134,7 @@ const Order = () => {
                     </div>
                   </div>
                   
-                  <div className="space-y-3 mb-6">
+                  <div className="space-y-3 mb-6 flex-grow">
                     {pkg.features.map((feature, index) => (
                       <div key={index} className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-primary" />
@@ -143,13 +143,15 @@ const Order = () => {
                     ))}
                   </div>
                   
-                  <Button 
-                    variant={pkg.popular ? "hero" : "default"} 
-                    className="w-full"
-                    size="lg"
-                  >
-                    SELECT PACKAGE
-                  </Button>
+                  <div className="mt-auto">
+                    <Button 
+                      variant={pkg.popular ? "hero" : "default"} 
+                      className="w-full"
+                      size="lg"
+                    >
+                      SELECT PACKAGE
+                    </Button>
+                  </div>
                 </Card>
               ))}
             </div>
