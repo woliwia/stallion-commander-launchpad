@@ -98,16 +98,63 @@ const Order = () => {
                     <h3 className="text-xl font-bold text-foreground mb-2">{pkg.name}</h3>
                     
                     {/* Product Images */}
-                    <div className="flex justify-center items-center gap-2 mb-4">
-                      {[...Array(pkg.bottles)].map((_, i) => (
-                        <img 
-                          key={i} 
-                          src={productImage} 
-                          alt="Health Commander Male Formula" 
-                          className="w-12 h-16 object-contain"
-                        />
-                      ))}
-                      <span className="ml-2 text-sm font-semibold text-primary">{pkg.bottles} Bottle{pkg.bottles > 1 ? 's' : ''}</span>
+                    <div className="flex flex-col items-center gap-2 mb-4">
+                      {pkg.bottles === 1 ? (
+                        // Single bottle for Starter Pack
+                        <div className="flex justify-center">
+                          <img 
+                            src={productImage} 
+                            alt="Health Commander Male Formula" 
+                            className="w-12 h-16 object-contain"
+                          />
+                        </div>
+                      ) : pkg.bottles === 3 ? (
+                        // 2+1 arrangement for Commander Pack
+                        <div className="flex flex-col items-center gap-1">
+                          <div className="flex gap-2">
+                            {[...Array(2)].map((_, i) => (
+                              <img 
+                                key={i} 
+                                src={productImage} 
+                                alt="Health Commander Male Formula" 
+                                className="w-10 h-14 object-contain"
+                              />
+                            ))}
+                          </div>
+                          <div className="flex">
+                            <img 
+                              src={productImage} 
+                              alt="Health Commander Male Formula" 
+                              className="w-10 h-14 object-contain"
+                            />
+                          </div>
+                        </div>
+                      ) : (
+                        // 3+3 arrangement for Ultimate Stallion
+                        <div className="flex flex-col items-center gap-1">
+                          <div className="flex gap-1">
+                            {[...Array(3)].map((_, i) => (
+                              <img 
+                                key={i} 
+                                src={productImage} 
+                                alt="Health Commander Male Formula" 
+                                className="w-8 h-12 object-contain"
+                              />
+                            ))}
+                          </div>
+                          <div className="flex gap-1">
+                            {[...Array(3)].map((_, i) => (
+                              <img 
+                                key={i + 3} 
+                                src={productImage} 
+                                alt="Health Commander Male Formula" 
+                                className="w-8 h-12 object-contain"
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                      <span className="text-sm font-semibold text-primary">{pkg.bottles} Bottle{pkg.bottles > 1 ? 's' : ''}</span>
                     </div>
                     
                     <div className="mb-4">
