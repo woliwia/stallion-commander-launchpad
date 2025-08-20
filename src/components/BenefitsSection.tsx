@@ -232,7 +232,7 @@ export const BenefitsSection = () => {
         </div>
         
         {/* Health Mechanisms Section */}
-        <div className="mt-12 sm:mt-16">
+        <div className="mt-6 sm:mt-8">
           {/* Vascular Enhancement Graphics */}
           <div className="bg-card border border-border rounded-2xl p-6 sm:p-8 mb-8">
             <h3 className="text-xl sm:text-2xl font-bold text-center text-foreground mb-6">
