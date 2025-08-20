@@ -51,16 +51,13 @@ export const HeroSection = () => {
               ))}
             </div>
             
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            {/* CTA Button */}
+            <div className="flex justify-center pt-4">
               <Link to="/order">
                 <Button variant="hero" size="xl" className="w-full sm:w-auto">
                   CLAIM YOUR POWER NOW
                 </Button>
               </Link>
-              <Button variant="premium" size="xl" className="w-full sm:w-auto">
-                Learn More
-              </Button>
             </div>
             
             {/* Trust Indicators */}
