@@ -1,6 +1,7 @@
 import { Battery, Brain, Heart, Zap, Shield, Target } from "lucide-react";
 import vascularDiagram from "@/assets/vascular-enhancement-diagram.png";
 import surprisedWoman from "@/assets/surprised-woman-face.png";
+import couplesBeautyBar from "@/assets/couples-beauty-bar.png";
 
 const benefits = [
   {
@@ -80,12 +81,13 @@ export const BenefitsSection = () => {
           ))}
         </div>
         
-        {/* Bottom CTA */}
-        <div className="text-center mt-12 sm:mt-16">
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 sm:px-6 py-2 sm:py-3 rounded-full mb-6">
-            <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-            <span className="font-semibold text-primary text-sm sm:text-base">Backed by Science • Proven Results</span>
-          </div>
+        {/* Beauty Bar Collage */}
+        <div className="mt-12 sm:mt-16 -mx-4">
+          <img 
+            src={couplesBeautyBar}
+            alt="Happy couples - middle-aged men with beautiful women showing satisfaction and confidence"
+            className="w-full h-auto object-cover"
+          />
         </div>
         
         {/* Scientific Explanation Section */}
