@@ -33,7 +33,7 @@ export const HeroSection = () => {
                 </span>
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-medium">
-                The ultimate male performance enhancer that transforms ordinary men into unstoppable forces
+                The ultimate male performance enhancer that transforms ordinary men into unstoppable Stallions
               </p>
             </div>
             
