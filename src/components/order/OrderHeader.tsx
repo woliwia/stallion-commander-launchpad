@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const OrderHeader = () => {
   return (
-    <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+    <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-[88px] z-40">
       <div className="container mx-auto px-4 py-3 md:py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors">
