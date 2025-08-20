@@ -1,6 +1,6 @@
 import { Battery, Brain, Heart, Zap, Shield, Target } from "lucide-react";
 import vascularDiagram from "@/assets/vascular-enhancement-diagram.png";
-import womenSatisfactionCollage from "@/assets/women-satisfaction-collage.png";
+import womenOrgasmicSmiles from "@/assets/women-orgasmic-smiles.png";
 import couplesBeautyBar from "@/assets/couples-beauty-bar.png";
 
 const benefits = [
@@ -258,12 +258,21 @@ export const BenefitsSection = () => {
               </div>
             </div>
             
-            {/* Women Satisfaction Reactions */}
-            <div className="flex justify-center mt-6">
+            {/* RESULTS DON'T LIE Heading */}
+            <div className="text-center mt-6 mb-4">
+              <h3 className="text-2xl sm:text-3xl font-black text-foreground">
+                <span className="bg-gradient-primary bg-clip-text text-transparent">
+                  RESULTS DON'T LIE
+                </span>
+              </h3>
+            </div>
+            
+            {/* Women Orgasmic Reactions */}
+            <div className="flex justify-center">
               <img 
-                src={womenSatisfactionCollage}
-                alt="Multiple women showing expressions of intense satisfaction and pleasure"
-                className="w-full max-w-2xl h-auto object-cover rounded-lg shadow-lg"
+                src={womenOrgasmicSmiles}
+                alt="Multiple women showing expressions of intense orgasmic pleasure and satisfaction"
+                className="w-full max-w-xl h-24 sm:h-32 object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
