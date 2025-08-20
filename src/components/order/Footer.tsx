@@ -1,7 +1,4 @@
 import { Heart } from "lucide-react";
-import fdaLogo from "@/assets/fda-registered-logo.png";
-import gmpLogo from "@/assets/gmp-logo.png";
-import recyclableLogo from "@/assets/recyclable-logo.png";
 
 const Footer = () => {
   const footerLinks = [
@@ -59,21 +56,11 @@ const Footer = () => {
         </div>
 
         {/* Certification Logos */}
-        <div className="flex items-center justify-center gap-6 md:gap-8">
+        <div className="flex items-center justify-center">
           <img 
-            src={fdaLogo}
-            alt="Made in FDA Registered Facility"
-            className="h-12 w-12 md:h-16 md:w-16 opacity-70 hover:opacity-100 transition-opacity"
-          />
-          <img 
-            src={gmpLogo}
-            alt="GMP Certified"
-            className="h-12 w-12 md:h-16 md:w-16 opacity-70 hover:opacity-100 transition-opacity"
-          />
-          <img 
-            src={recyclableLogo}
-            alt="Recyclable Packaging"
-            className="h-12 w-12 md:h-16 md:w-16 opacity-70 hover:opacity-100 transition-opacity"
+            src="/lovable-uploads/06e1c285-a576-46f1-83d3-1334be303b4a.png"
+            alt="FDA Registered Facility, Made in USA, GMP Certified, Recyclable"
+            className="h-20 md:h-24 opacity-90 hover:opacity-100 transition-opacity"
           />
         </div>
       </div>
