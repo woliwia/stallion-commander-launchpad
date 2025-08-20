@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -36,6 +37,8 @@ interface PackageCardProps {
 }
 
 const PackageCard = ({ pkg, productImage, commanderPackImage, ultimatePackImage }: PackageCardProps) => {
+  const navigate = useNavigate();
+  
   const getImageSrc = () => {
     if (pkg.bottles === 1) return productImage;
     if (pkg.bottles === 3) return commanderPackImage;
@@ -99,6 +102,7 @@ const PackageCard = ({ pkg, productImage, commanderPackImage, ultimatePackImage 
           variant={pkg.popular ? "hero" : "default"} 
           className="w-full text-sm md:text-base"
           size="lg"
+          onClick={() => navigate('/checkout', { state: { package: pkg } })}
         >
           SELECT PACKAGE
         </Button>
