@@ -26,7 +26,7 @@ const packages = [
     price: 159,
     savings: 228,
     popular: true,
-    features: ["3 Month Supply", "Free Shipping", "90-Day Guarantee", "FREE Bonus eBook"]
+    features: ["3 Month Supply", "Free Shipping", "90-Day Guarantee"]
   },
   {
     id: "ultimate",
@@ -36,7 +36,7 @@ const packages = [
     price: 249,
     savings: 525,
     popular: false,
-    features: ["6 Month Supply", "Free Shipping", "90-Day Guarantee", "FREE Bonus eBook", "Priority Support"]
+    features: ["6 Month Supply", "Free Shipping", "90-Day Guarantee", "Priority Support"]
   }
 ];
 
