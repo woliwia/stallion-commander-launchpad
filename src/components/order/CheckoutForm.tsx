@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Separator } from "@/components/ui/separator";
 import AdditionalOptions from "./AdditionalOptions";
 import { cn } from "@/lib/utils";
+import paymentMethodsBar from "@/assets/payment-methods-bar.png";
 
 interface Package {
   id: string;
@@ -151,10 +152,10 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
         OR FILL OUT DETAILS
       </div>
 
-      <div className="text-center p-4 rounded-md" style={{ backgroundColor: '#e0f4ff' }}>
+      <div className="text-center p-4 rounded-md bg-black">
         <img 
-          src="/lovable-uploads/7ad63e2f-18bf-48fc-87e1-1bc8cf2cbaeb.png" 
-          alt="Accepted payment methods: Visa, MasterCard, American Express, Apple Pay, Google Pay"
+          src={paymentMethodsBar} 
+          alt="Accepted payment methods: Apple Pay, Google Pay, Visa, MasterCard, American Express, PayPal, Discover"
           className="w-full h-20 object-contain"
         />
       </div>
