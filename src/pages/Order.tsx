@@ -77,7 +77,7 @@ const Order = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
             {/* Left Side - Package Selection */}
-            <div className="order-2 xl:order-1">
+            <div className="order-1 xl:order-1">
               <PackageSelector
                 packages={packages}
                 selectedPackage={selectedPackage}
@@ -89,7 +89,7 @@ const Order = () => {
             </div>
 
             {/* Right Side - Checkout Form */}
-            <div className="order-1 xl:order-2">
+            <div className="order-2 xl:order-2">
               <CheckoutForm selectedPackage={selectedPackage} />
             </div>
           </div>
