@@ -7,7 +7,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Separator } from "@/components/ui/separator";
 import AdditionalOptions from "./AdditionalOptions";
 import { cn } from "@/lib/utils";
-import croppedPaymentMethods from "@/assets/cropped-payment-methods.png";
 
 interface Package {
   id: string;
@@ -154,8 +153,8 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
 
       <div className="text-center p-1 rounded-md bg-background">
         <img 
-          src={croppedPaymentMethods} 
-          alt="Accepted payment methods: Visa, MasterCard, Discover, American Express"
+          src="/lovable-uploads/829a69f9-68ac-4e14-a642-778d5b1ffd89.png" 
+          alt="Accepted payment methods: American Express, Mastercard, Visa, Discover"
           className="w-full h-20 object-contain"
         />
       </div>
