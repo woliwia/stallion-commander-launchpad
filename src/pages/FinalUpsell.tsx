@@ -26,6 +26,7 @@ const FinalUpsell = () => {
           <div className="mb-8">
             <h2 className="text-xl md:text-2xl font-bold text-primary">
               Get 3 More Bottles of Stallion Commander for only $14.99
+              <span className="text-sm md:text-base font-normal"> / bottle</span>
             </h2>
           </div>
           
