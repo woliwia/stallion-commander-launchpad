@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Order from "./pages/Order";
 import Checkout from "./pages/Checkout";
 import Upsell from "./pages/Upsell";
+import FinalUpsell from "./pages/FinalUpsell";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/order" element={<Order />} />
           <Route path="/upsell" element={<Upsell />} />
+          <Route path="/final-upsell" element={<FinalUpsell />} />
           <Route path="/checkout" element={<Checkout />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
