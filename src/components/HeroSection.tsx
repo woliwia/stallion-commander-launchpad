@@ -78,25 +78,29 @@ export const HeroSection = () => {
             </div>
             
             {/* CTA Button */}
-            <div className="pt-6 sm:pt-8 flex justify-center">
-              <Link to="/order" className="w-full max-w-md">
-                <Button variant="hero" size="xl" className="w-full text-base sm:text-lg md:text-xl lg:text-2xl px-6 py-4 sm:px-8 sm:py-6 lg:py-8 font-black">
-                  CLAIM YOUR POWER NOW
-                </Button>
-              </Link>
+            <div className="pt-6 sm:pt-8 flex justify-center w-full">
+              <div className="w-full max-w-md mx-auto">
+                <Link to="/order" className="w-full block">
+                  <Button variant="hero" size="xl" className="w-full text-base sm:text-lg md:text-xl lg:text-2xl px-6 py-4 sm:px-8 sm:py-6 lg:py-8 font-black">
+                    CLAIM YOUR POWER NOW
+                  </Button>
+                </Link>
+              </div>
             </div>
             
             {/* Trust Indicators */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 pt-4 sm:pt-6 border-t border-border mt-6">
-              <div className="flex items-center gap-3">
-                <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                <span className="text-sm sm:text-base font-medium text-muted-foreground">90-Day Guarantee</span>
-              </div>
-              <div className="flex items-center gap-2">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
-                ))}
-                <span className="text-sm sm:text-base font-medium text-muted-foreground ml-3">4.9/5 (2,847 reviews)</span>
+            <div className="w-full flex justify-center pt-4 sm:pt-6 mt-6">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 border-t border-border pt-4 sm:pt-6 max-w-md sm:max-w-2xl w-full">
+                <div className="flex items-center gap-3">
+                  <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                  <span className="text-sm sm:text-base font-medium text-muted-foreground">90-Day Guarantee</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
+                  ))}
+                  <span className="text-sm sm:text-base font-medium text-muted-foreground ml-3">4.9/5 (2,847 reviews)</span>
+                </div>
               </div>
             </div>
           </div>
