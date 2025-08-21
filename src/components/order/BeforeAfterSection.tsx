@@ -14,7 +14,7 @@ const BeforeAfterSection = () => {
           <img 
             src="/lovable-uploads/ad086c5e-10ee-4818-bdb8-bafe3c305c86.png"
             alt="Women's satisfied expressions showing the incredible results"
-            className="w-full h-20 object-cover rounded-lg"
+            className="w-full h-28 object-cover rounded-lg"
             loading="lazy"
           />
         </div>
@@ -32,7 +32,7 @@ const BeforeAfterSection = () => {
           <img 
             src={beforeAfterImage}
             alt="Before and after transformation showing incredible results from Stallion Commander"
-            className="w-full max-w-3xl mx-auto rounded-lg drop-shadow-lg"
+            className="w-full max-w-3xl mx-auto rounded-lg drop-shadow-lg min-h-[300px] object-cover"
             loading="lazy"
           />
           
