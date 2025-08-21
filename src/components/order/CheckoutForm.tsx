@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
-import PaymentMethods from "./PaymentMethods";
 import AdditionalOptions from "./AdditionalOptions";
 import { cn } from "@/lib/utils";
 
@@ -151,8 +150,6 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
       <div className="text-center text-muted-foreground font-medium">
         OR FILL OUT DETAILS
       </div>
-
-      <PaymentMethods />
 
       {/* Checkout Form */}
       <Card className="p-6 sm:p-8">
