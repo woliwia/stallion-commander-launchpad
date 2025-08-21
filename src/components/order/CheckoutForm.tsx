@@ -148,11 +148,11 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
         </div>
       </Card>
 
-      <div className="text-center text-white font-medium mb-3">
+      <div className="text-center text-white font-medium mb-2">
         OR FILL OUT DETAILS
       </div>
 
-      <div className="text-center p-4 rounded-md bg-background mb-4">
+      <div className="text-center p-2 rounded-md bg-background mb-2">
         <img 
           src={cleanPaymentMethods} 
           alt="Accepted payment methods: Visa, MasterCard, Discover, American Express"
