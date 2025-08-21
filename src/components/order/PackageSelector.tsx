@@ -103,9 +103,9 @@ const PackageSelector = ({
                 {/* Package Info */}
                 <div className="flex-1">
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
-                    {pkg.bottles} BOTTLE{pkg.bottles > 1 ? 'S' : ''}
-                    {pkg.bottles === 3 && <span className="text-primary"> + 1 FREE</span>}
-                    {pkg.bottles === 6 && <span className="text-primary"> + 3 FREE</span>}
+                    {pkg.bottles === 1 && "1 BOTTLE"}
+                    {pkg.bottles === 3 && "2 BOTTLES + 1 FREE"}
+                    {pkg.bottles === 6 && "BUY 3 BOTTLES GET 3 FREE"}
                   </h3>
 
                   <div className="flex items-center gap-4 mb-4">
@@ -113,17 +113,6 @@ const PackageSelector = ({
                       ${pkg.pricePerBottle}
                       {pkg.bottles > 1 && <span className="text-sm font-normal text-muted-foreground"> / bottle</span>}
                     </div>
-                  </div>
-
-                  <div className="text-lg font-semibold text-primary">
-                    FREE SHIPPING
-                  </div>
-                </div>
-
-                {/* Total Price */}
-                <div className="text-right">
-                  <div className="text-3xl sm:text-4xl font-black text-foreground">
-                    ${pkg.price}
                   </div>
                 </div>
               </div>
