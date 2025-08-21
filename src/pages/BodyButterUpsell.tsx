@@ -18,8 +18,11 @@ const BodyButterUpsell = () => {
           {/* Main Offer Text */}
           <div className="mb-8">
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4">
-              Get rid of that dry flakey skin with argan infuse whipped body butter only $19.99
+              Get rid of that dry FLAKEY Skin with ARGAN Infused, Whipped Body Butter only $19.99 <span className="text-lg text-red-500 line-through">(regular price $34.99)</span>
             </h1>
+            <p className="text-xl md:text-2xl font-semibold text-primary mt-4">
+              See What Great Skin Feels Like.
+            </p>
           </div>
           
           {/* Product Image */}
