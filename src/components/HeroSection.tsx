@@ -28,12 +28,8 @@ export const HeroSection = () => {
                 fetchPriority="high"
               />
               
-              {/* Floating Elements */}
               <div className="absolute -top-1 -right-1 sm:top-2 sm:-right-2 bg-primary text-primary-foreground px-2 py-1 sm:px-3 sm:py-1 rounded-full font-bold animate-glow-pulse text-xs sm:text-sm">
                 LIMITED TIME
-              </div>
-              <div className="absolute -bottom-1 -left-1 sm:-bottom-2 sm:-left-2 bg-card border border-border px-2 py-1 sm:px-3 sm:py-1 rounded-full font-semibold text-xs sm:text-sm">
-                FREE SHIPPING
               </div>
             </div>
             
@@ -43,11 +39,14 @@ export const HeroSection = () => {
 
           {/* Main Content */}
           <div className="relative z-20 pt-4 sm:pt-6 md:pt-8 pr-[52%] sm:pr-[42%] md:pr-[35%] lg:pr-[42%] xl:pr-[35%]">
-            {/* Badge */}
-            <div className="flex justify-center lg:justify-start mb-3 sm:mb-4">
+            {/* Badge and Free Shipping */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-3 sm:mb-4">
               <div className="inline-flex items-center gap-2 bg-gradient-card border border-border px-3 py-2 sm:px-4 sm:py-2 lg:px-5 lg:py-3 rounded-full">
                 <Trophy className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                 <span className="text-sm sm:text-base font-medium text-foreground">#1 Male Vitality Formula</span>
+              </div>
+              <div className="inline-flex items-center gap-2 bg-card border border-border px-3 py-2 sm:px-4 sm:py-2 lg:px-5 lg:py-3 rounded-full">
+                <span className="text-sm sm:text-base font-semibold text-foreground">FREE SHIPPING</span>
               </div>
             </div>
             
@@ -80,7 +79,7 @@ export const HeroSection = () => {
             
             {/* CTA Button */}
             <div className="pt-6 sm:pt-8 flex justify-center">
-              <Link to="/order" className="w-full max-w-md lg:max-w-none">
+              <Link to="/order" className="w-full max-w-md">
                 <Button variant="hero" size="xl" className="w-full text-base sm:text-lg md:text-xl lg:text-2xl px-6 py-4 sm:px-8 sm:py-6 lg:py-8 font-black">
                   CLAIM YOUR POWER NOW
                 </Button>
