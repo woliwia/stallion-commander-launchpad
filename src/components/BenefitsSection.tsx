@@ -39,32 +39,32 @@ const benefits = [
 
 export const BenefitsSection = () => {
   return (
-    <section className="py-8 sm:py-12 md:py-16 bg-gradient-card relative">
+    <section className="py-responsive bg-gradient-card relative">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(45_100%_65%)_1px,transparent_1px)] [background-size:24px_24px]" />
       </div>
       
-      <div className="container mx-auto px-4 relative">
+      <div className="container relative">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-4 sm:mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-responsive">
+          <h2 className="text-responsive-xl font-black text-foreground mb-responsive-sm">
             EXPERIENCE THE
             <span className="block bg-gradient-primary bg-clip-text text-transparent">
               STALLION DIFFERENCE
             </span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
+          <p className="text-responsive-lg text-muted-foreground leading-relaxed">
             Discover why thousands of men choose Stallion Commander to unlock their true potential and dominate in every area of life.
           </p>
           
           {/* Attractive Women Beauty Bar */}
-          <div className="mt-6 sm:mt-8">
+          <div className="mt-responsive-sm">
             <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
               <img 
                 src={attractiveWomenBeautyBar}
                 alt="Beautiful confident women"
-                className="w-full h-20 sm:h-24 md:h-32 lg:h-40 object-cover"
+                className="w-full h-16 sm:h-20 md:h-24 lg:h-32 object-cover"
                 loading="lazy"
                 decoding="async"
               />
@@ -73,22 +73,22 @@ export const BenefitsSection = () => {
         </div>
         
         {/* Benefits Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-responsive">
           {benefits.map((benefit, index) => (
             <div 
               key={index} 
-              className="bg-card border border-border p-4 sm:p-6 lg:p-8 rounded-xl lg:rounded-2xl hover:bg-gradient-card hover:shadow-premium transition-all duration-300 group animate-slide-up"
+              className="bg-card border border-border p-responsive rounded-xl lg:rounded-2xl hover:bg-gradient-card hover:shadow-premium transition-all duration-300 group animate-slide-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="bg-primary/10 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 lg:mb-6 group-hover:bg-primary/20 transition-colors">
-                <benefit.icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-primary" />
+              <div className="bg-primary/10 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl flex items-center justify-center mb-responsive-sm group-hover:bg-primary/20 transition-colors">
+                <benefit.icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-primary" />
               </div>
               
-              <h3 className="text-base sm:text-lg lg:text-xl font-bold text-foreground mb-2 sm:mb-3 lg:mb-4">
+              <h3 className="text-responsive-lg font-bold text-foreground mb-responsive-sm">
                 {benefit.title}
               </h3>
               
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+              <p className="text-responsive-base text-muted-foreground leading-relaxed">
                 {benefit.description}
               </p>
             </div>
