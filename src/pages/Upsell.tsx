@@ -34,15 +34,6 @@ const Upsell = () => {
             </p>
           </div>
           
-          {/* User Uploaded Image */}
-          <div className="mb-12">
-            <img 
-              src="/lovable-uploads/cc86c21e-9e63-4df7-b93e-6b69bc1dd6a6.png"
-              alt="Satisfied customer"
-              className="w-full max-w-2xl mx-auto h-auto object-contain rounded-lg shadow-lg"
-            />
-          </div>
-          
           {/* Complete Order Button */}
           <Button 
             onClick={handleCompleteOrder}
