@@ -57,14 +57,14 @@ const PackageSelector = ({
         <div className="h-1 w-full bg-gradient-to-r from-primary to-primary/30 rounded lg:mb-6"></div>
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-6">
         {packages.map((pkg) => {
           const isSelected = selectedPackage?.id === pkg.id;
 
           return (
             <Card
               key={pkg.id}
-              className={`relative p-6 cursor-pointer transition-all duration-300 border-2 ${
+              className={`relative p-8 cursor-pointer transition-all duration-300 border-2 ${
                 isSelected 
                   ? 'border-primary bg-primary/5 shadow-glow' 
                   : 'border-border hover:border-primary/50'
@@ -89,7 +89,7 @@ const PackageSelector = ({
                 </div>
               )}
 
-              <div className="flex items-center gap-6 pl-8">
+              <div className="flex items-center gap-8 pl-8 py-4">
                 {/* Package Image */}
                 <div className="flex-shrink-0">
                   <img 
