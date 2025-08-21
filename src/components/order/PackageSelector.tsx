@@ -104,8 +104,18 @@ const PackageSelector = ({
                 <div className="flex-1">
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
                     {pkg.bottles === 1 && "1 BOTTLE"}
-                    {pkg.bottles === 3 && "2 BOTTLES + 1 FREE"}
-                    {pkg.bottles === 6 && "BUY 3 BOTTLES GET 3 FREE"}
+                    {pkg.bottles === 3 && (
+                      <span>
+                        Buy 2 Get<br />
+                        1 FREE
+                      </span>
+                    )}
+                    {pkg.bottles === 6 && (
+                      <span>
+                        Buy 3 Get<br />
+                        3 FREE
+                      </span>
+                    )}
                   </h3>
 
                   <div className="flex items-center gap-4 mb-4">
