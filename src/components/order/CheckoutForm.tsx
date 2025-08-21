@@ -153,8 +153,8 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
 
       <div className="text-center">
         <img 
-          src="/lovable-uploads/a21582a3-c925-476d-9af9-62f444d0bd3f.png" 
-          alt="Accepted payment methods: Mastercard, Visa, Apple Pay, American Express, Google Pay, Discover"
+          src="/lovable-uploads/ff7c269b-f139-4064-9f20-6649fea9553d.png" 
+          alt="Accepted payment methods: Visa, Mastercard, American Express, Apple Pay, Google Pay"
           className="h-12 mx-auto opacity-90"
         />
       </div>
