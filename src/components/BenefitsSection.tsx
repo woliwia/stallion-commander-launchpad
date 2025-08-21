@@ -2,6 +2,7 @@ import { Battery, Brain, Heart, Zap, Shield, Target } from "lucide-react";
 import vascularDiagram from "@/assets/vascular-enhancement-diagram.png";
 import diverseAppearancesBeautyBar from "@/assets/diverse-appearances-beauty-bar.png";
 import fullFaceSurprisedOrgasmBar from "@/assets/full-face-surprised-orgasm-bar.png";
+import attractiveWomenBeautyBar from "@/assets/attractive-women-beauty-bar.png";
 
 const benefits = [
   {
@@ -56,6 +57,19 @@ export const BenefitsSection = () => {
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
             Discover why thousands of men choose Stallion Commander to unlock their true potential and dominate in every area of life.
           </p>
+          
+          {/* Attractive Women Beauty Bar */}
+          <div className="mt-6 sm:mt-8">
+            <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+              <img 
+                src={attractiveWomenBeautyBar}
+                alt="Beautiful confident women"
+                className="w-full h-20 sm:h-24 md:h-32 lg:h-40 object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
         </div>
         
         {/* Benefits Grid */}
