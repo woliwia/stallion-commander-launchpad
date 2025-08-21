@@ -82,14 +82,16 @@ export const BenefitsSection = () => {
         </div>
         
         {/* Beauty Bar Collage */}
-        <div className="mt-8 sm:mt-12 -mx-4">
-          <img 
-            src={diverseAppearancesBeautyBar}
-            alt="Beautiful diverse women showing confidence and satisfaction - blonde, brunette, Spanish, Italian, and Norwegian"
-            className="w-full h-24 sm:h-32 md:h-40 lg:h-48 object-cover"
-            loading="lazy"
-            decoding="async"
-          />
+        <div className="mt-8 sm:mt-12">
+          <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+            <img 
+              src={diverseAppearancesBeautyBar}
+              alt="Beautiful diverse women showing confidence and satisfaction - blonde, brunette, Spanish, Italian, and Norwegian"
+              className="w-full h-24 sm:h-32 md:h-40 lg:h-48 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </div>
         
         {/* Scientific Explanation Section */}
