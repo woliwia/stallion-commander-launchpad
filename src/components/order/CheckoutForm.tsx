@@ -151,11 +151,11 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
         OR FILL OUT DETAILS
       </div>
 
-      <div className="text-center">
+      <div className="text-center p-4 rounded-md" style={{ backgroundColor: '#e0f4ff' }}>
         <img 
           src="/lovable-uploads/7ad63e2f-18bf-48fc-87e1-1bc8cf2cbaeb.png" 
           alt="Accepted payment methods: Visa, MasterCard, American Express, Apple Pay, Google Pay"
-          className="w-full h-16 object-contain opacity-90"
+          className="w-full h-20 object-contain"
         />
       </div>
 
