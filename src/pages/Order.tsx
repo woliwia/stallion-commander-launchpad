@@ -1,5 +1,4 @@
 import { useState } from "react";
-import OrderHeader from "@/components/order/OrderHeader";
 import CountdownTimer from "@/components/order/CountdownTimer";
 import LimitedTimeOffer from "@/components/order/LimitedTimeOffer";
 import PackageSelector from "@/components/order/PackageSelector";
@@ -53,9 +52,8 @@ const Order = () => {
   return (
     <div className="min-h-screen bg-gradient-dark">
       <CountdownTimer />
-      <OrderHeader />
 
-      <div className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
+      <div className="container mx-auto px-4 py-4 sm:py-6 md:py-8">
         {/* Page Header */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-foreground mb-4 sm:mb-6 md:mb-8 leading-tight">
