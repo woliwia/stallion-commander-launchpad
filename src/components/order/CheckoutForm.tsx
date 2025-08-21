@@ -162,8 +162,8 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                 value={formData.firstName}
                 onChange={(e) => handleInputChange('firstName', e.target.value)}
                 className={cn(
-                  "mt-2 h-12",
-                  errors.firstName && "border-red-500 focus:ring-red-500"
+                  "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                  errors.firstName && "border-red-500 focus:ring-red-500 bg-red-50/20"
                 )}
               />
             </div>
@@ -176,8 +176,8 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                 value={formData.lastName}
                 onChange={(e) => handleInputChange('lastName', e.target.value)}
                 className={cn(
-                  "mt-2 h-12",
-                  errors.lastName && "border-red-500 focus:ring-red-500"
+                  "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                  errors.lastName && "border-red-500 focus:ring-red-500 bg-red-50/20"
                 )}
               />
             </div>
@@ -193,8 +193,8 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
               value={formData.address}
               onChange={(e) => handleInputChange('address', e.target.value)}
               className={cn(
-                "mt-2 h-12",
-                errors.address && "border-red-500 focus:ring-red-500"
+                "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                errors.address && "border-red-500 focus:ring-red-500 bg-red-50/20"
               )}
             />
           </div>
@@ -206,7 +206,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
               placeholder="Apartment, suite, etc." 
               value={formData.address2}
               onChange={(e) => handleInputChange('address2', e.target.value)}
-              className="mt-2 h-12"
+              className="mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400"
             />
           </div>
 
@@ -220,15 +220,15 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                 value={formData.city}
                 onChange={(e) => handleInputChange('city', e.target.value)}
                 className={cn(
-                  "mt-2 h-12",
-                  errors.city && "border-red-500 focus:ring-red-500"
+                  "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                  errors.city && "border-red-500 focus:ring-red-500 bg-red-50/20"
                 )}
               />
             </div>
             <div>
               <Label htmlFor="country" className="text-foreground font-medium">Country *</Label>
               <Select value={formData.country} onValueChange={(value) => handleInputChange('country', value)}>
-                <SelectTrigger className="mt-2 h-12">
+                <SelectTrigger className="mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400">
                   <SelectValue placeholder="United States" />
                 </SelectTrigger>
                 <SelectContent>
@@ -247,8 +247,8 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                 value={formData.postalCode}
                 onChange={(e) => handleInputChange('postalCode', e.target.value)}
                 className={cn(
-                  "mt-2 h-12",
-                  errors.postalCode && "border-red-500 focus:ring-red-500"
+                  "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                  errors.postalCode && "border-red-500 focus:ring-red-500 bg-red-50/20"
                 )}
               />
             </div>
@@ -265,8 +265,8 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
               value={formData.email}
               onChange={(e) => handleInputChange('email', e.target.value)}
               className={cn(
-                "mt-2 h-12",
-                errors.email && "border-red-500 focus:ring-red-500"
+                "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                errors.email && "border-red-500 focus:ring-red-500 bg-red-50/20"
               )}
             />
           </div>
@@ -281,8 +281,8 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
               value={formData.phone}
               onChange={(e) => handleInputChange('phone', e.target.value)}
               className={cn(
-                "mt-2 h-12",
-                errors.phone && "border-red-500 focus:ring-red-500"
+                "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                errors.phone && "border-red-500 focus:ring-red-500 bg-red-50/20"
               )}
             />
           </div>
