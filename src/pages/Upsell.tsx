@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import CountdownTimer from "@/components/order/CountdownTimer";
 import { useNavigate } from "react-router-dom";
+import threeStallionBottles from "@/assets/three-stallion-commander-bottles.png";
 
 const Upsell = () => {
   const navigate = useNavigate();
@@ -13,6 +14,22 @@ const Upsell = () => {
   return (
     <div className="min-h-screen bg-background">
       <CountdownTimer />
+      
+      {/* Three Stallion Commander Bottles Header */}
+      <div className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <div className="container mx-auto px-4 py-2">
+          <div className="flex items-center justify-center">
+            <img 
+              src={threeStallionBottles}
+              alt="3 Bottles of Stallion Commander"
+              className="h-16 sm:h-20 md:h-24 w-auto max-w-full object-contain"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+            />
+          </div>
+        </div>
+      </div>
       
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto text-center">
