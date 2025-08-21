@@ -14,97 +14,99 @@ export const HeroSection = () => {
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       
-      <div className="relative container mx-auto px-4 py-2 sm:py-4 md:py-6">
+      <div className="relative container mx-auto px-4 py-4 sm:py-6 md:py-8">
         <div className="relative min-h-[calc(100vh-80px)]">
-          {/* Hero Image - Top Right */}
-          <div className="absolute top-0 right-0 w-1/2 sm:w-2/5 md:w-1/3 lg:w-2/5 xl:w-1/3 z-10">
-            <div className="relative bg-gradient-card p-3 sm:p-4 md:p-6 rounded-2xl border border-border shadow-premium">
-              <img 
-                src={coupleImage} 
-                alt="Confident mature man with beautiful woman - Stallion Commander results" 
-                className="w-full drop-shadow-2xl rounded-xl"
-                loading="eager"
-                decoding="async"
-                fetchPriority="high"
-              />
-              
-              <div className="absolute -top-1 -right-1 sm:top-2 sm:-right-2 bg-primary text-primary-foreground px-2 py-1 sm:px-3 sm:py-1 rounded-full font-bold animate-glow-pulse text-xs sm:text-sm">
-                LIMITED TIME
-              </div>
-            </div>
+          
+          {/* Mobile-First Layout */}
+          <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 xl:gap-12">
             
-            {/* Background Glow */}
-            <div className="absolute inset-0 bg-primary opacity-20 blur-3xl -z-10" />
-          </div>
-
-          {/* Main Content */}
-          <div className="relative z-20 pt-2 sm:pt-3 md:pt-4 pr-[52%] sm:pr-[42%] md:pr-[35%] lg:pr-[42%] xl:pr-[35%]">
-            {/* Badge and Free Shipping */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-4 sm:mb-6">
-              <div className="inline-flex items-center gap-2 bg-gradient-card border border-border px-3 py-2 sm:px-4 sm:py-2 lg:px-5 lg:py-3 rounded-full">
-                <Trophy className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                <span className="text-sm sm:text-base font-medium text-foreground">#1 Male Vitality Formula</span>
-              </div>
-              <div className="inline-flex items-center gap-2 bg-card border border-border px-3 py-2 sm:px-4 sm:py-2 lg:px-5 lg:py-3 rounded-full">
-                <span className="text-sm sm:text-base font-semibold text-foreground">FREE SHIPPING</span>
-              </div>
-            </div>
-            
-            {/* Main Headline */}
-            <div className="space-y-3 sm:space-y-4 lg:space-y-6 text-center lg:text-left">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-foreground leading-tight">
-                UNLEASH YOUR
-                <span className="block bg-gradient-primary bg-clip-text text-transparent">
-                  STALLION POWER
-                </span>
-              </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground font-medium leading-relaxed">
-                The ultimate male performance enhancer that transforms ordinary men into unstoppable Stallions
-              </p>
-            </div>
-            
-            {/* Benefits */}
-            <div className="grid grid-cols-1 gap-3 sm:gap-4 mt-6">
-              {[
-                { icon: Star, text: "Explosive Energy" },
-                { icon: Shield, text: "Enhanced Performance" },
-                { icon: Trophy, text: "Supreme Confidence" }
-              ].map((benefit, index) => (
-                <div key={index} className="flex items-center gap-4 bg-card border border-border p-3 sm:p-4 lg:p-6 rounded-xl hover:bg-gradient-card transition-all duration-300">
-                  <benefit.icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-primary flex-shrink-0" />
-                  <span className="font-bold text-foreground text-sm sm:text-base lg:text-lg">{benefit.text}</span>
+            {/* Main Content - Full width on mobile, left side on desktop */}
+            <div className="w-full lg:w-3/5 xl:w-2/3 space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1">
+              {/* Badge and Free Shipping */}
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-3">
+                <div className="inline-flex items-center gap-2 bg-gradient-card border border-border px-3 py-2 sm:px-4 sm:py-2 rounded-full">
+                  <Trophy className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                  <span className="text-xs sm:text-sm lg:text-base font-medium text-foreground">#1 Male Vitality Formula</span>
                 </div>
-              ))}
-            </div>
+                <div className="inline-flex items-center gap-2 bg-card border border-border px-3 py-2 sm:px-4 sm:py-2 rounded-full">
+                  <span className="text-xs sm:text-sm lg:text-base font-semibold text-foreground">FREE SHIPPING</span>
+                </div>
+              </div>
             
-            {/* CTA Button */}
-            <div className="pt-6 sm:pt-8">
-              <div className="flex justify-center">
-                <Link to="/order">
-                  <Button variant="hero" size="xl" className="text-base sm:text-lg md:text-xl lg:text-2xl px-6 py-4 sm:px-8 sm:py-6 lg:py-8 font-black">
+              {/* Main Headline */}
+              <div className="space-y-3 sm:space-y-4">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-foreground leading-tight">
+                  UNLEASH YOUR
+                  <span className="block bg-gradient-primary bg-clip-text text-transparent">
+                    STALLION POWER
+                  </span>
+                </h1>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  The ultimate male performance enhancer that transforms ordinary men into unstoppable Stallions
+                </p>
+              </div>
+            
+              {/* Benefits */}
+              <div className="grid grid-cols-1 gap-2 sm:gap-3">
+                {[
+                  { icon: Star, text: "Explosive Energy" },
+                  { icon: Shield, text: "Enhanced Performance" },
+                  { icon: Trophy, text: "Supreme Confidence" }
+                ].map((benefit, index) => (
+                  <div key={index} className="flex items-center gap-3 bg-card border border-border p-3 sm:p-4 rounded-lg hover:bg-gradient-card transition-all duration-300">
+                    <benefit.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
+                    <span className="font-bold text-foreground text-sm sm:text-base">{benefit.text}</span>
+                  </div>
+                ))}
+              </div>
+            
+              {/* CTA Button */}
+              <div className="pt-4">
+                <Link to="/order" className="block">
+                  <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base md:text-lg font-black px-8 py-4">
                     CLAIM YOUR POWER NOW
                   </Button>
                 </Link>
               </div>
-            </div>
             
-            {/* Trust Indicators */}
-            <div className="pt-4 sm:pt-6 mt-6">
-              <div className="border-t border-border pt-4 sm:pt-6">
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-                  <div className="flex items-center gap-3">
-                    <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                    <span className="text-sm sm:text-base font-medium text-muted-foreground">90-Day Guarantee</span>
-                  </div>
+              {/* Trust Indicators */}
+              <div className="pt-4 border-t border-border">
+                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-6">
                   <div className="flex items-center gap-2">
+                    <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                    <span className="text-xs sm:text-sm font-medium text-muted-foreground">90-Day Guarantee</span>
+                  </div>
+                  <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
+                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-primary text-primary" />
                     ))}
-                    <span className="text-sm sm:text-base font-medium text-muted-foreground ml-3">4.9/5 (2,847 reviews)</span>
+                    <span className="text-xs sm:text-sm font-medium text-muted-foreground ml-2">4.9/5 (2,847 reviews)</span>
                   </div>
                 </div>
               </div>
             </div>
+            
+            {/* Hero Image - Right side on desktop, top on mobile */}
+            <div className="w-full lg:w-2/5 xl:w-1/3 order-1 lg:order-2">
+              <div className="relative bg-gradient-card p-4 sm:p-6 rounded-2xl border border-border shadow-premium max-w-md mx-auto">
+                <img 
+                  src={coupleImage} 
+                  alt="Confident mature man with beautiful woman - Stallion Commander results" 
+                  className="w-full drop-shadow-2xl rounded-xl"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                />
+                
+                <div className="absolute -top-2 -right-2 bg-primary text-primary-foreground px-3 py-1 rounded-full font-bold animate-glow-pulse text-xs sm:text-sm">
+                  LIMITED TIME
+                </div>
+              </div>
+              
+              {/* Background Glow */}
+              <div className="absolute inset-0 bg-primary opacity-20 blur-3xl -z-10" />
+            </div>
+            
           </div>
         </div>
       </div>
