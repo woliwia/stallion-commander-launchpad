@@ -1,8 +1,9 @@
-import { lazy, Suspense } from "react";
+import { useState } from "react";
 import OrderHeader from "@/components/order/OrderHeader";
 import CountdownTimer from "@/components/order/CountdownTimer";
 import LimitedTimeOffer from "@/components/order/LimitedTimeOffer";
-import PackageCard from "@/components/order/PackageCard";
+import PackageSelector from "@/components/order/PackageSelector";
+import CheckoutForm from "@/components/order/CheckoutForm";
 import TrustBadges from "@/components/order/TrustBadges";
 import BeforeAfterSection from "@/components/order/BeforeAfterSection";
 import ReviewsSection from "@/components/order/ReviewsSection";
@@ -47,6 +48,8 @@ const packages = [
 ];
 
 const Order = () => {
+  const [selectedPackage, setSelectedPackage] = useState(packages[1]); // Default to popular package
+
   return (
     <div className="min-h-screen bg-gradient-dark">
       <CountdownTimer />
@@ -56,34 +59,47 @@ const Order = () => {
         {/* Page Header */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-foreground mb-4 sm:mb-6 md:mb-8 leading-tight">
-            CHOOSE YOUR
-            <span className="block bg-gradient-primary bg-clip-text text-transparent">
-              STALLION PACKAGE
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              GET UP TO 68% OFF
             </span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-            Select the perfect package to unlock your true potential. All packages include our 90-day money-back guarantee.
+            Hurry, this is the best price you can get on Stallion Commander!
+          </p>
+          <p className="text-base sm:text-lg text-primary font-semibold mt-2">
+            If you try Stallion Commander today you'll also get <span className="font-bold">FREE shipping</span>.
           </p>
         </div>
 
         <LimitedTimeOffer />
 
+        {/* Main Content Grid */}
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
-            {packages.map((pkg) => (
-              <Suspense key={pkg.id} fallback={<div className="animate-pulse bg-muted rounded-2xl h-96" />}>
-                <PackageCard 
-                  pkg={pkg}
-                  productImage={productImage}
-                  commanderPackImage={commanderPackImage}
-                  ultimatePackImage={ultimatePackImage}
-                />
-              </Suspense>
-            ))}
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
+            {/* Left Side - Package Selection */}
+            <div className="order-2 xl:order-1">
+              <PackageSelector
+                packages={packages}
+                selectedPackage={selectedPackage}
+                onPackageSelect={setSelectedPackage}
+                productImage={productImage}
+                commanderPackImage={commanderPackImage}
+                ultimatePackImage={ultimatePackImage}
+              />
+            </div>
+
+            {/* Right Side - Checkout Form */}
+            <div className="order-1 xl:order-2">
+              <CheckoutForm selectedPackage={selectedPackage} />
+            </div>
           </div>
         </div>
 
-        <TrustBadges />
+        {/* Trust Badges - Below main content */}
+        <div className="mt-12 sm:mt-16 md:mt-20">
+          <TrustBadges />
+        </div>
+
         <BeforeAfterSection />
         <ReviewsSection />
       </div>

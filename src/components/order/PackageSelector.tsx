@@ -1,0 +1,153 @@
+import { useState } from "react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Check } from "lucide-react";
+
+interface Package {
+  id: string;
+  name: string;
+  bottles: number;
+  originalPrice: number;
+  price: number;
+  savings: number;
+  popular: boolean;
+  features: string[];
+}
+
+interface PackageSelectorProps {
+  packages: Package[];
+  selectedPackage: Package | null;
+  onPackageSelect: (pkg: Package) => void;
+  productImage: string;
+  commanderPackImage: string;
+  ultimatePackImage: string;
+}
+
+const PackageSelector = ({ 
+  packages, 
+  selectedPackage, 
+  onPackageSelect,
+  productImage,
+  commanderPackImage,
+  ultimatePackImage
+}: PackageSelectorProps) => {
+  const getImageSrc = (bottles: number) => {
+    if (bottles === 1) return productImage;
+    if (bottles === 3) return commanderPackImage;
+    return ultimatePackImage;
+  };
+
+  const getImageAlt = (bottles: number) => {
+    if (bottles === 1) return "Health Commander Male Formula - Single Bottle";
+    if (bottles === 3) return "Health Commander Male Formula - Buy 2 Get 1 FREE";
+    return "Health Commander Male Formula - Buy 3 Get 3 FREE";
+  };
+
+  return (
+    <div className="space-y-6">
+      <div className="text-center mb-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground mb-4">
+          Step 1: <span className="text-primary">Select Order Quantity</span>
+        </h2>
+      </div>
+
+      <div className="space-y-4">
+        {packages.map((pkg) => {
+          const isSelected = selectedPackage?.id === pkg.id;
+          const pricePerBottle = Math.round(pkg.price / pkg.bottles);
+          const originalPricePerBottle = Math.round(pkg.originalPrice / pkg.bottles);
+          const discountPercent = Math.round(((pkg.originalPrice - pkg.price) / pkg.originalPrice) * 100);
+
+          return (
+            <Card
+              key={pkg.id}
+              className={`relative p-6 cursor-pointer transition-all duration-300 border-2 ${
+                isSelected 
+                  ? 'border-primary bg-primary/5 shadow-glow' 
+                  : 'border-border hover:border-primary/50'
+              }`}
+              onClick={() => onPackageSelect(pkg)}
+            >
+              {/* Selection Radio Button */}
+              <div className="absolute top-4 left-4">
+                <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
+                  isSelected ? 'border-primary bg-primary' : 'border-muted-foreground'
+                }`}>
+                  {isSelected && <Check className="w-3 h-3 text-primary-foreground" />}
+                </div>
+              </div>
+
+              {/* Popular Badge */}
+              {pkg.popular && (
+                <div className="absolute top-4 right-4">
+                  <Badge className="bg-primary text-primary-foreground font-bold">
+                    Most Popular
+                  </Badge>
+                </div>
+              )}
+
+              {/* Discount Badge */}
+              <div className="absolute top-4 right-20">
+                <Badge variant="secondary" className="bg-green-600 text-white font-bold">
+                  Save {discountPercent}%
+                </Badge>
+              </div>
+
+              <div className="flex items-center gap-6 pl-8">
+                {/* Package Image */}
+                <div className="flex-shrink-0">
+                  <img 
+                    src={getImageSrc(pkg.bottles)}
+                    alt={getImageAlt(pkg.bottles)}
+                    className="w-24 h-24 sm:w-32 sm:h-32 object-contain drop-shadow-lg"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Package Info */}
+                <div className="flex-1">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
+                    {pkg.bottles} BOTTLE{pkg.bottles > 1 ? 'S' : ''}
+                    {pkg.bottles === 3 && <span className="text-primary"> + 1 FREE</span>}
+                    {pkg.bottles === 6 && <span className="text-primary"> + 3 FREE</span>}
+                  </h3>
+
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="text-2xl sm:text-3xl font-black text-foreground">
+                      ${pricePerBottle}
+                      <span className="text-sm font-normal text-muted-foreground"> each</span>
+                    </div>
+                    <div className="text-lg text-muted-foreground line-through">
+                      Reg. ${originalPricePerBottle}
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="text-lg font-semibold text-primary">
+                      Savings ${pkg.savings}
+                    </div>
+                    <div className="text-lg font-semibold text-primary">
+                      FREE SHIPPING
+                    </div>
+                  </div>
+                </div>
+
+                {/* Total Price */}
+                <div className="text-right">
+                  <div className="text-3xl sm:text-4xl font-black text-foreground">
+                    ${pkg.price}
+                  </div>
+                  <div className="text-lg text-muted-foreground line-through">
+                    ${pkg.originalPrice}
+                  </div>
+                </div>
+              </div>
+            </Card>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default PackageSelector;
