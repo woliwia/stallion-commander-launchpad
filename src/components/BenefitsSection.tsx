@@ -2,7 +2,7 @@ import { Battery, Brain, Heart, Zap, Shield, Target } from "lucide-react";
 import vascularDiagram from "@/assets/vascular-enhancement-diagram.png";
 import diverseAppearancesBeautyBar from "@/assets/diverse-appearances-beauty-bar.png";
 import fullFaceSurprisedOrgasmBar from "@/assets/full-face-surprised-orgasm-bar.png";
-import attractiveWomenBeautyBar from "@/assets/attractive-women-beauty-bar.png";
+import muscularMenLiftingWeightsBar from "@/assets/muscular-men-lifting-weights-bar.png";
 
 const benefits = [
   {
@@ -62,8 +62,8 @@ export const BenefitsSection = () => {
           <div className="mt-responsive-sm">
             <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
               <img 
-                src={attractiveWomenBeautyBar}
-                alt="Beautiful confident women"
+                src={muscularMenLiftingWeightsBar}
+                alt="Muscular middle-aged men lifting weights showing strength and determination"
                 className="w-full h-16 sm:h-20 md:h-24 lg:h-32 object-cover"
                 loading="lazy"
                 decoding="async"
