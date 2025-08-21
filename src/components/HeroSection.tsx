@@ -38,9 +38,9 @@ export const HeroSection = () => {
           </div>
 
           {/* Main Content */}
-          <div className="relative z-20 pt-4 sm:pt-6 md:pt-8 pr-[52%] sm:pr-[42%] md:pr-[35%] lg:pr-[42%] xl:pr-[35%]">
+          <div className="relative z-20 pt-2 sm:pt-3 md:pt-4 pr-[52%] sm:pr-[42%] md:pr-[35%] lg:pr-[42%] xl:pr-[35%]">
             {/* Badge and Free Shipping */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-4 sm:mb-6">
               <div className="inline-flex items-center gap-2 bg-gradient-card border border-border px-3 py-2 sm:px-4 sm:py-2 lg:px-5 lg:py-3 rounded-full">
                 <Trophy className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                 <span className="text-sm sm:text-base font-medium text-foreground">#1 Male Vitality Formula</span>
