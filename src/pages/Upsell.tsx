@@ -34,15 +34,6 @@ const Upsell = () => {
             </p>
           </div>
           
-          {/* Stallion Commander Bottles */}
-          <div className="mb-12">
-            <img 
-              src="/lovable-uploads/485000f9-073a-41dc-b7e0-853ab55820a4.png"
-              alt="3 Bottles of Stallion Commander"
-              className="w-full max-w-md mx-auto h-auto object-contain"
-            />
-          </div>
-          
           {/* User Uploaded Image */}
           <div className="mb-12">
             <img 
