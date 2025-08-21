@@ -14,25 +14,52 @@ export const HeroSection = () => {
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       
-      <div className="relative container mx-auto px-4 py-8 sm:py-12 md:py-16 lg:py-20">
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-center min-h-[calc(100vh-200px)]">
+      <div className="relative container mx-auto px-4 py-4 sm:py-6 md:py-8 lg:py-12">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-center min-h-[calc(100vh-120px)]">
+          {/* Right Content - Product Image - Mobile First */}
+          <div className="relative animate-scale-in order-1 lg:order-2 mb-6 lg:mb-0">
+            <div className="relative z-10 bg-gradient-card p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl lg:rounded-3xl border border-border shadow-premium">
+              <img 
+                src={coupleImage} 
+                alt="Confident mature man with beautiful woman - Stallion Commander results" 
+                className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto drop-shadow-2xl rounded-xl lg:rounded-2xl"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+              />
+              
+              {/* Floating Elements */}
+              <div className="absolute top-2 -right-2 sm:top-4 sm:-right-4 lg:-right-6 bg-primary text-primary-foreground px-3 py-1 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full font-bold animate-glow-pulse text-xs sm:text-sm lg:text-base">
+                LIMITED TIME
+              </div>
+              <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 lg:-left-6 bg-card border border-border px-3 py-1 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full font-semibold text-xs sm:text-sm lg:text-base">
+                FREE SHIPPING
+              </div>
+            </div>
+            
+            {/* Background Glow */}
+            <div className="absolute inset-0 bg-primary opacity-20 blur-3xl -z-10" />
+          </div>
+
           {/* Left Content */}
-          <div className="space-y-6 sm:space-y-8 animate-slide-up order-2 lg:order-1">
+          <div className="space-y-4 sm:space-y-6 lg:space-y-8 animate-slide-up order-2 lg:order-1">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-gradient-card border border-border px-4 py-2 sm:px-5 sm:py-3 rounded-full">
-              <Trophy className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-              <span className="text-sm sm:text-base font-medium text-foreground">#1 Male Vitality Formula</span>
+            <div className="flex justify-center lg:justify-start">
+              <div className="inline-flex items-center gap-2 bg-gradient-card border border-border px-3 py-2 sm:px-4 sm:py-2 lg:px-5 lg:py-3 rounded-full">
+                <Trophy className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                <span className="text-sm sm:text-base font-medium text-foreground">#1 Male Vitality Formula</span>
+              </div>
             </div>
             
             {/* Main Headline */}
-            <div className="space-y-4 sm:space-y-6">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-foreground leading-tight">
+            <div className="space-y-3 sm:space-y-4 lg:space-y-6 text-center lg:text-left">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-foreground leading-tight">
                 UNLEASH YOUR
                 <span className="block bg-gradient-primary bg-clip-text text-transparent">
                   STALLION POWER
                 </span>
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground font-medium leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground font-medium leading-relaxed">
                 The ultimate male performance enhancer that transforms ordinary men into unstoppable Stallions
               </p>
             </div>
@@ -52,9 +79,9 @@ export const HeroSection = () => {
             </div>
             
             {/* CTA Button */}
-            <div className="pt-6">
-              <Link to="/order">
-                <Button variant="hero" size="xl" className="w-full text-lg sm:text-xl md:text-2xl px-8 py-6 sm:py-8 font-black">
+            <div className="pt-4 sm:pt-6 flex justify-center">
+              <Link to="/order" className="w-full max-w-md lg:max-w-none">
+                <Button variant="hero" size="xl" className="w-full text-base sm:text-lg md:text-xl lg:text-2xl px-6 py-4 sm:px-8 sm:py-6 lg:py-8 font-black">
                   CLAIM YOUR POWER NOW
                 </Button>
               </Link>
@@ -75,27 +102,6 @@ export const HeroSection = () => {
             </div>
           </div>
           
-          {/* Right Content - Product Image */}
-          <div className="relative animate-scale-in order-1 lg:order-2">
-            <div className="relative z-10 bg-gradient-card p-6 sm:p-8 md:p-10 lg:p-12 rounded-3xl border border-border shadow-premium">
-              <img 
-                src={coupleImage} 
-                alt="Confident mature man with beautiful woman - Stallion Commander results" 
-                className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto drop-shadow-2xl rounded-2xl"
-              />
-              
-              {/* Floating Elements */}
-              <div className="absolute top-4 -right-4 sm:-right-6 bg-primary text-primary-foreground px-4 py-2 sm:px-6 sm:py-3 rounded-full font-bold animate-glow-pulse text-sm sm:text-base">
-                LIMITED TIME
-              </div>
-              <div className="absolute -bottom-4 -left-4 sm:-left-6 bg-card border border-border px-4 py-2 sm:px-6 sm:py-3 rounded-full font-semibold text-sm sm:text-base">
-                FREE SHIPPING
-              </div>
-            </div>
-            
-            {/* Background Glow */}
-            <div className="absolute inset-0 bg-primary opacity-20 blur-3xl -z-10" />
-          </div>
         </div>
       </div>
     </section>
