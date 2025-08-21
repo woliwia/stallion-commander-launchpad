@@ -147,6 +147,19 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
         </div>
       </Card>
 
+      <div className="flex gap-4 justify-center">
+        <img 
+          src="/lovable-uploads/12d90191-607b-43c6-8b14-bc3792309dfe.png" 
+          alt="Apple Pay"
+          className="h-14 w-auto"
+        />
+        <img 
+          src="/lovable-uploads/e8af47a8-93b8-476a-a321-a82dd9a5babd.png" 
+          alt="Google Pay"
+          className="h-14 w-auto"
+        />
+      </div>
+
       <div className="text-center text-white font-medium">
         OR FILL OUT DETAILS
       </div>
