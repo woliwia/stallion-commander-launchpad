@@ -69,9 +69,9 @@ const Order = () => {
 
         {/* Main Content Grid - Two Step Layout */}
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-10 md:gap-12 xl:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
             {/* Step 1 - Package Selection (Left Side) */}
-            <div className="order-1 xl:order-1 xl:border-r xl:border-border/30 xl:pr-8">
+            <div className="order-1 lg:order-1 lg:border-r lg:border-border/30 lg:pr-8">
               <PackageSelector
                 packages={packages}
                 selectedPackage={selectedPackage}
@@ -83,7 +83,7 @@ const Order = () => {
             </div>
 
             {/* Step 2 - Checkout Form (Right Side) */}
-            <div className="order-2 xl:order-2 xl:pl-8">
+            <div className="order-2 lg:order-2 lg:pl-8">
               <CheckoutForm selectedPackage={selectedPackage} />
             </div>
           </div>

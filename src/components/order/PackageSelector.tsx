@@ -45,7 +45,7 @@ const PackageSelector = ({
 
   return (
     <div className="space-y-6">
-      <div className="text-center xl:text-left mb-8">
+      <div className="text-center lg:text-left mb-8">
         <div className="inline-flex items-center gap-3 mb-4">
           <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-black text-lg">
             1
@@ -54,7 +54,7 @@ const PackageSelector = ({
             <span className="text-primary">Select Order Quantity</span>
           </h2>
         </div>
-        <div className="h-1 w-full bg-gradient-to-r from-primary to-primary/30 rounded xl:mb-6"></div>
+        <div className="h-1 w-full bg-gradient-to-r from-primary to-primary/30 rounded lg:mb-6"></div>
       </div>
 
       <div className="space-y-4">
