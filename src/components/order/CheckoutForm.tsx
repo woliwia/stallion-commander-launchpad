@@ -162,9 +162,10 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                 value={formData.firstName}
                 onChange={(e) => handleInputChange('firstName', e.target.value)}
                 className={cn(
-                  "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                  "mt-2 h-12 border-blue-200 focus:border-blue-400",
                   errors.firstName && "border-red-500 focus:ring-red-500 bg-red-50/20"
                 )}
+                style={{ backgroundColor: !errors.firstName ? '#e0f4ff' : undefined }}
               />
             </div>
             <div>
@@ -176,9 +177,10 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                 value={formData.lastName}
                 onChange={(e) => handleInputChange('lastName', e.target.value)}
                 className={cn(
-                  "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                  "mt-2 h-12 border-blue-200 focus:border-blue-400",
                   errors.lastName && "border-red-500 focus:ring-red-500 bg-red-50/20"
                 )}
+                style={{ backgroundColor: !errors.lastName ? '#e0f4ff' : undefined }}
               />
             </div>
           </div>
@@ -193,9 +195,10 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
               value={formData.address}
               onChange={(e) => handleInputChange('address', e.target.value)}
               className={cn(
-                "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                "mt-2 h-12 border-blue-200 focus:border-blue-400",
                 errors.address && "border-red-500 focus:ring-red-500 bg-red-50/20"
               )}
+              style={{ backgroundColor: !errors.address ? '#e0f4ff' : undefined }}
             />
           </div>
 
@@ -206,7 +209,8 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
               placeholder="Apartment, suite, etc." 
               value={formData.address2}
               onChange={(e) => handleInputChange('address2', e.target.value)}
-              className="mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400"
+              className="mt-2 h-12 border-blue-200 focus:border-blue-400"
+              style={{ backgroundColor: '#e0f4ff' }}
             />
           </div>
 
@@ -220,15 +224,16 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                 value={formData.city}
                 onChange={(e) => handleInputChange('city', e.target.value)}
                 className={cn(
-                  "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                  "mt-2 h-12 border-blue-200 focus:border-blue-400",
                   errors.city && "border-red-500 focus:ring-red-500 bg-red-50/20"
                 )}
+                style={{ backgroundColor: !errors.city ? '#e0f4ff' : undefined }}
               />
             </div>
             <div>
               <Label htmlFor="country" className="text-foreground font-medium">Country *</Label>
               <Select value={formData.country} onValueChange={(value) => handleInputChange('country', value)}>
-                <SelectTrigger className="mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400">
+                <SelectTrigger className="mt-2 h-12 border-blue-200 focus:border-blue-400" style={{ backgroundColor: '#e0f4ff' }}>
                   <SelectValue placeholder="United States" />
                 </SelectTrigger>
                 <SelectContent>
@@ -247,9 +252,10 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                 value={formData.postalCode}
                 onChange={(e) => handleInputChange('postalCode', e.target.value)}
                 className={cn(
-                  "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                  "mt-2 h-12 border-blue-200 focus:border-blue-400",
                   errors.postalCode && "border-red-500 focus:ring-red-500 bg-red-50/20"
                 )}
+                style={{ backgroundColor: !errors.postalCode ? '#e0f4ff' : undefined }}
               />
             </div>
           </div>
@@ -265,9 +271,10 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
               value={formData.email}
               onChange={(e) => handleInputChange('email', e.target.value)}
               className={cn(
-                "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                "mt-2 h-12 border-blue-200 focus:border-blue-400",
                 errors.email && "border-red-500 focus:ring-red-500 bg-red-50/20"
               )}
+              style={{ backgroundColor: !errors.email ? '#e0f4ff' : undefined }}
             />
           </div>
 
@@ -281,9 +288,10 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
               value={formData.phone}
               onChange={(e) => handleInputChange('phone', e.target.value)}
               className={cn(
-                "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                "mt-2 h-12 border-blue-200 focus:border-blue-400",
                 errors.phone && "border-red-500 focus:ring-red-500 bg-red-50/20"
               )}
+              style={{ backgroundColor: !errors.phone ? '#e0f4ff' : undefined }}
             />
           </div>
 
@@ -302,9 +310,10 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                 value={formData.cardNumber}
                 onChange={(e) => handleInputChange('cardNumber', e.target.value)}
                 className={cn(
-                  "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                  "mt-2 h-12 border-blue-200 focus:border-blue-400",
                   errors.cardNumber && "border-red-500 focus:ring-red-500 bg-red-50/20"
                 )}
+                style={{ backgroundColor: !errors.cardNumber ? '#e0f4ff' : undefined }}
               />
             </div>
 
@@ -318,9 +327,10 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                   value={formData.expiry}
                   onChange={(e) => handleInputChange('expiry', e.target.value)}
                   className={cn(
-                    "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                    "mt-2 h-12 border-blue-200 focus:border-blue-400",
                     errors.expiry && "border-red-500 focus:ring-red-500 bg-red-50/20"
                   )}
+                  style={{ backgroundColor: !errors.expiry ? '#e0f4ff' : undefined }}
                 />
               </div>
               <div>
@@ -332,9 +342,10 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                   value={formData.cvv}
                   onChange={(e) => handleInputChange('cvv', e.target.value)}
                   className={cn(
-                    "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                    "mt-2 h-12 border-blue-200 focus:border-blue-400",
                     errors.cvv && "border-red-500 focus:ring-red-500 bg-red-50/20"
                   )}
+                  style={{ backgroundColor: !errors.cvv ? '#e0f4ff' : undefined }}
                 />
               </div>
             </div>
