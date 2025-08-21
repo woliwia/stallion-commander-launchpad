@@ -29,65 +29,65 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <section className="py-8 bg-background relative overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-20 bg-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
       
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-6">
+        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-foreground mb-6 sm:mb-8">
             REAL MEN,
             <span className="block bg-gradient-primary bg-clip-text text-transparent">
               REAL RESULTS
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed">
             Join thousands of satisfied customers who've unlocked their true potential with Stallion Commander.
           </p>
         </div>
         
         {/* Testimonials Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="bg-card border border-border p-8 rounded-xl shadow-premium hover:shadow-glow transition-all duration-300 animate-slide-up group"
+              className="bg-card border border-border p-6 sm:p-8 rounded-2xl shadow-premium hover:shadow-glow transition-all duration-300 animate-slide-up group"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Quote Icon */}
-              <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-6">
-                <Quote className="w-6 h-6 text-primary" />
+              <div className="bg-primary/10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-6">
+                <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
               </div>
               
               {/* Rating */}
-              <div className="flex items-center gap-1 mb-4">
+              <div className="flex items-center gap-1 mb-4 sm:mb-6">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                  <Star key={i} className="w-5 h-5 sm:w-6 sm:h-6 fill-primary text-primary" />
                 ))}
               </div>
               
               {/* Testimonial Text */}
-              <blockquote className="text-foreground leading-relaxed mb-6 font-medium">
+              <blockquote className="text-foreground leading-relaxed mb-6 font-medium text-base sm:text-lg">
                 "{testimonial.text}"
               </blockquote>
               
               {/* Highlight */}
-              <div className="bg-primary/10 border border-primary/20 px-4 py-2 rounded-full mb-6 inline-block">
-                <span className="text-primary font-semibold text-sm">"{testimonial.highlight}"</span>
+              <div className="bg-primary/10 border border-primary/20 px-4 py-2 sm:px-6 sm:py-3 rounded-full mb-6 inline-block">
+                <span className="text-primary font-semibold text-sm sm:text-base">"{testimonial.highlight}"</span>
               </div>
               
               {/* Customer Info */}
               <div className="border-t border-border pt-6">
-                <div className="font-bold text-foreground">{testimonial.name}</div>
-                <div className="text-muted-foreground text-sm">Age {testimonial.age} • {testimonial.location}</div>
+                <div className="font-bold text-foreground text-base sm:text-lg">{testimonial.name}</div>
+                <div className="text-muted-foreground text-sm sm:text-base">Age {testimonial.age} • {testimonial.location}</div>
               </div>
             </div>
           ))}
         </div>
         
         {/* Trust Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {[
             { number: "50K+", label: "Satisfied Customers" },
             { number: "4.9/5", label: "Average Rating" },
@@ -95,10 +95,10 @@ export const TestimonialsSection = () => {
             { number: "24/7", label: "Customer Support" }
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-black bg-gradient-primary bg-clip-text text-transparent mb-2">
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-primary bg-clip-text text-transparent mb-2 sm:mb-4">
                 {stat.number}
               </div>
-              <div className="text-muted-foreground font-medium">
+              <div className="text-muted-foreground font-medium text-sm sm:text-base md:text-lg">
                 {stat.label}
               </div>
             </div>

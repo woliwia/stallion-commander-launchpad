@@ -89,64 +89,64 @@ const Checkout = () => {
         </div>
       </header>
 
-      <div className="container mx-auto px-4 py-6 md:py-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-            {/* Order Summary */}
-            <Card className="p-4 md:p-5 bg-card border-2 border-border h-fit">
-              <h2 className="text-lg md:text-xl font-bold text-foreground mb-4">Order Summary</h2>
+      <div className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
+            {/* Order Summary - Appears first on mobile */}
+            <Card className="p-6 sm:p-8 bg-card border-2 border-border h-fit order-2 xl:order-1">
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-6">Order Summary</h2>
               
               {/* Package Details */}
-              <div className="space-y-3 mb-4">
-                <div className="flex items-start justify-between gap-3">
-                  <div className="flex items-center gap-3">
-                    <div className="border-2 border-blue-500 rounded-lg p-2 bg-blue-50/10 flex-shrink-0">
+              <div className="space-y-4 mb-6">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex items-center gap-4">
+                    <div className="border-2 border-blue-500 rounded-xl p-3 bg-blue-50/10 flex-shrink-0">
                       <img 
                         src={getImageSrc()}
                         alt={getImageAlt()}
-                        className="w-16 h-16 md:w-20 md:h-20 object-contain drop-shadow-lg"
+                        className="w-20 h-20 sm:w-24 sm:h-24 object-contain drop-shadow-lg"
                         loading="lazy"
                       />
                     </div>
                     <div className="min-w-0">
-                      <h3 className="font-bold text-foreground text-base md:text-lg">{selectedPackage.name}</h3>
-                      <p className="text-sm text-muted-foreground">{selectedPackage.bottles} Bottle{selectedPackage.bottles > 1 ? 's' : ''}</p>
+                      <h3 className="font-bold text-foreground text-lg sm:text-xl">{selectedPackage.name}</h3>
+                      <p className="text-base text-muted-foreground">{selectedPackage.bottles} Bottle{selectedPackage.bottles > 1 ? 's' : ''}</p>
                     </div>
                   </div>
                   {selectedPackage.popular && (
-                    <div className="bg-primary text-primary-foreground px-2 py-1 rounded-full text-xs font-bold flex-shrink-0">
+                    <div className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold flex-shrink-0">
                       MOST POPULAR
                     </div>
                   )}
                 </div>
 
                 {/* Price Breakdown */}
-                <div className="bg-muted/50 p-3 rounded-lg space-y-2">
-                  <div className="flex justify-between text-sm">
+                <div className="bg-muted/50 p-4 sm:p-5 rounded-xl space-y-3">
+                  <div className="flex justify-between text-base">
                     <span className="text-muted-foreground">Price per bottle:</span>
                     <div className="text-right">
                       <span className="font-semibold text-foreground">${pricePerBottle}</span>
                       <span className="text-muted-foreground line-through ml-2">${originalPricePerBottle}</span>
                     </div>
                   </div>
-                  <div className="flex justify-between text-sm">
+                  <div className="flex justify-between text-base">
                     <span className="text-muted-foreground">Quantity:</span>
                     <span className="font-semibold text-foreground">{selectedPackage.bottles} bottle{selectedPackage.bottles > 1 ? 's' : ''}</span>
                   </div>
-                  <div className="flex justify-between text-sm">
+                  <div className="flex justify-between text-base">
                     <span className="text-muted-foreground">Subtotal:</span>
                     <span className="font-semibold text-foreground">${selectedPackage.price}</span>
                   </div>
-                  <div className="flex justify-between text-sm">
+                  <div className="flex justify-between text-base">
                     <span className="text-muted-foreground">Shipping:</span>
                     <span className="font-semibold text-primary">FREE</span>
                   </div>
                   <Separator />
                   <div className="flex justify-between">
-                    <span className="font-bold text-foreground">Total:</span>
+                    <span className="font-bold text-foreground text-lg">Total:</span>
                     <div className="text-right">
-                      <span className="font-black text-foreground text-lg">${selectedPackage.price}</span>
-                      <div className="text-sm text-destructive font-semibold">
+                      <span className="font-black text-foreground text-xl">${selectedPackage.price}</span>
+                      <div className="text-base text-destructive font-semibold">
                         You save ${selectedPackage.savings}!
                       </div>
                     </div>
@@ -154,12 +154,12 @@ const Checkout = () => {
                 </div>
 
                 {/* Features */}
-                <div className="space-y-1 mt-3">
-                  <h4 className="font-semibold text-foreground text-sm">Included:</h4>
-                  <ul className="space-y-1">
+                <div className="space-y-2 mt-4">
+                  <h4 className="font-semibold text-foreground text-base">Included:</h4>
+                  <ul className="space-y-2">
                     {selectedPackage.features.map((feature, index) => (
-                      <li key={index} className="text-xs text-muted-foreground flex items-center gap-2">
-                        <div className="w-1 h-1 bg-primary rounded-full flex-shrink-0"></div>
+                      <li key={index} className="text-sm text-muted-foreground flex items-center gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
@@ -169,54 +169,54 @@ const Checkout = () => {
             </Card>
 
             {/* Checkout Form */}
-            <Card className="p-4 md:p-6 lg:p-8 bg-card border-2 border-border">
-              <div className="flex items-center gap-2 mb-6">
-                <CreditCard className="w-5 h-5 text-primary" />
-                <h2 className="text-xl md:text-2xl font-bold text-foreground">Payment Details</h2>
+            <Card className="p-6 sm:p-8 md:p-10 bg-card border-2 border-border order-1 xl:order-2">
+              <div className="flex items-center gap-3 mb-8">
+                <CreditCard className="w-6 h-6 text-primary" />
+                <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Payment Details</h2>
               </div>
 
-              <form className="space-y-6">
+              <form className="space-y-8">
                 {/* Contact Information */}
-                <div className="space-y-4">
-                  <h3 className="font-semibold text-foreground">Contact Information</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-6">
+                  <h3 className="font-semibold text-foreground text-lg">Contact Information</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="firstName" className="text-foreground">First Name</Label>
-                      <Input id="firstName" placeholder="John" className="mt-1" />
+                      <Label htmlFor="firstName" className="text-foreground text-base">First Name</Label>
+                      <Input id="firstName" placeholder="John" className="mt-2 h-12" />
                     </div>
                     <div>
-                      <Label htmlFor="lastName" className="text-foreground">Last Name</Label>
-                      <Input id="lastName" placeholder="Doe" className="mt-1" />
+                      <Label htmlFor="lastName" className="text-foreground text-base">Last Name</Label>
+                      <Input id="lastName" placeholder="Doe" className="mt-2 h-12" />
                     </div>
                   </div>
                   <div>
-                    <Label htmlFor="email" className="text-foreground">Email Address</Label>
-                    <Input id="email" type="email" placeholder="john.doe@example.com" className="mt-1" />
+                    <Label htmlFor="email" className="text-foreground text-base">Email Address</Label>
+                    <Input id="email" type="email" placeholder="john.doe@example.com" className="mt-2 h-12" />
                   </div>
                   <div>
-                    <Label htmlFor="phone" className="text-foreground">Phone Number</Label>
-                    <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" className="mt-1" />
+                    <Label htmlFor="phone" className="text-foreground text-base">Phone Number</Label>
+                    <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" className="mt-2 h-12" />
                   </div>
                 </div>
 
                 <Separator />
 
                 {/* Billing Address */}
-                <div className="space-y-4">
-                  <h3 className="font-semibold text-foreground">Billing Address</h3>
+                <div className="space-y-6">
+                  <h3 className="font-semibold text-foreground text-lg">Billing Address</h3>
                   <div>
-                    <Label htmlFor="address" className="text-foreground">Street Address</Label>
-                    <Input id="address" placeholder="123 Main Street" className="mt-1" />
+                    <Label htmlFor="address" className="text-foreground text-base">Street Address</Label>
+                    <Input id="address" placeholder="123 Main Street" className="mt-2 h-12" />
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="city" className="text-foreground">City</Label>
-                      <Input id="city" placeholder="New York" className="mt-1" />
+                      <Label htmlFor="city" className="text-foreground text-base">City</Label>
+                      <Input id="city" placeholder="New York" className="mt-2 h-12" />
                     </div>
                     <div>
-                      <Label htmlFor="state" className="text-foreground">State</Label>
+                      <Label htmlFor="state" className="text-foreground text-base">State</Label>
                       <Select>
-                        <SelectTrigger>
+                        <SelectTrigger className="mt-2 h-12">
                           <SelectValue placeholder="Select state" />
                         </SelectTrigger>
                         <SelectContent>
@@ -227,15 +227,15 @@ const Checkout = () => {
                       </Select>
                     </div>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="zipCode" className="text-foreground">ZIP Code</Label>
-                      <Input id="zipCode" placeholder="10001" className="mt-1" />
+                      <Label htmlFor="zipCode" className="text-foreground text-base">ZIP Code</Label>
+                      <Input id="zipCode" placeholder="10001" className="mt-2 h-12" />
                     </div>
                     <div>
-                      <Label htmlFor="country" className="text-foreground">Country</Label>
+                      <Label htmlFor="country" className="text-foreground text-base">Country</Label>
                       <Select>
-                        <SelectTrigger>
+                        <SelectTrigger className="mt-2 h-12">
                           <SelectValue placeholder="Select country" />
                         </SelectTrigger>
                         <SelectContent>
@@ -251,35 +251,35 @@ const Checkout = () => {
                 <Separator />
 
                 {/* Payment Method */}
-                <div className="space-y-4">
-                  <h3 className="font-semibold text-foreground">Payment Method</h3>
+                <div className="space-y-6">
+                  <h3 className="font-semibold text-foreground text-lg">Payment Method</h3>
                   <div>
-                    <Label htmlFor="cardNumber" className="text-foreground">Card Number</Label>
-                    <Input id="cardNumber" placeholder="1234 5678 9012 3456" className="mt-1" />
+                    <Label htmlFor="cardNumber" className="text-foreground text-base">Card Number</Label>
+                    <Input id="cardNumber" placeholder="1234 5678 9012 3456" className="mt-2 h-12" />
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="expiry" className="text-foreground">Expiry Date</Label>
-                      <Input id="expiry" placeholder="MM/YY" className="mt-1" />
+                      <Label htmlFor="expiry" className="text-foreground text-base">Expiry Date</Label>
+                      <Input id="expiry" placeholder="MM/YY" className="mt-2 h-12" />
                     </div>
                     <div>
-                      <Label htmlFor="cvv" className="text-foreground">CVV</Label>
-                      <Input id="cvv" placeholder="123" className="mt-1" />
+                      <Label htmlFor="cvv" className="text-foreground text-base">CVV</Label>
+                      <Input id="cvv" placeholder="123" className="mt-2 h-12" />
                     </div>
                   </div>
                 </div>
 
                 {/* Complete Order Button */}
-                <div className="pt-4">
+                <div className="pt-6">
                   <Button 
                     variant="hero" 
                     size="lg" 
-                    className="w-full text-lg font-bold"
+                    className="w-full text-lg sm:text-xl font-bold h-14 sm:h-16"
                     type="submit"
                   >
                     COMPLETE YOUR ORDER - ${selectedPackage.price}
                   </Button>
-                  <p className="text-xs text-muted-foreground text-center mt-3">
+                  <p className="text-sm text-muted-foreground text-center mt-4">
                     🔒 Your payment information is encrypted and secure. 90-day money-back guarantee.
                   </p>
                 </div>
