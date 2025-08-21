@@ -9,6 +9,7 @@ import Checkout from "./pages/Checkout";
 import Upsell from "./pages/Upsell";
 import FinalUpsell from "./pages/FinalUpsell";
 import ArganOilUpsell from "./pages/ArganOilUpsell";
+import BodyButterUpsell from "./pages/BodyButterUpsell";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/upsell" element={<Upsell />} />
           <Route path="/final-upsell" element={<FinalUpsell />} />
           <Route path="/argan-oil" element={<ArganOilUpsell />} />
+          <Route path="/body-butter" element={<BodyButterUpsell />} />
           <Route path="/checkout" element={<Checkout />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
