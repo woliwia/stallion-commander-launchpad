@@ -18,13 +18,13 @@ const ArganOilUpsell = () => {
           {/* Main Offer Text */}
           <div className="mb-8">
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4">
-              Wait - get fuller stronger hair and younger healthier skin and 100% organic lubricant...
+              Wait - get Fuller, STRONGER Hair and YOUNGER, Healthier SKIN plus your ULTIMATE 100% Organic Intimacy lubricant...
             </h1>
             <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2">
               Pure Argan Oil does it all
             </h2>
             <p className="text-xl md:text-2xl font-semibold text-foreground">
-              Get yours for only $29.99
+              Get yours for only $29.99 <span className="text-lg text-muted-foreground line-through">(regularly $99.99)</span>
             </p>
           </div>
           
