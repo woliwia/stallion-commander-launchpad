@@ -302,7 +302,14 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
 
           {/* Payment Method */}
           <div className="space-y-4">
-            <h3 className="font-bold text-foreground text-lg">Payment Information</h3>
+            <div className="flex items-center justify-between">
+              <h3 className="font-bold text-foreground text-lg">Payment Information</h3>
+              <img 
+                src="/lovable-uploads/f1dcde99-da67-417c-b2dc-6c20a1a0bb0a.png" 
+                alt="Accepted payment methods: Visa, Mastercard, American Express, and more"
+                className="h-6 opacity-80"
+              />
+            </div>
             
             <div>
               <Label htmlFor="cardNumber" className="text-foreground font-medium">Card Number *</Label>
