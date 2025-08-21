@@ -2,17 +2,22 @@ import beforeAfterImage from "@/assets/before-after-transformation.png";
 
 const BeforeAfterSection = () => {
   return (
-    <div className="mt-16 mb-12">
-      <div className="text-center mb-8">
+    <div className="mt-8 mb-12">
+      <div className="text-center mb-6">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-foreground mb-4">
           REAL RESULTS FROM
           <span className="block bg-gradient-primary bg-clip-text text-transparent">
             REAL MEN
           </span>
         </h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          See the incredible transformations achieved by men who chose Stallion Commander
-        </p>
+        <div className="max-w-full mx-auto">
+          <img 
+            src="/lovable-uploads/ad086c5e-10ee-4818-bdb8-bafe3c305c86.png"
+            alt="Women's satisfied expressions showing the incredible results"
+            className="w-full h-20 object-cover rounded-lg"
+            loading="lazy"
+          />
+        </div>
       </div>
       
       <div className="max-w-4xl mx-auto">
