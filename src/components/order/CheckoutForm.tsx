@@ -158,8 +158,8 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
           className="w-full h-20 object-contain"
         />
       </div>
-      <Card className="p-6 sm:p-8 mt-2">
-        <form className="space-y-6" onSubmit={handleSubmit}>
+      <Card className="p-4 sm:p-6 mt-2">
+        <form className="space-y-4" onSubmit={handleSubmit}>
           {/* Contact Information */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
@@ -375,7 +375,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
       />
 
       {/* Order Summary */}
-      <Card className="p-6 bg-gradient-card border-2 border-primary/20">
+      <Card className="p-4 bg-gradient-card border-2 border-primary/20">
         <h3 className="font-bold text-foreground text-lg mb-4">Order Summary</h3>
         
         <div className="space-y-3">

@@ -2,7 +2,7 @@ import beforeAfterImage from "@/assets/before-after-transformation.png";
 
 const BeforeAfterSection = () => {
   return (
-    <div className="mt-8 mb-12">
+    <div className="mt-6 mb-8">
       <div className="text-center mb-6">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-foreground mb-4">
           REAL RESULTS FROM

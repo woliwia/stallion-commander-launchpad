@@ -91,7 +91,7 @@ const Order = () => {
             </div>
 
             {/* Step 2 - Checkout Form (Right Side) */}
-            <div className="order-2 lg:order-2 lg:pl-8">
+            <div className="order-2 lg:order-2 lg:pl-4">
               <CheckoutForm selectedPackage={selectedPackage} />
             </div>
           </div>
