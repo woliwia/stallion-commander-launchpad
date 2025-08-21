@@ -2,12 +2,11 @@ import { Battery, Brain, Heart, Zap, Shield, Target } from "lucide-react";
 import vascularDiagram from "@/assets/vascular-enhancement-diagram.png";
 import diverseAppearancesBeautyBar from "@/assets/diverse-appearances-beauty-bar.png";
 import fullFaceSurprisedOrgasmBar from "@/assets/full-face-surprised-orgasm-bar.png";
-import smilingWhiteWomanBeautyBar from "@/assets/smiling-white-woman-beauty-bar.png";
 
 const benefits = [
   {
     icon: Zap,
-    title: "Explosive Energy",
+    title: "Explosive Energy", 
     description: "Experience unstoppable energy that lasts all day and night, powering through any challenge."
   },
   {
@@ -85,8 +84,8 @@ export const BenefitsSection = () => {
         {/* Beauty Bar Collage */}
         <div className="mt-8 sm:mt-12 -mx-4">
           <img 
-            src={smilingWhiteWomanBeautyBar}
-            alt="Beautiful smiling woman showing confidence and satisfaction"
+            src={diverseAppearancesBeautyBar}
+            alt="Beautiful diverse women showing confidence and satisfaction - blonde, brunette, Spanish, Italian, and Norwegian"
             className="w-full h-24 sm:h-32 md:h-40 lg:h-48 object-cover"
             loading="lazy"
             decoding="async"
