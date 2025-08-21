@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
@@ -9,6 +8,7 @@ interface Package {
   bottles: number;
   originalPrice: number;
   price: number;
+  pricePerBottle: number;
   savings: number;
   popular: boolean;
   features: string[];
@@ -60,9 +60,6 @@ const PackageSelector = ({
       <div className="space-y-4">
         {packages.map((pkg) => {
           const isSelected = selectedPackage?.id === pkg.id;
-          const pricePerBottle = Math.round(pkg.price / pkg.bottles);
-          const originalPricePerBottle = Math.round(pkg.originalPrice / pkg.bottles);
-          const discountPercent = Math.round(((pkg.originalPrice - pkg.price) / pkg.originalPrice) * 100);
 
           return (
             <Card
@@ -92,13 +89,6 @@ const PackageSelector = ({
                 </div>
               )}
 
-              {/* Discount Badge */}
-              <div className="absolute top-4 right-20">
-                <Badge variant="secondary" className="bg-green-600 text-white font-bold">
-                  Save {discountPercent}%
-                </Badge>
-              </div>
-
               <div className="flex items-center gap-6 pl-8">
                 {/* Package Image */}
                 <div className="flex-shrink-0">
@@ -120,21 +110,13 @@ const PackageSelector = ({
 
                   <div className="flex items-center gap-4 mb-4">
                     <div className="text-2xl sm:text-3xl font-black text-foreground">
-                      ${pricePerBottle}
-                      <span className="text-sm font-normal text-muted-foreground"> each</span>
-                    </div>
-                    <div className="text-lg text-muted-foreground line-through">
-                      Reg. ${originalPricePerBottle}
+                      ${pkg.pricePerBottle}
+                      {pkg.bottles > 1 && <span className="text-sm font-normal text-muted-foreground"> / bottle</span>}
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <div className="text-lg font-semibold text-primary">
-                      Savings ${pkg.savings}
-                    </div>
-                    <div className="text-lg font-semibold text-primary">
-                      FREE SHIPPING
-                    </div>
+                  <div className="text-lg font-semibold text-primary">
+                    FREE SHIPPING
                   </div>
                 </div>
 
@@ -142,9 +124,6 @@ const PackageSelector = ({
                 <div className="text-right">
                   <div className="text-3xl sm:text-4xl font-black text-foreground">
                     ${pkg.price}
-                  </div>
-                  <div className="text-lg text-muted-foreground line-through">
-                    ${pkg.originalPrice}
                   </div>
                 </div>
               </div>
