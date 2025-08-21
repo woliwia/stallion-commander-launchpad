@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CountdownTimer from "@/components/order/CountdownTimer";
-import LimitedTimeOffer from "@/components/order/LimitedTimeOffer";
 import PackageSelector from "@/components/order/PackageSelector";
 import CheckoutForm from "@/components/order/CheckoutForm";
 import TrustBadges from "@/components/order/TrustBadges";
@@ -54,8 +53,7 @@ const Order = () => {
       <CountdownTimer />
 
       <div className="container mx-auto px-4 py-4 sm:py-6 md:py-8">
-        {/* Page Header */}
-        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+        <div className="text-center mb-6 sm:mb-8 md:mb-10">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-foreground mb-4 sm:mb-6 md:mb-8 leading-tight">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               GET UP TO 68% OFF
@@ -68,8 +66,6 @@ const Order = () => {
             If you try Stallion Commander today you'll also get <span className="font-bold">FREE shipping</span>.
           </p>
         </div>
-
-        <LimitedTimeOffer />
 
         {/* Main Content Grid */}
         <div className="max-w-7xl mx-auto">
