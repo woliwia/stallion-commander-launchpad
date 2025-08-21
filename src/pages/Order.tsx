@@ -80,6 +80,11 @@ const Order = () => {
                 commanderPackImage={commanderPackImage}
                 ultimatePackImage={ultimatePackImage}
               />
+              
+              {/* Before/After Section positioned below packages */}
+              <div className="hidden lg:block">
+                <BeforeAfterSection />
+              </div>
             </div>
 
             {/* Step 2 - Checkout Form (Right Side) */}
@@ -94,7 +99,11 @@ const Order = () => {
           <TrustBadges />
         </div>
 
-        <BeforeAfterSection />
+        {/* Before/After Section for mobile view */}
+        <div className="lg:hidden">
+          <BeforeAfterSection />
+        </div>
+
         <ReviewsSection />
       </div>
       
