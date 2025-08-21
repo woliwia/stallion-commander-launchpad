@@ -28,6 +28,15 @@ const ArganOilUpsell = () => {
             </p>
           </div>
           
+          {/* Product Image */}
+          <div className="mb-12">
+            <img 
+              src="/lovable-uploads/0d1bf809-e895-4770-8656-d25443b8ebe8.png"
+              alt="Pure Argan Oil - Fuller hair, younger skin, organic lubricant"
+              className="w-full max-w-2xl mx-auto h-auto object-contain rounded-lg shadow-lg"
+            />
+          </div>
+          
           {/* Complete Order Button */}
           <Button 
             onClick={handleCompleteOrder}
