@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Separator } from "@/components/ui/separator";
 import PaymentMethods from "./PaymentMethods";
 import AdditionalOptions from "./AdditionalOptions";
+import { cn } from "@/lib/utils";
 
 interface Package {
   id: string;
@@ -26,6 +27,83 @@ interface CheckoutFormProps {
 const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
   const [rushOrder, setRushOrder] = useState(true);
   const [insureOrder, setInsureOrder] = useState(true);
+  const [errors, setErrors] = useState<Record<string, boolean>>({});
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    address: '',
+    address2: '',
+    city: '',
+    country: '',
+    postalCode: '',
+    email: '',
+    phone: '',
+    cardNumber: '',
+    expiry: '',
+    cvv: ''
+  });
+
+  // Refs for form fields
+  const fieldRefs = {
+    firstName: useRef<HTMLInputElement>(null),
+    lastName: useRef<HTMLInputElement>(null),
+    address: useRef<HTMLInputElement>(null),
+    city: useRef<HTMLInputElement>(null),
+    postalCode: useRef<HTMLInputElement>(null),
+    email: useRef<HTMLInputElement>(null),
+    phone: useRef<HTMLInputElement>(null),
+    cardNumber: useRef<HTMLInputElement>(null),
+    expiry: useRef<HTMLInputElement>(null),
+    cvv: useRef<HTMLInputElement>(null)
+  };
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    // Clear error when user starts typing
+    if (errors[field]) {
+      setErrors(prev => ({ ...prev, [field]: false }));
+    }
+  };
+
+  const validateForm = () => {
+    const requiredFields = [
+      'firstName', 'lastName', 'address', 'city', 'postalCode', 
+      'email', 'phone', 'cardNumber', 'expiry', 'cvv'
+    ];
+    
+    const newErrors: Record<string, boolean> = {};
+    let firstErrorField: string | null = null;
+    
+    requiredFields.forEach(field => {
+      if (!formData[field as keyof typeof formData].trim()) {
+        newErrors[field] = true;
+        if (!firstErrorField) {
+          firstErrorField = field;
+        }
+      }
+    });
+    
+    setErrors(newErrors);
+    
+    // Focus on first error field
+    if (firstErrorField && fieldRefs[firstErrorField as keyof typeof fieldRefs]) {
+      fieldRefs[firstErrorField as keyof typeof fieldRefs].current?.focus();
+      fieldRefs[firstErrorField as keyof typeof fieldRefs].current?.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'center' 
+      });
+    }
+    
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (validateForm()) {
+      // Process the order
+      console.log('Order submitted:', { formData, rushOrder, insureOrder });
+    }
+  };
 
   if (!selectedPackage) {
     return (
@@ -72,38 +150,84 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
 
       {/* Checkout Form */}
       <Card className="p-6 sm:p-8">
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={handleSubmit}>
           {/* Contact Information */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="firstName" className="text-foreground font-medium">First Name</Label>
-              <Input id="firstName" placeholder="First Name" className="mt-2 h-12" />
+              <Label htmlFor="firstName" className="text-foreground font-medium">First Name *</Label>
+              <Input 
+                ref={fieldRefs.firstName}
+                id="firstName" 
+                placeholder="First Name" 
+                value={formData.firstName}
+                onChange={(e) => handleInputChange('firstName', e.target.value)}
+                className={cn(
+                  "mt-2 h-12",
+                  errors.firstName && "border-red-500 focus:ring-red-500"
+                )}
+              />
             </div>
             <div>
-              <Label htmlFor="lastName" className="text-foreground font-medium">Last Name</Label>
-              <Input id="lastName" placeholder="Last Name" className="mt-2 h-12" />
+              <Label htmlFor="lastName" className="text-foreground font-medium">Last Name *</Label>
+              <Input 
+                ref={fieldRefs.lastName}
+                id="lastName" 
+                placeholder="Last Name" 
+                value={formData.lastName}
+                onChange={(e) => handleInputChange('lastName', e.target.value)}
+                className={cn(
+                  "mt-2 h-12",
+                  errors.lastName && "border-red-500 focus:ring-red-500"
+                )}
+              />
             </div>
           </div>
 
           {/* Address */}
           <div>
-            <Label htmlFor="address" className="text-foreground font-medium">Address</Label>
-            <Input id="address" placeholder="Address" className="mt-2 h-12" />
+            <Label htmlFor="address" className="text-foreground font-medium">Address *</Label>
+            <Input 
+              ref={fieldRefs.address}
+              id="address" 
+              placeholder="Address" 
+              value={formData.address}
+              onChange={(e) => handleInputChange('address', e.target.value)}
+              className={cn(
+                "mt-2 h-12",
+                errors.address && "border-red-500 focus:ring-red-500"
+              )}
+            />
           </div>
 
           <div>
             <Label htmlFor="address2" className="text-foreground font-medium">Address Line 2 (Optional)</Label>
-            <Input id="address2" placeholder="Apartment, suite, etc." className="mt-2 h-12" />
+            <Input 
+              id="address2" 
+              placeholder="Apartment, suite, etc." 
+              value={formData.address2}
+              onChange={(e) => handleInputChange('address2', e.target.value)}
+              className="mt-2 h-12"
+            />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
-              <Label htmlFor="city" className="text-foreground font-medium">City</Label>
-              <Input id="city" placeholder="City" className="mt-2 h-12" />
+              <Label htmlFor="city" className="text-foreground font-medium">City *</Label>
+              <Input 
+                ref={fieldRefs.city}
+                id="city" 
+                placeholder="City" 
+                value={formData.city}
+                onChange={(e) => handleInputChange('city', e.target.value)}
+                className={cn(
+                  "mt-2 h-12",
+                  errors.city && "border-red-500 focus:ring-red-500"
+                )}
+              />
             </div>
             <div>
-              <Label htmlFor="country" className="text-foreground font-medium">Country</Label>
-              <Select>
+              <Label htmlFor="country" className="text-foreground font-medium">Country *</Label>
+              <Select value={formData.country} onValueChange={(value) => handleInputChange('country', value)}>
                 <SelectTrigger className="mt-2 h-12">
                   <SelectValue placeholder="United States" />
                 </SelectTrigger>
@@ -115,20 +239,52 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
               </Select>
             </div>
             <div>
-              <Label htmlFor="postalCode" className="text-foreground font-medium">Postal Code</Label>
-              <Input id="postalCode" placeholder="Postal Code" className="mt-2 h-12" />
+              <Label htmlFor="postalCode" className="text-foreground font-medium">Postal Code *</Label>
+              <Input 
+                ref={fieldRefs.postalCode}
+                id="postalCode" 
+                placeholder="Postal Code" 
+                value={formData.postalCode}
+                onChange={(e) => handleInputChange('postalCode', e.target.value)}
+                className={cn(
+                  "mt-2 h-12",
+                  errors.postalCode && "border-red-500 focus:ring-red-500"
+                )}
+              />
             </div>
           </div>
 
           {/* Contact Details */}
           <div>
-            <Label htmlFor="email" className="text-foreground font-medium">Email Address</Label>
-            <Input id="email" type="email" placeholder="Email Address" className="mt-2 h-12" />
+            <Label htmlFor="email" className="text-foreground font-medium">Email Address *</Label>
+            <Input 
+              ref={fieldRefs.email}
+              id="email" 
+              type="email" 
+              placeholder="Email Address" 
+              value={formData.email}
+              onChange={(e) => handleInputChange('email', e.target.value)}
+              className={cn(
+                "mt-2 h-12",
+                errors.email && "border-red-500 focus:ring-red-500"
+              )}
+            />
           </div>
 
           <div>
-            <Label htmlFor="phone" className="text-foreground font-medium">Phone Number</Label>
-            <Input id="phone" type="tel" placeholder="Phone Number" className="mt-2 h-12" />
+            <Label htmlFor="phone" className="text-foreground font-medium">Phone Number *</Label>
+            <Input 
+              ref={fieldRefs.phone}
+              id="phone" 
+              type="tel" 
+              placeholder="Phone Number" 
+              value={formData.phone}
+              onChange={(e) => handleInputChange('phone', e.target.value)}
+              className={cn(
+                "mt-2 h-12",
+                errors.phone && "border-red-500 focus:ring-red-500"
+              )}
+            />
           </div>
 
           <Separator />
@@ -138,18 +294,48 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
             <h3 className="font-bold text-foreground text-lg">Payment Information</h3>
             
             <div>
-              <Label htmlFor="cardNumber" className="text-foreground font-medium">Card Number</Label>
-              <Input id="cardNumber" placeholder="1234 5678 9012 3456" className="mt-2 h-12" />
+              <Label htmlFor="cardNumber" className="text-foreground font-medium">Card Number *</Label>
+              <Input 
+                ref={fieldRefs.cardNumber}
+                id="cardNumber" 
+                placeholder="1234 5678 9012 3456" 
+                value={formData.cardNumber}
+                onChange={(e) => handleInputChange('cardNumber', e.target.value)}
+                className={cn(
+                  "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                  errors.cardNumber && "border-red-500 focus:ring-red-500 bg-red-50/20"
+                )}
+              />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <Label htmlFor="expiry" className="text-foreground font-medium">Expiry Date</Label>
-                <Input id="expiry" placeholder="MM/YY" className="mt-2 h-12" />
+                <Label htmlFor="expiry" className="text-foreground font-medium">Expiry Date *</Label>
+                <Input 
+                  ref={fieldRefs.expiry}
+                  id="expiry" 
+                  placeholder="MM/YY" 
+                  value={formData.expiry}
+                  onChange={(e) => handleInputChange('expiry', e.target.value)}
+                  className={cn(
+                    "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                    errors.expiry && "border-red-500 focus:ring-red-500 bg-red-50/20"
+                  )}
+                />
               </div>
               <div>
-                <Label htmlFor="cvv" className="text-foreground font-medium">CVV</Label>
-                <Input id="cvv" placeholder="123" className="mt-2 h-12" />
+                <Label htmlFor="cvv" className="text-foreground font-medium">CVV *</Label>
+                <Input 
+                  ref={fieldRefs.cvv}
+                  id="cvv" 
+                  placeholder="123" 
+                  value={formData.cvv}
+                  onChange={(e) => handleInputChange('cvv', e.target.value)}
+                  className={cn(
+                    "mt-2 h-12 bg-blue-50/50 border-blue-200 focus:bg-blue-50 focus:border-blue-400",
+                    errors.cvv && "border-red-500 focus:ring-red-500 bg-red-50/20"
+                  )}
+                />
               </div>
             </div>
           </div>
@@ -207,6 +393,8 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
           variant="hero" 
           size="lg" 
           className="w-full mt-6 text-xl font-black h-16"
+          onClick={handleSubmit}
+          type="button"
         >
           COMPLETE YOUR ORDER - ${finalTotal.toFixed(2)}
         </Button>
