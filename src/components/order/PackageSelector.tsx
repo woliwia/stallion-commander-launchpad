@@ -45,12 +45,12 @@ const PackageSelector = ({
 
   return (
     <div className="space-y-6">
-      <div className="text-center lg:text-left mb-8">
+      <div className="text-center lg:text-left mb-8 mt-12">
         <div className="inline-flex items-center gap-3 mb-4">
           <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-black text-lg">
             1
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground">
+          <h2 className="text-xl sm:text-2xl font-black text-foreground">
             <span className="text-primary">Select Order Quantity</span>
           </h2>
         </div>
