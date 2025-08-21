@@ -2,6 +2,7 @@ import { Battery, Brain, Heart, Zap, Shield, Target } from "lucide-react";
 import vascularDiagram from "@/assets/vascular-enhancement-diagram.png";
 import diverseAppearancesBeautyBar from "@/assets/diverse-appearances-beauty-bar.png";
 import fullFaceSurprisedOrgasmBar from "@/assets/full-face-surprised-orgasm-bar.png";
+import smilingWhiteWomanBeautyBar from "@/assets/smiling-white-woman-beauty-bar.png";
 
 const benefits = [
   {
@@ -84,8 +85,8 @@ export const BenefitsSection = () => {
         {/* Beauty Bar Collage */}
         <div className="mt-8 sm:mt-12 -mx-4">
           <img 
-            src={diverseAppearancesBeautyBar}
-            alt="Beautiful women with diverse appearances and ethnicities showing confidence and satisfaction"
+            src={smilingWhiteWomanBeautyBar}
+            alt="Beautiful smiling woman showing confidence and satisfaction"
             className="w-full h-24 sm:h-32 md:h-40 lg:h-48 object-cover"
             loading="lazy"
             decoding="async"
