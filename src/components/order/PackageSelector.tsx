@@ -95,7 +95,7 @@ const PackageSelector = ({
                   <img 
                     src={getImageSrc(pkg.bottles)}
                     alt={getImageAlt(pkg.bottles)}
-                    className="w-28 h-28 sm:w-36 sm:h-36 object-contain drop-shadow-lg"
+                    className="w-32 h-36 sm:w-40 sm:h-44 object-contain drop-shadow-lg"
                     loading="lazy"
                   />
                 </div>
