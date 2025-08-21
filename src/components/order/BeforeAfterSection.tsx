@@ -18,8 +18,8 @@ const BeforeAfterSection = () => {
             loading="lazy"
           />
         </div>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
-          See the incredible transformations achieved by men who chose Stallion Commander
+        <p className="text-lg text-white max-w-2xl mx-auto mt-4">
+          See the incredible transformations achieved by men who chose <span className="text-primary font-semibold">Stallion Commander</span>
         </p>
       </div>
       
