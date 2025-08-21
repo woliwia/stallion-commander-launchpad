@@ -14,15 +14,15 @@ const ultimatePackImage = "/src/assets/ultimate-pack-6bottles.png";
 
 const packages = [
   {
-    id: "starter",
-    name: "Starter Pack",
-    bottles: 1,
-    originalPrice: 129,
-    price: 59.99,
-    pricePerBottle: 59.99,
+    id: "ultimate",
+    name: "Ultimate Stallion",
+    bottles: 6,
+    originalPrice: 774,
+    price: 269.94,
+    pricePerBottle: 44.99,
     savings: 0,
     popular: false,
-    features: ["1 Month Supply", "Free Shipping", "90-Day Guarantee"]
+    features: ["6 Month Supply", "Free Shipping", "90-Day Guarantee", "Priority Support"]
   },
   {
     id: "popular",
@@ -36,15 +36,15 @@ const packages = [
     features: ["3 Month Supply", "Free Shipping", "90-Day Guarantee"]
   },
   {
-    id: "ultimate",
-    name: "Ultimate Stallion",
-    bottles: 6,
-    originalPrice: 774,
-    price: 269.94,
-    pricePerBottle: 44.99,
+    id: "starter",
+    name: "Starter Pack",
+    bottles: 1,
+    originalPrice: 129,
+    price: 59.99,
+    pricePerBottle: 59.99,
     savings: 0,
     popular: false,
-    features: ["6 Month Supply", "Free Shipping", "90-Day Guarantee", "Priority Support"]
+    features: ["1 Month Supply", "Free Shipping", "90-Day Guarantee"]
   }
 ];
 
