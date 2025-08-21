@@ -135,7 +135,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
       </div>
 
       {/* PayPal Button */}
-      <Card className="p-6 bg-gradient-primary text-center">
+      <Card className="p-6 bg-gradient-primary text-center mb-2">
         <Button 
           size="lg" 
           className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-lg h-14"
@@ -147,18 +147,18 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
         </div>
       </Card>
 
-      <div className="text-center text-white font-medium">
+      <div className="text-center text-white font-medium mb-1">
         OR FILL OUT DETAILS
       </div>
 
-      <div className="text-center p-1 rounded-md bg-background">
+      <div className="text-center p-1 rounded-md bg-background mb-2">
         <img 
-          src="/lovable-uploads/829a69f9-68ac-4e14-a642-778d5b1ffd89.png" 
+          src="/lovable-uploads/9a09954a-ad19-47fc-be2a-f1938e036a43.png" 
           alt="Accepted payment methods: American Express, Mastercard, Visa, Discover"
           className="w-full h-20 object-contain"
         />
       </div>
-      <Card className="p-6 sm:p-8">
+      <Card className="p-6 sm:p-8 mt-2">
         <form className="space-y-6" onSubmit={handleSubmit}>
           {/* Contact Information */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
