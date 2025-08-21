@@ -18,6 +18,9 @@ const BeforeAfterSection = () => {
             loading="lazy"
           />
         </div>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
+          See the incredible transformations achieved by men who chose Stallion Commander
+        </p>
       </div>
       
       <div className="max-w-4xl mx-auto">
