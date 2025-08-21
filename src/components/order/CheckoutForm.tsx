@@ -147,7 +147,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
         </div>
       </Card>
 
-      <div className="text-center text-muted-foreground font-medium">
+      <div className="text-center text-white font-medium">
         OR FILL OUT DETAILS
       </div>
 
