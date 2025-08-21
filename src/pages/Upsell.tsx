@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import CountdownTimer from "@/components/order/CountdownTimer";
 import { useNavigate } from "react-router-dom";
+import threeStallionBottles from "@/assets/three-stallion-commander-bottles.png";
 
 const Upsell = () => {
   const navigate = useNavigate();
@@ -32,6 +33,15 @@ const Upsell = () => {
             <p className="text-xl md:text-2xl font-semibold text-primary">
               and MAXIMIZE Results!
             </p>
+          </div>
+          
+          {/* Three Stallion Commander Bottles */}
+          <div className="mb-12">
+            <img 
+              src={threeStallionBottles}
+              alt="3 Bottles of Stallion Commander"
+              className="w-full max-w-md mx-auto h-auto object-contain"
+            />
           </div>
           
           {/* Complete Order Button */}
