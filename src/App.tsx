@@ -24,10 +24,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/order" element={<Order />} />
-          <Route path="/upsell" element={<Upsell />} />
-          <Route path="/final-upsell" element={<FinalUpsell />} />
-          <Route path="/argan-oil" element={<ArganOilUpsell />} />
-          <Route path="/body-butter" element={<BodyButterUpsell />} />
+          <Route path="/upsell1" element={<Upsell />} />
+          <Route path="/upsell2" element={<FinalUpsell />} />
+          <Route path="/upsell3" element={<ArganOilUpsell />} />
+          <Route path="/upsell4" element={<BodyButterUpsell />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/checkout" element={<Checkout />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
