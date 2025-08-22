@@ -21,7 +21,7 @@ const FloatingCTA = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 w-full z-50 animate-fade-in bg-red-600 border-t border-white/20">
+    <div className="fixed bottom-0 left-0 w-full z-50 animate-fade-in bg-blue-600 border-t border-white/20">
       <div className="w-full px-4 py-3 flex items-center justify-between">
         <div className="text-white">
           <div className="font-bold text-sm md:text-base">
@@ -35,9 +35,9 @@ const FloatingCTA = () => {
           <Button 
             variant="secondary"
             size="lg"
-            className="bg-white text-red-600 hover:bg-gray-100 font-bold shadow-xl whitespace-nowrap"
+            className="bg-white text-blue-600 hover:bg-gray-100 font-bold shadow-xl whitespace-nowrap"
           >
-            CLAIM YOUR BOTTLE NOW →
+            CLAIM YOUR STALLION POWER NOW →
           </Button>
         </Link>
       </div>
