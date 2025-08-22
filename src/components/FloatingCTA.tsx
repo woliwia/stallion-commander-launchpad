@@ -21,15 +21,23 @@ const FloatingCTA = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 w-full z-50 animate-fade-in bg-black border-t border-white/20">
-      <div className="w-full p-4 flex justify-center">
+    <div className="fixed bottom-0 left-0 w-full z-50 animate-fade-in bg-red-600 border-t border-white/20">
+      <div className="w-full px-4 py-3 flex items-center justify-between">
+        <div className="text-white">
+          <div className="font-bold text-sm md:text-base">
+            🔥 LIMITED TIME: Free Shipping on All Orders!
+          </div>
+          <div className="text-xs md:text-sm opacity-90">
+            Don't miss out - Join thousands who've restored their masculine power naturally
+          </div>
+        </div>
         <Link to="/order">
           <Button 
-            variant="hero" 
+            variant="secondary"
             size="lg"
-            className="shadow-2xl"
+            className="bg-white text-red-600 hover:bg-gray-100 font-bold shadow-xl whitespace-nowrap"
           >
-            CLAIM YOUR POWER
+            CLAIM YOUR BOTTLE NOW →
           </Button>
         </Link>
       </div>
