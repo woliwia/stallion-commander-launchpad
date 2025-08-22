@@ -21,16 +21,20 @@ const FloatingCTA = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in">
-      <Link to="/order">
-        <Button 
-          variant="hero" 
-          size="lg"
-          className="shadow-2xl border-2 border-white/20 backdrop-blur-sm"
-        >
-          CLAIM YOUR POWER
-        </Button>
-      </Link>
+    <div className="fixed bottom-0 left-0 right-0 z-50 animate-fade-in">
+      <div className="bg-black border-t border-white/20 p-4">
+        <div className="container mx-auto flex justify-center">
+          <Link to="/order">
+            <Button 
+              variant="hero" 
+              size="lg"
+              className="shadow-2xl"
+            >
+              CLAIM YOUR POWER
+            </Button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
