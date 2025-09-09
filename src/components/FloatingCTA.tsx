@@ -21,23 +21,15 @@ const FloatingCTA = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 w-full z-50 animate-fade-in bg-blue-600 border-t border-white/20">
-      <div className="w-full px-4 py-3 flex items-center justify-between">
-        <div className="text-white">
-          <div className="font-bold text-sm md:text-base">
-            🔥 LIMITED TIME: Free Shipping on All Orders!
-          </div>
-          <div className="text-xs md:text-sm opacity-90">
-            Don't miss out - Join thousands who've restored their masculine power naturally
-          </div>
-        </div>
+    <div className="fixed bottom-0 left-0 w-full z-50 animate-fade-in bg-black border-t border-white/20">
+      <div className="w-full p-4 flex justify-center">
         <Link to="/order">
           <Button 
-            variant="secondary"
+            variant="hero" 
             size="lg"
-            className="bg-white text-blue-600 hover:bg-gray-100 font-bold shadow-xl whitespace-nowrap"
+            className="shadow-2xl"
           >
-            CLAIM YOUR STALLION POWER NOW →
+            CLAIM YOUR POWER
           </Button>
         </Link>
       </div>
