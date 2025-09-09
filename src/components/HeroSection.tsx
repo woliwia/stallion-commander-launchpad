@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Shield, Star, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
-import coupleImage from "@/assets/couple-hero-image.jpg";
-import heroImage from "@/assets/confident-man.jpg";
+import heroImage from "@/assets/hero-couple-with-bottles.jpg";
 
 export const HeroSection = () => {
   return (
@@ -64,7 +63,7 @@ export const HeroSection = () => {
               <div className="pt-4">
                 <Link to="/order" className="block">
                   <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base md:text-lg font-black px-8 py-4">
-                    CLAIM YOUR POWER NOW
+                    CLAIM YOUR STALLION POWER NOW
                   </Button>
                 </Link>
               </div>
@@ -90,8 +89,8 @@ export const HeroSection = () => {
             <div className="w-full lg:w-2/5 xl:w-1/3 order-1 lg:order-2">
               <div className="relative bg-gradient-card p-4 sm:p-6 rounded-2xl border border-border shadow-premium max-w-md mx-auto">
                 <img 
-                  src={coupleImage} 
-                  alt="Confident mature man with beautiful woman - Stallion Commander results" 
+                  src={heroImage} 
+                  alt="Confident couple with Stallion Commander bottles - ultimate male performance enhancement" 
                   className="w-full drop-shadow-2xl rounded-xl"
                   loading="eager"
                   decoding="async"
