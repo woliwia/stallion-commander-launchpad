@@ -3,7 +3,6 @@ import { Shield, Star, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import coupleImage from "@/assets/couple-hero-image.jpg";
 import heroImage from "@/assets/confident-man.jpg";
-import stallionBottles from "/lovable-uploads/e3402c3c-578c-46bc-b1d6-515daa210613.png";
 
 export const HeroSection = () => {
   return (
@@ -87,47 +86,25 @@ export const HeroSection = () => {
               </div>
             </div>
             
-            {/* Blended Hero Images - Right side on desktop, top on mobile */}
+            {/* Hero Image - Right side on desktop, top on mobile */}
             <div className="w-full lg:w-2/5 xl:w-1/3 order-1 lg:order-2">
-              <div className="relative bg-gradient-card p-4 sm:p-6 rounded-2xl border border-border shadow-premium max-w-md mx-auto overflow-hidden">
+              <div className="relative bg-gradient-card p-4 sm:p-6 rounded-2xl border border-border shadow-premium max-w-md mx-auto">
+                <img 
+                  src={coupleImage} 
+                  alt="Confident mature man with beautiful woman - Stallion Commander results" 
+                  className="w-full drop-shadow-2xl rounded-xl"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                />
                 
-                {/* Background Hero Image with Fade Mask */}
-                <div className="absolute inset-0 p-4 sm:p-6">
-                  <img 
-                    src={coupleImage} 
-                    alt="Confident mature man with beautiful woman - Stallion Commander results" 
-                    className="w-full h-full object-cover rounded-xl opacity-40"
-                    style={{
-                      maskImage: 'linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%)',
-                      WebkitMaskImage: 'linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%)'
-                    }}
-                    loading="lazy"
-                  />
-                </div>
-                
-                {/* Foreground Product Bottles */}
-                <div className="relative z-10">
-                  <img 
-                    src={stallionBottles} 
-                    alt="Stallion Commander Ultimate Male Vitality - 3 Bottle Package" 
-                    className="w-full drop-shadow-2xl animate-fade-in"
-                    loading="eager"
-                    decoding="async"
-                    fetchPriority="high"
-                  />
-                </div>
-                
-                {/* Gradient Overlay for Blending */}
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-background/10 to-background/30 rounded-2xl" />
-                
-                <div className="absolute -top-2 -right-2 bg-primary text-primary-foreground px-3 py-1 rounded-full font-bold animate-glow-pulse text-xs sm:text-sm z-20">
+                <div className="absolute -top-2 -right-2 bg-primary text-primary-foreground px-3 py-1 rounded-full font-bold animate-glow-pulse text-xs sm:text-sm">
                   LIMITED TIME
                 </div>
               </div>
               
-              {/* Background Glow Effects */}
-              <div className="absolute inset-0 bg-primary opacity-20 blur-3xl -z-10 animate-pulse" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-50 blur-2xl -z-10" />
+              {/* Background Glow */}
+              <div className="absolute inset-0 bg-primary opacity-20 blur-3xl -z-10" />
             </div>
             
           </div>
