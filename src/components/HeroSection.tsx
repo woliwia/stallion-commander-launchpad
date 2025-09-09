@@ -3,6 +3,7 @@ import { Shield, Star, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import coupleImage from "@/assets/couple-hero-image.jpg";
 import heroImage from "@/assets/confident-man.jpg";
+import stallionBottles from "/lovable-uploads/e3402c3c-578c-46bc-b1d6-515daa210613.png";
 
 export const HeroSection = () => {
   return (
@@ -86,13 +87,14 @@ export const HeroSection = () => {
               </div>
             </div>
             
-            {/* Hero Image - Right side on desktop, top on mobile */}
-            <div className="w-full lg:w-2/5 xl:w-1/3 order-1 lg:order-2">
+            {/* Hero Images - Right side on desktop, top on mobile */}
+            <div className="w-full lg:w-2/5 xl:w-1/3 order-1 lg:order-2 space-y-4">
+              {/* Product Bottles */}
               <div className="relative bg-gradient-card p-4 sm:p-6 rounded-2xl border border-border shadow-premium max-w-md mx-auto">
                 <img 
-                  src={coupleImage} 
-                  alt="Confident mature man with beautiful woman - Stallion Commander results" 
-                  className="w-full drop-shadow-2xl rounded-xl"
+                  src={stallionBottles} 
+                  alt="Stallion Commander Ultimate Male Vitality - 3 Bottle Package" 
+                  className="w-full drop-shadow-2xl"
                   loading="eager"
                   decoding="async"
                   fetchPriority="high"
@@ -101,6 +103,16 @@ export const HeroSection = () => {
                 <div className="absolute -top-2 -right-2 bg-primary text-primary-foreground px-3 py-1 rounded-full font-bold animate-glow-pulse text-xs sm:text-sm">
                   LIMITED TIME
                 </div>
+              </div>
+              
+              {/* Lifestyle Image */}
+              <div className="relative bg-gradient-card p-3 sm:p-4 rounded-xl border border-border shadow-lg max-w-sm mx-auto">
+                <img 
+                  src={coupleImage} 
+                  alt="Confident mature man with beautiful woman - Stallion Commander results" 
+                  className="w-full drop-shadow-xl rounded-lg"
+                  loading="lazy"
+                />
               </div>
               
               {/* Background Glow */}
