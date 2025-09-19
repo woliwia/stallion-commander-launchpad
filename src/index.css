@@ -151,6 +151,34 @@
   }
 }
 
+@layer components {
+  .logo-wordmark {
+    display: block;
+    height: clamp(2.5rem, 6vw, 3.75rem);
+    aspect-ratio: 1920 / 131;
+    background-image: linear-gradient(
+      90deg,
+      #7ed8ff 0%,
+      #46c6ff 32%,
+      #03b9f2 55%,
+      #ffffff 55%,
+      #ffffff 100%
+    );
+    filter:
+      drop-shadow(0 0 12px rgba(3, 185, 242, 0.55))
+      drop-shadow(0 0 26px rgba(125, 216, 255, 0.35));
+    mask-image: url("/lovable-uploads/9aebaefa-86d2-491f-9e62-42000f1abcef.png");
+    -webkit-mask-image: url("/lovable-uploads/9aebaefa-86d2-491f-9e62-42000f1abcef.png");
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    transition: filter 200ms ease, transform 200ms ease;
+  }
+}
+
 @layer utilities {
   .text-neon-glow {
     text-shadow:

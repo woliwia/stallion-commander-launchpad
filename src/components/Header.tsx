@@ -7,15 +7,12 @@ const Header = () => {
       <BreakingNewsBar />
       <div className="container mx-auto px-4 py-1 sm:py-2">
         <div className="flex items-center justify-center">
-          <Link to="/" className="transition-all duration-300 hover:scale-105">
-            <span
-              className="relative inline-flex items-center gap-[0.75em] text-sm font-black uppercase tracking-[0.65em] sm:text-base md:text-lg lg:text-xl"
-            >
-              <span className="bg-gradient-to-r from-[#7ed8ff] via-[#03b9f2] to-[#00f0ff] bg-clip-text text-transparent text-neon-glow">
-                STALLION
-              </span>
-              <span className="text-white">COMMANDER</span>
-            </span>
+          <Link
+            to="/"
+            className="inline-flex flex-col items-center gap-2 transition-all duration-300 hover:scale-105"
+          >
+            <span className="sr-only">Stallion Commander</span>
+            <span aria-hidden className="logo-wordmark" />
           </Link>
         </div>
       </div>
