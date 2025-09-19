@@ -37,8 +37,13 @@ export const HeroSection = () => {
               <div className="space-y-3 sm:space-y-4">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-foreground leading-tight">
                   BREAKING:
-                  <span className="block bg-gradient-primary bg-clip-text text-transparent">
-                    STALLION COMMANDER JUST HIT THE MARKET
+                  <span className="mt-1 block space-y-1">
+                    <span className="block bg-gradient-primary bg-clip-text text-transparent">
+                      STALLION COMMANDER
+                    </span>
+                    <span className="block bg-gradient-primary bg-clip-text text-transparent">
+                      JUST HIT THE MARKET
+                    </span>
                   </span>
                 </h1>
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
