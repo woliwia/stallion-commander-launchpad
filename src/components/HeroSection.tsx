@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Shield, Star, Trophy } from "lucide-react";
+import { AlertTriangle, Megaphone, Shield, Star, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import coupleImage from "@/assets/couple-hero-image.jpg";
 import heroImage from "@/assets/confident-man.jpg";
@@ -25,11 +25,16 @@ export const HeroSection = () => {
               {/* Badge and Free Shipping */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-3">
                 <div className="inline-flex items-center gap-2 bg-gradient-card border border-border px-3 py-2 sm:px-4 sm:py-2 rounded-full">
-                  <Trophy className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                  <span className="text-xs sm:text-sm lg:text-base font-medium text-foreground">#1 Male Vitality Formula</span>
+                  <Megaphone className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                  <span className="text-xs sm:text-sm lg:text-base font-semibold text-foreground">
+                    BREAKING • JUST DROPPED
+                  </span>
                 </div>
                 <div className="inline-flex items-center gap-2 bg-card border border-border px-3 py-2 sm:px-4 sm:py-2 rounded-full">
-                  <span className="text-xs sm:text-sm lg:text-base font-semibold text-foreground">FREE SHIPPING</span>
+                  <AlertTriangle className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                  <span className="text-xs sm:text-sm lg:text-base font-semibold text-foreground">
+                    LIMITED ACCESS · DON&apos;T MISS OUT
+                  </span>
                 </div>
               </div>
             
