@@ -151,12 +151,11 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
         OR FILL OUT DETAILS
       </div>
 
-      <div className="text-center p-1 rounded-md bg-background mb-2">
-        <img 
-          src="/lovable-uploads/9a09954a-ad19-47fc-be2a-f1938e036a43.png" 
-          alt="Accepted payment methods: American Express, Mastercard, Visa, Discover"
-          className="w-full h-16 object-contain"
-        />
+      <div className="mb-6 flex justify-center">
+        <div className="text-center text-2xl font-black uppercase leading-none tracking-[0.3em] sm:text-3xl md:text-4xl">
+          <span className="text-[#0B6BFF]">STALLION</span>{" "}
+          <span className="text-[#80858F]">COMMANDER</span>
+        </div>
       </div>
       <Card className="p-4 sm:p-6 mt-2">
         <form className="space-y-4" onSubmit={handleSubmit}>
