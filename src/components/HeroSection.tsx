@@ -36,18 +36,13 @@ export const HeroSection = () => {
               {/* Main Headline */}
               <div className="space-y-3 sm:space-y-4">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-foreground leading-tight">
-                  BREAKING:
-                  <span className="mt-1 block space-y-1">
-                    <span className="block bg-gradient-primary bg-clip-text text-transparent">
-                      STALLION COMMANDER
-                    </span>
-                    <span className="block bg-gradient-primary bg-clip-text text-transparent">
-                      JUST HIT THE MARKET
-                    </span>
+                  UNLEASH YOUR
+                  <span className="block bg-gradient-primary bg-clip-text text-transparent">
+                    STALLION POWER
                   </span>
                 </h1>
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Experts are calling it the ultimate game-changer for unstoppable performance—limited access, just released, don’t miss out.
+                  The ultimate male performance enhancer that transforms ordinary men into unstoppable Stallions
                 </p>
               </div>
             
