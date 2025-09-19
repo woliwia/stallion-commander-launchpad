@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { AlertTriangle, Megaphone, Shield, Star, Trophy } from "lucide-react";
+import { AlertTriangle, Megaphone, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import coupleImage from "@/assets/couple-hero-image.jpg";
 import heroImage from "@/assets/confident-man.jpg";
@@ -57,9 +57,9 @@ export const HeroSection = () => {
               {/* Benefits */}
               <div className="grid grid-cols-1 gap-2 sm:gap-3">
                 {[
-                  { icon: Star, text: "Explosive Energy" },
-                  { icon: Shield, text: "Enhanced Performance" },
-                  { icon: Trophy, text: "Supreme Confidence" }
+                  { icon: Megaphone, text: "Breaking Release • Just Dropped" },
+                  { icon: AlertTriangle, text: "Limited Access • Don’t Miss Out" },
+                  { icon: Trophy, text: "Experts Call It the Game-Changer" }
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-center gap-3 bg-card border border-border p-3 sm:p-4 rounded-lg hover:bg-gradient-card transition-all duration-300">
                     <benefit.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
