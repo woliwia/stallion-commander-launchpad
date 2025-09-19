@@ -13,10 +13,14 @@ const Header = () => {
             className="transition-all duration-300 hover:scale-105"
             aria-label="Stallion Commander home"
           >
-            <span className="flex items-center gap-2 text-sm font-black uppercase tracking-[0.35em] sm:text-base md:text-lg lg:text-xl">
-              <span className="text-[#0B6BFF]">STALLION</span>
-              <span className="text-[#80858F]">COMMANDER</span>
-            </span>
+            <img
+              src="/lovable-uploads/9aebaefa-86d2-491f-9e62-42000f1abcef.png"
+              alt="Stallion Commander logo"
+              className="h-6 w-auto max-w-full sm:h-8 md:h-10 lg:h-12"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+            />
           </Link>
         </div>
       </div>
