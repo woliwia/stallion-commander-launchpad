@@ -19,13 +19,13 @@ export const BreakingNewsBar = () => {
           <div className="relative flex-1 overflow-hidden">
             <div className="flex min-w-max items-center gap-8 whitespace-nowrap text-[0.7rem] font-semibold uppercase tracking-tight will-change-transform motion-safe:animate-news-ticker motion-reduce:translate-x-0 sm:text-sm">
               <span>
-                BREAKING: Stallion Commander Just Dropped—Experts Call It the Ultimate Game-Changer!
+                BREAKING: Stallion Commander Just Hit the Market—Experts Call It the Ultimate Game-Changer!
               </span>
               <span className="text-white/85">
                 Limited Access • Just Released • Don’t Miss Out
               </span>
               <span>
-                BREAKING: Stallion Commander Just Dropped—Experts Call It the Ultimate Game-Changer!
+                BREAKING: Stallion Commander Just Hit the Market—Experts Call It the Ultimate Game-Changer!
               </span>
               <span className="text-white/85">
                 Limited Access • Just Released • Don’t Miss Out
