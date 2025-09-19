@@ -1,11 +1,10 @@
 const PaymentMethods = () => {
   return (
     <div className="mb-4 flex items-center justify-center">
-      <img
-        src="/lovable-uploads/57dcb4da-4530-45f2-914e-0725921540d3.png"
-        alt="Stallion Commander Logo"
-        className="h-6 w-auto max-w-full sm:h-8 md:h-10"
-      />
+      <div className="flex items-baseline gap-2 text-2xl font-black tracking-[0.15em] sm:text-3xl md:text-4xl">
+        <span className="text-[#0B6BFF]">STALLION</span>
+        <span className="text-[#80858F]">COMMANDER</span>
+      </div>
     </div>
   );
 };
