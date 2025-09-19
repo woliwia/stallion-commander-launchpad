@@ -9,11 +9,12 @@ const Header = () => {
         <div className="flex items-center justify-center">
           <Link to="/" className="transition-all duration-300 hover:scale-105">
             <span
-              className="relative inline-flex items-center text-sm font-black uppercase tracking-[0.65em] text-transparent sm:text-base md:text-lg lg:text-xl"
+              className="relative inline-flex items-center gap-[0.75em] text-sm font-black uppercase tracking-[0.65em] sm:text-base md:text-lg lg:text-xl"
             >
-              <span className="bg-gradient-to-r from-[#7ed8ff] via-[#03b9f2] to-white bg-clip-text text-neon-glow">
-                STALLIONCOMMANDER
+              <span className="bg-gradient-to-r from-[#7ed8ff] via-[#03b9f2] to-[#00f0ff] bg-clip-text text-transparent text-neon-glow">
+                STALLION
               </span>
+              <span className="text-white">COMMANDER</span>
             </span>
           </Link>
         </div>
