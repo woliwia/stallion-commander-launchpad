@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
+
+import { BreakingNewsBar } from "@/components/BreakingNewsBar";
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/90 shadow-premium backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 shadow-premium backdrop-blur-xl">
+      <BreakingNewsBar />
       <div className="container mx-auto px-4 py-1 sm:py-2">
         <div className="flex items-center justify-center">
           <Link to="/" className="transition-all duration-300 hover:scale-105">
