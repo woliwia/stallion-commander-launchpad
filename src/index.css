@@ -150,3 +150,12 @@
     }
   }
 }
+
+@layer utilities {
+  .text-neon-glow {
+    text-shadow:
+      0 0 10px rgba(3, 185, 242, 0.55),
+      0 0 18px rgba(3, 185, 242, 0.35),
+      0 0 28px rgba(125, 216, 255, 0.25);
+  }
+}
