@@ -82,7 +82,7 @@ export const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-card border-2 border-[#42C6F7] p-responsive rounded-xl lg:rounded-2xl hover:bg-gradient-card hover:shadow-premium transition-all duration-300 group animate-slide-up"
+              className="bg-card border border-[#B0B0B0] p-responsive rounded-xl lg:rounded-2xl hover:bg-gradient-card hover:shadow-premium transition-all duration-300 group animate-slide-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="bg-primary/10 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl flex items-center justify-center mb-responsive-sm group-hover:bg-primary/20 transition-colors">
@@ -115,7 +115,7 @@ export const BenefitsSection = () => {
         
         {/* Scientific Explanation Section */}
         <div className="mt-12 sm:mt-16">
-          <div className="bg-card border border-border rounded-2xl p-6 sm:p-8 md:p-12">
+          <div className="bg-card border border-[#B0B0B0] rounded-2xl p-6 sm:p-8 md:p-12">
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground text-center tracking-tight mb-8 sm:mb-12">
               THE CLINICAL EDGE OF
               <span className="block bg-gradient-primary bg-clip-text text-transparent">
@@ -199,7 +199,7 @@ export const BenefitsSection = () => {
             </div>
             
             {/* Additional Supporting Ingredients */}
-            <div className="bg-gradient-card border border-border rounded-xl p-6 mb-8">
+            <div className="bg-gradient-card border border-[#B0B0B0] rounded-xl p-6 mb-8">
               <h4 className="text-xl font-bold text-foreground mb-4 text-center">Additional Powerhouse Ingredients</h4>
               <div className="grid sm:grid-cols-3 gap-4 text-center">
                 <div>
@@ -259,7 +259,7 @@ export const BenefitsSection = () => {
         {/* Health Mechanisms Section */}
         <div className="mt-6 sm:mt-8">
           {/* Vascular Enhancement Graphics */}
-          <div className="bg-card border border-border rounded-2xl p-6 sm:p-8 mb-8">
+          <div className="bg-card border border-[#B0B0B0] rounded-2xl p-6 sm:p-8 mb-8">
             <h3 className="text-xl sm:text-2xl font-bold text-center text-foreground mb-6">
               VASCULAR ENHANCEMENT PROCESS
             </h3>
@@ -304,7 +304,7 @@ export const BenefitsSection = () => {
             </div>
           </div>
           
-          <div className="bg-gradient-card border border-border rounded-2xl p-6 sm:p-8 md:p-12">
+          <div className="bg-gradient-card border border-[#B0B0B0] rounded-2xl p-6 sm:p-8 md:p-12">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground text-center mb-8 sm:mb-12">
               HOW STALLION COMMANDER
               <span className="block bg-gradient-primary bg-clip-text text-transparent">
@@ -314,7 +314,7 @@ export const BenefitsSection = () => {
             
             <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
               {/* Health of the Corpora Cavernosa */}
-              <div className="bg-card border border-border rounded-xl p-6">
+              <div className="bg-card border border-[#B0B0B0] rounded-xl p-6">
                 <div className="bg-primary/10 w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
                   <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
@@ -325,7 +325,7 @@ export const BenefitsSection = () => {
               </div>
               
               {/* Cell Regeneration */}
-              <div className="bg-card border border-border rounded-xl p-6">
+              <div className="bg-card border border-[#B0B0B0] rounded-xl p-6">
                 <div className="bg-primary/10 w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
                   <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
@@ -336,7 +336,7 @@ export const BenefitsSection = () => {
               </div>
               
               {/* Hormonal Balance */}
-              <div className="bg-card border border-border rounded-xl p-6">
+              <div className="bg-card border border-[#B0B0B0] rounded-xl p-6">
                 <div className="bg-primary/10 w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
                   <Target className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
@@ -347,7 +347,7 @@ export const BenefitsSection = () => {
               </div>
               
               {/* Vitality Booster */}
-              <div className="bg-card border border-border rounded-xl p-6">
+              <div className="bg-card border border-[#B0B0B0] rounded-xl p-6">
                 <div className="bg-primary/10 w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
                   <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
