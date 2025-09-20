@@ -3,31 +3,52 @@ import { Card } from "@/components/ui/card";
 
 const reviews = [
   {
-    name: "Ethan S.",
+    name: "Michael T.",
+    age: 39,
+    rating: 5,
+    review:
+      "Stallion Commander gave me the stamina I thought I lost years ago. My workouts are stronger, and my confidence is through the roof.",
+    location: "New York"
+  },
+  {
+    name: "Ryan S.",
+    age: 32,
+    rating: 5,
+    review:
+      "After just a month, I feel more energized than ever. My partner noticed the difference immediately.",
+    location: "Nevada"
+  },
+  {
+    name: "Daniel K.",
+    age: 45,
+    rating: 5,
+    review:
+      "No side effects, only pure results. I’ve tried supplements before, but nothing compares to this.",
+    location: "Chicago"
+  },
+  {
+    name: "Anthony B.",
+    age: 28,
+    rating: 5,
+    review:
+      "Within 2 weeks, I felt more powerful in the gym and more confident in my everyday life.",
+    location: "Texas"
+  },
+  {
+    name: "Chris J.",
     age: 36,
     rating: 5,
     review:
-      "Stallion Commander gave me the drive I thought I’d lost years ago. My workouts are stronger, my focus is sharper, and my partner says she’s never seen me more confident.",
-    location: "New York",
-    tag: "Drive restored"
+      "Finally, a product that delivers exactly what it promises. My strength, stamina, and focus have all improved.",
+    location: "Florida"
   },
   {
-    name: "Carlos M.",
-    age: 42,
+    name: "Jason M.",
+    age: 41,
     rating: 5,
     review:
-      "I’ve tried plenty of supplements, but nothing comes close to this. Within weeks I had more stamina, more energy, and I felt like I was in my 20s again.",
-    location: "Texas",
-    tag: "Feels like 20 again"
-  },
-  {
-    name: "Liam P.",
-    age: 31,
-    rating: 5,
-    review:
-      "At first I was doubtful, but now I’m all in. Stallion Commander has boosted my endurance, and I feel unstoppable both at the gym and in everyday life.",
-    location: "Florida",
-    tag: "Unstoppable endurance"
+      "This supplement is a total game-changer. My endurance and recovery time have dramatically improved.",
+    location: "California"
   }
 ];
 
@@ -53,7 +74,7 @@ const ReviewsSection = () => {
         {reviews.map((review, index) => (
           <Card
             key={index}
-            className="p-6 bg-gradient-card border border-border hover:shadow-premium transition-all duration-300 flex flex-col h-full"
+            className="p-6 bg-gradient-card border border-[#42c6f7] hover:shadow-premium transition-all duration-300 flex flex-col h-full"
           >
             <div className="flex items-center gap-1 mb-4">
               {[...Array(review.rating)].map((_, i) => (
