@@ -118,7 +118,7 @@ export const BenefitsSection = () => {
           <div className="bg-card border border-[#B0B0B0] rounded-2xl p-6 sm:p-8 md:p-12">
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground text-center tracking-tight mb-8 sm:mb-12">
               THE CLINICAL EDGE OF
-              <span className="block bg-gradient-primary bg-clip-text text-transparent">
+              <span className="block text-[#42C6F7]">
                 STALLION COMMANDER
               </span>
             </h3>
