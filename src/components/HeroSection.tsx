@@ -1,5 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { AlertTriangle, Megaphone, Shield, Star, Trophy } from "lucide-react";
+import {
+  Activity,
+  AlertTriangle,
+  Crown,
+  Megaphone,
+  Shield,
+  Star,
+  Zap,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import coupleImage from "@/assets/couple-hero-image.jpg";
 import heroImage from "@/assets/confident-man.jpg";
@@ -57,13 +65,38 @@ export const HeroSection = () => {
               {/* Benefits */}
               <div className="grid grid-cols-1 gap-2 sm:gap-3">
                 {[
-                  { icon: Megaphone, text: "Breaking Release • Just Dropped" },
-                  { icon: AlertTriangle, text: "Limited Access • Don’t Miss Out" },
-                  { icon: Trophy, text: "Experts Call It the Game-Changer" }
+                  {
+                    icon: Zap,
+                    title: "Unleash Explosive Energy",
+                    description:
+                      "Ignite your stamina and power through every challenge with unstoppable drive.",
+                  },
+                  {
+                    icon: Activity,
+                    title: "Peak Performance Amplified",
+                    description:
+                      "Boost strength, endurance, and vitality to perform at your absolute best.",
+                  },
+                  {
+                    icon: Crown,
+                    title: "Command Supreme Confidence",
+                    description:
+                      "Elevate your presence, mindset, and performance—inside and outside the gym.",
+                  },
                 ].map((benefit, index) => (
-                  <div key={index} className="flex items-center gap-3 bg-card border border-border p-3 sm:p-4 rounded-lg hover:bg-gradient-card transition-all duration-300">
-                    <benefit.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
-                    <span className="font-bold text-foreground text-sm sm:text-base">{benefit.text}</span>
+                  <div
+                    key={index}
+                    className="flex items-start gap-3 bg-card border border-border p-3 sm:p-4 rounded-lg hover:bg-gradient-card transition-all duration-300"
+                  >
+                    <benefit.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
+                    <div className="space-y-1">
+                      <p className="text-sm sm:text-base font-extrabold text-foreground">
+                        {benefit.title}
+                      </p>
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-snug">
+                        {benefit.description}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
