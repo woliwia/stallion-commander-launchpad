@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { AlertTriangle, Megaphone, Trophy } from "lucide-react";
+import { AlertTriangle, Megaphone, Shield, Star, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import coupleImage from "@/assets/couple-hero-image.jpg";
 import heroImage from "@/assets/confident-man.jpg";
