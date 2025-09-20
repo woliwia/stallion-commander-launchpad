@@ -318,7 +318,7 @@ export const BenefitsSection = () => {
                 </div>
                 <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3">Health of the Corpora Cavernosa</h4>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  Stallion Commander increases blood flow into the corpora cavernosa, allowing more blood flow to the penis and to produce more intense and longer-lasting erections.
+                  Flood the corpora cavernosa with surge-level circulation so you achieve harder, fuller erections that stay rock-solid longer.
                 </p>
               </div>
               
@@ -329,7 +329,7 @@ export const BenefitsSection = () => {
                 </div>
                 <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3">Cell Regeneration</h4>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  To maximize the expansion of the corpora cavernosa, which helps generate impressive erections, your body must produce new cells more quickly. So Stallion Commander Vitality Enrichment is loaded in anti-oxidants, proven to assist in the formation of new tissue.
+                  Trigger rapid cell regeneration so your chambers expand, veins widen, and every erection surges with maximum volume.
                 </p>
               </div>
               
@@ -340,7 +340,7 @@ export const BenefitsSection = () => {
                 </div>
                 <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3">Hormonal Balance</h4>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  Stallion Commander also increases the concentration of the hormone, testosterone, mainly responsible for the male sex drive and influence the power of erections and quality of orgasms.
+                  Elevate testosterone to ignite relentless sex drive, intensify orgasms, and keep your performance fierce every time.
                 </p>
               </div>
               
@@ -351,7 +351,7 @@ export const BenefitsSection = () => {
                 </div>
                 <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3">Vitality Booster</h4>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  Stallion Commander is loaded with substances that give extra energy so that you can enjoy your new power and virility all night.
+                  Unleash all-night stamina and electrifying confidence so you dominate every encounter with unstoppable power.
                 </p>
               </div>
             </div>
