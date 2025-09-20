@@ -8,7 +8,7 @@ export const GuaranteeSection = () => {
       <div className="container mx-auto px-4 relative">
         <div className="max-w-6xl mx-auto">
           {/* Main Guarantee Card */}
-          <div className="bg-card border-2 border-primary/20 rounded-3xl p-8 sm:p-12 md:p-16 shadow-premium mb-12 sm:mb-16">
+          <div className="bg-card border border-[#42C6F7] rounded-3xl p-8 sm:p-12 md:p-16 shadow-premium mb-12 sm:mb-16">
             <div className="text-center mb-12 sm:mb-16">
               {/* Shield Icon */}
               <div className="bg-primary/10 w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full flex items-center justify-center mx-auto mb-6 sm:mb-8 animate-glow-pulse">
