@@ -40,17 +40,16 @@ export const HeroSection = () => {
             
               {/* Main Headline */}
               <div className="space-y-3 sm:space-y-4">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-foreground leading-tight">
-                  <span className="block">BREAKING:</span>
-                  <span className="block bg-gradient-primary bg-clip-text text-transparent">
-                    STALLION COMMANDER
-                  </span>
-                  <span className="block bg-gradient-primary bg-clip-text text-transparent">
-                    JUST HIT THE MARKET
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-foreground leading-tight">
+                  <span className="block">EXPERIENCE THE POWER OF THE</span>
+                  <span className="block">
+                    <span className="bg-gradient-primary bg-clip-text text-transparent">
+                      STALLION DIFFERENCE
+                    </span>
                   </span>
                 </h1>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Experts are calling it the ultimate game-changer for unstoppable performance—limited access, just released, don’t miss out.
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground font-semibold leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  Join thousands of men who trust Stallion Commander to unleash unstoppable energy, amplify strength, and dominate every aspect of life.
                 </p>
               </div>
             
