@@ -273,11 +273,11 @@ export const BenefitsSection = () => {
               />
             </div>
             <div className="grid sm:grid-cols-2 gap-6 text-center">
-              <div className="bg-gradient-card p-4 rounded-lg">
+              <div className="bg-gradient-card border border-[#B0B0B0] p-4 rounded-lg">
                 <h4 className="font-bold text-foreground mb-2">BEFORE</h4>
                 <p className="text-sm text-muted-foreground">Normal circulation with restricted blood flow and limited vascular capacity</p>
               </div>
-              <div className="bg-gradient-card p-4 rounded-lg">
+              <div className="bg-gradient-card border border-[#B0B0B0] p-4 rounded-lg">
                 <h4 className="font-bold text-foreground mb-2">AFTER</h4>
                 <p className="text-sm text-muted-foreground">Enhanced circulation with enlarged veins, increased blood flow, and improved turgidity</p>
               </div>
