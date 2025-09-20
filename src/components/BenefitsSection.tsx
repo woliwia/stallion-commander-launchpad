@@ -305,7 +305,7 @@ export const BenefitsSection = () => {
           <div className="bg-gradient-card border border-[#B0B0B0] rounded-2xl p-6 sm:p-8 md:p-12">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground text-center mb-8 sm:mb-12">
               HOW STALLION COMMANDER
-              <span className="block bg-gradient-primary bg-clip-text text-transparent">
+              <span className="block text-[#42C6F7]">
                 TRANSFORMS YOUR BODY
               </span>
             </h3>
