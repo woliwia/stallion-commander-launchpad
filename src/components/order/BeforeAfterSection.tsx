@@ -37,20 +37,22 @@ const BeforeAfterSection = () => {
           />
           
           <div className="grid md:grid-cols-2 gap-6 mt-6">
-            <div className="text-center">
+            <div className="text-center border border-[#B0B0B0] rounded-xl p-4 md:p-6">
               <h3 className="text-2xl md:text-3xl font-black text-muted-foreground tracking-wide mb-3">
                 BEFORE
               </h3>
               <p className="text-base text-muted-foreground">
-                Restricted circulation keeps veins tight and stamina limited—performance fades fast with every attempt.
+                Restricted circulation keeps veins tight, endurance low, and performance weak—every effort burns out before it
+                begins.
               </p>
             </div>
-            <div className="text-center">
+            <div className="text-center border border-[#B0B0B0] rounded-xl p-4 md:p-6">
               <h3 className="text-2xl md:text-3xl font-black text-primary tracking-wide mb-3">
                 AFTER
               </h3>
               <p className="text-base text-foreground font-semibold">
-                Enhanced circulation drives expanded veins, relentless blood flow, and rock-solid stamina for peak performance every time.
+                Optimized circulation expands veins, powers stronger blood flow, and unlocks peak stamina for relentless
+                performance every time.
               </p>
             </div>
           </div>
