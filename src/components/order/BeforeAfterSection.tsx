@@ -38,12 +38,20 @@ const BeforeAfterSection = () => {
           
           <div className="grid md:grid-cols-2 gap-6 mt-6">
             <div className="text-center">
-              <h3 className="text-xl font-bold text-muted-foreground mb-2">BEFORE</h3>
-              <p className="text-sm text-muted-foreground">Low energy, poor confidence, struggling with performance</p>
+              <h3 className="text-2xl md:text-3xl font-black text-muted-foreground tracking-wide mb-3">
+                BEFORE
+              </h3>
+              <p className="text-base text-muted-foreground">
+                Restricted circulation keeps veins tight and stamina limited—performance fades fast with every attempt.
+              </p>
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-bold text-primary mb-2">AFTER</h3>
-              <p className="text-sm text-foreground font-semibold">Increased energy, enhanced confidence, peak performance</p>
+              <h3 className="text-2xl md:text-3xl font-black text-primary tracking-wide mb-3">
+                AFTER
+              </h3>
+              <p className="text-base text-foreground font-semibold">
+                Enhanced circulation drives expanded veins, relentless blood flow, and rock-solid stamina for peak performance every time.
+              </p>
             </div>
           </div>
         </div>
