@@ -7,48 +7,52 @@ const reviews = [
     age: 39,
     rating: 5,
     review:
-      "Stallion Commander gave me the stamina I thought I lost years ago. My workouts are stronger, and my confidence is through the roof.",
-    location: "New York"
+      "Stallion Commander gave me the stamina I thought I’d lost. Stronger workouts, sharper focus, and my confidence is back.",
+    location: "New York",
+    tag: "Back in control"
   },
   {
     name: "Ryan S.",
     age: 32,
     rating: 5,
     review:
-      "After just a month, I feel more energized than ever. My partner noticed the difference immediately.",
-    location: "Nevada"
+      "After a few weeks my energy stayed high all day. My partner noticed before I did.",
+    location: "Nevada",
+    tag: "Unstoppable energy"
   },
   {
     name: "Daniel K.",
     age: 45,
     rating: 5,
-    review:
-      "No side effects, only pure results. I’ve tried supplements before, but nothing compares to this.",
-    location: "Chicago"
+    review: "No jitters and real results. I’ve tried others—nothing compares to this.",
+    location: "Chicago",
+    tag: "Nothing compares"
   },
   {
     name: "Anthony B.",
     age: 28,
     rating: 5,
     review:
-      "Within 2 weeks, I felt more powerful in the gym and more confident in my everyday life.",
-    location: "Texas"
+      "Two weeks in and I felt stronger at the gym and more confident everywhere else.",
+    location: "Texas",
+    tag: "Confidence up"
   },
   {
     name: "Chris J.",
     age: 36,
     rating: 5,
     review:
-      "Finally, a product that delivers exactly what it promises. My strength, stamina, and focus have all improved.",
-    location: "Florida"
+      "Delivers exactly what it promises—strength, stamina, and focus all improved.",
+    location: "Florida",
+    tag: "Delivered results"
   },
   {
     name: "Jason M.",
     age: 41,
     rating: 5,
-    review:
-      "This supplement is a total game-changer. My endurance and recovery time have dramatically improved.",
-    location: "California"
+    review: "Total game-changer. Endurance and recovery have both jumped.",
+    location: "California",
+    tag: "Game-changer"
   }
 ];
 
