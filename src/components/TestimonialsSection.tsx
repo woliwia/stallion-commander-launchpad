@@ -36,14 +36,12 @@ export const TestimonialsSection = () => {
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-4 sm:mb-6">
-            REAL MEN,
-            <span className="block bg-gradient-primary bg-clip-text text-transparent">
-              REAL RESULTS
-            </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-4 sm:mb-6">
+            <span className="block">REAL MEN.</span>
+            <span className="block text-[#42C6F7]">UNDENIABLE RESULTS.</span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Join thousands of satisfied customers who've unlocked their true potential with Stallion Commander.
+          <p className="text-base sm:text-lg md:text-xl text-foreground/80 leading-relaxed">
+            Thousands of men have already transformed their strength, confidence, and performance with Stallion Commander—now it’s your turn to unleash your full potential.
           </p>
         </div>
         
