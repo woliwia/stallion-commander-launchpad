@@ -48,9 +48,9 @@ export const TestimonialsSection = () => {
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {testimonials.map((testimonial, index) => (
-            <div 
+            <div
               key={index}
-              className="bg-card border border-border p-4 sm:p-6 rounded-xl lg:rounded-2xl shadow-premium hover:shadow-glow transition-all duration-300 animate-slide-up group"
+              className="bg-card border border-[#42C6F7] p-4 sm:p-6 rounded-xl lg:rounded-2xl shadow-premium hover:shadow-glow transition-all duration-300 animate-slide-up group"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Quote Icon */}
