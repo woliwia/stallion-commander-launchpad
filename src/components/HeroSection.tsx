@@ -75,7 +75,7 @@ export const HeroSection = () => {
                 ].map((benefit, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-3 bg-card border-2 border-white p-3 sm:p-4 rounded-xl hover:bg-gradient-card transition-all duration-300"
+                    className="flex items-start gap-3 bg-card border border-[#B0B0B0] p-3 sm:p-4 rounded-xl hover:bg-gradient-card transition-all duration-300"
                   >
                     <benefit.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
                     <div className="space-y-1">
