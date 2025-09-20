@@ -82,7 +82,7 @@ export const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-card border border-[#B0B0B0] p-responsive rounded-xl lg:rounded-2xl hover:bg-gradient-card hover:shadow-premium transition-all duration-300 group animate-slide-up"
+              className="bg-card border-2 border-[#42C6F7] p-responsive rounded-xl lg:rounded-2xl hover:bg-gradient-card hover:shadow-premium transition-all duration-300 group animate-slide-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="bg-primary/10 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl flex items-center justify-center mb-responsive-sm group-hover:bg-primary/20 transition-colors">
