@@ -260,7 +260,7 @@ export const BenefitsSection = () => {
         <div className="mt-6 sm:mt-8">
           {/* Vascular Enhancement Graphics */}
           <div className="bg-card border border-[#B0B0B0] rounded-2xl p-6 sm:p-8 mb-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-center text-foreground mb-6">
+            <h3 className="text-3xl sm:text-4xl font-black text-center text-foreground mb-6">
               VASCULAR ENHANCEMENT PROCESS
             </h3>
             <div className="flex justify-center mb-6">
