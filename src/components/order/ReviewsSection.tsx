@@ -3,58 +3,31 @@ import { Card } from "@/components/ui/card";
 
 const reviews = [
   {
-    name: "Alex M.",
+    name: "Ethan S.",
     age: 36,
     rating: 5,
     review:
-      "Stallion Commander gave me back my drive and focus. I feel stronger in the gym and more confident in every aspect of life.",
+      "Stallion Commander gave me the drive I thought I’d lost years ago. My workouts are stronger, my focus is sharper, and my partner says she’s never seen me more confident.",
     location: "New York",
-    tag: "Back in control"
+    tag: "Drive restored"
   },
   {
-    name: "Carlos R.",
+    name: "Carlos M.",
     age: 42,
     rating: 5,
     review:
-      "Within weeks, my stamina skyrocketed. I can go longer, feel sharper, and my energy levels stay high all day.",
-    location: "Nevada",
-    tag: "Unstoppable energy"
+      "I’ve tried plenty of supplements, but nothing comes close to this. Within weeks I had more stamina, more energy, and I felt like I was in my 20s again.",
+    location: "Texas",
+    tag: "Feels like 20 again"
   },
   {
-    name: "Ethan S.",
+    name: "Liam P.",
     age: 31,
     rating: 5,
     review:
-      "This is the only supplement that actually delivered. My workouts are more intense, and I feel like I’ve unlocked a new level of performance.",
-    location: "Illinois",
-    tag: "Next-level strength"
-  },
-  {
-    name: "Ryan P.",
-    age: 39,
-    rating: 5,
-    review:
-      "Not only did I notice the difference, but my wife did too! My confidence and vitality have never been better.",
-    location: "Colorado",
-    tag: "Confidence restored"
-  },
-  {
-    name: "Derek H.",
-    age: 28,
-    rating: 5,
-    review:
-      "I’ve tried countless products, but Stallion Commander is the real deal. No jitters, no side effects—just results.",
+      "At first I was doubtful, but now I’m all in. Stallion Commander has boosted my endurance, and I feel unstoppable both at the gym and in everyday life.",
     location: "Florida",
-    tag: "Finally found the one"
-  },
-  {
-    name: "Sam T.",
-    age: 45,
-    rating: 5,
-    review:
-      "I feel younger, stronger, and sharper. This formula keeps me on top of my game every single day.",
-    location: "Arizona",
-    tag: "Turned back the clock"
+    tag: "Unstoppable endurance"
   }
 ];
 
