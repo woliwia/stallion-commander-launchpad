@@ -285,10 +285,8 @@ export const BenefitsSection = () => {
             
             {/* RESULTS DON'T LIE Heading */}
             <div className="text-center mt-6 mb-4">
-              <h3 className="text-2xl sm:text-3xl font-black text-foreground">
-                <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  RESULTS DON'T LIE - JUST ASK HER
-                </span>
+              <h3 className="text-2xl sm:text-3xl font-black text-[#42C6F7]">
+                RESULTS DON'T LIE - JUST ASK HER
               </h3>
             </div>
             
