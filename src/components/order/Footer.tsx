@@ -43,7 +43,7 @@ const Footer = () => {
 
         {/* Brand */}
         <div className="text-center mb-4 sm:mb-6">
-          <div className="text-lg sm:text-xl md:text-2xl font-black bg-gradient-primary bg-clip-text text-transparent">
+          <div className="text-lg sm:text-xl md:text-2xl font-black text-[#42C6F7]">
             STALLION COMMANDER
           </div>
         </div>
