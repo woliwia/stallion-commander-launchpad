@@ -116,8 +116,8 @@ export const BenefitsSection = () => {
         {/* Scientific Explanation Section */}
         <div className="mt-12 sm:mt-16">
           <div className="bg-card border border-border rounded-2xl p-6 sm:p-8 md:p-12">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground text-center mb-8 sm:mb-12">
-              THE SCIENCE BEHIND
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground text-center tracking-tight mb-8 sm:mb-12">
+              THE CLINICAL EDGE OF
               <span className="block bg-gradient-primary bg-clip-text text-transparent">
                 STALLION COMMANDER
               </span>
