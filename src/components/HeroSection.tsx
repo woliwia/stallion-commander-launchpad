@@ -40,7 +40,7 @@ export const HeroSection = () => {
             
               {/* Main Headline */}
               <div className="space-y-3 sm:space-y-4">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-foreground leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-[#42C6F7] leading-tight">
                   <span className="block">BREAKING: STALLION COMMANDER JUST HIT THE MARKET</span>
                 </h1>
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground font-semibold leading-relaxed max-w-xl mx-auto lg:mx-0">
