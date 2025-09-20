@@ -74,7 +74,10 @@ export const GuaranteeSection = () => {
               { icon: Award, text: "FDA Registered Facility" },
               { icon: CheckCircle, text: "Third-Party Tested" }
             ].map((trust, index) => (
-              <div key={index} className="flex items-center justify-center gap-3 bg-card border border-border p-4 sm:p-6 rounded-xl">
+              <div
+                key={index}
+                className="flex items-center justify-center gap-3 bg-card border border-[#B0B0B0] p-4 sm:p-6 rounded-xl"
+              >
                 <trust.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 <span className="font-semibold text-foreground text-sm sm:text-base">{trust.text}</span>
               </div>
