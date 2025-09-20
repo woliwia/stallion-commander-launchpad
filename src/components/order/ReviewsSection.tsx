@@ -3,25 +3,58 @@ import { Card } from "@/components/ui/card";
 
 const reviews = [
   {
-    name: "Marcus T.",
+    name: "Alex M.",
+    age: 36,
+    rating: 5,
+    review:
+      "Stallion Commander gave me back my drive and focus. I feel stronger in the gym and more confident in every aspect of life.",
+    location: "New York",
+    tag: "Back in control"
+  },
+  {
+    name: "Carlos R.",
     age: 42,
     rating: 5,
-    review: "Life-changing results! My energy is through the roof and my confidence has never been higher. Worth every penny.",
-    location: "Texas, USA"
+    review:
+      "Within weeks, my stamina skyrocketed. I can go longer, feel sharper, and my energy levels stay high all day.",
+    location: "Nevada",
+    tag: "Unstoppable energy"
   },
   {
-    name: "David R.",
-    age: 38,
+    name: "Ethan S.",
+    age: 31,
     rating: 5,
-    review: "After just 30 days, I noticed incredible improvements. My wife can't believe the difference. Highly recommend!",
-    location: "California, USA"
+    review:
+      "This is the only supplement that actually delivered. My workouts are more intense, and I feel like I’ve unlocked a new level of performance.",
+    location: "Illinois",
+    tag: "Next-level strength"
   },
   {
-    name: "James M.",
+    name: "Ryan P.",
+    age: 39,
+    rating: 5,
+    review:
+      "Not only did I notice the difference, but my wife did too! My confidence and vitality have never been better.",
+    location: "Colorado",
+    tag: "Confidence restored"
+  },
+  {
+    name: "Derek H.",
+    age: 28,
+    rating: 5,
+    review:
+      "I’ve tried countless products, but Stallion Commander is the real deal. No jitters, no side effects—just results.",
+    location: "Florida",
+    tag: "Finally found the one"
+  },
+  {
+    name: "Sam T.",
     age: 45,
     rating: 5,
-    review: "Finally found something that actually works. The results speak for themselves. Already ordered my second bottle.",
-    location: "Florida, USA"
+    review:
+      "I feel younger, stronger, and sharper. This formula keeps me on top of my game every single day.",
+    location: "Arizona",
+    tag: "Turned back the clock"
   }
 ];
 
@@ -43,20 +76,28 @@ const ReviewsSection = () => {
         </div>
       </div>
       
-      <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {reviews.map((review, index) => (
-          <Card key={index} className="p-6 bg-gradient-card border border-border hover:shadow-premium transition-all duration-300 flex flex-col h-full">
+          <Card
+            key={index}
+            className="p-6 bg-gradient-card border border-border hover:shadow-premium transition-all duration-300 flex flex-col h-full"
+          >
             <div className="flex items-center gap-1 mb-4">
               {[...Array(review.rating)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-primary text-primary" />
               ))}
             </div>
-            
+
             <p className="text-foreground mb-4 leading-relaxed flex-grow">"{review.review}"</p>
-            
+
             <div className="border-t border-border pt-4 mt-auto">
               <div className="font-semibold text-foreground">{review.name}</div>
               <div className="text-sm text-muted-foreground">Age {review.age} • {review.location}</div>
+              {review.tag ? (
+                <span className="mt-3 inline-flex items-center rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                  “{review.tag}”
+                </span>
+              ) : null}
             </div>
           </Card>
         ))}
