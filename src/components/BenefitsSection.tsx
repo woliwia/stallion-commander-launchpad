@@ -133,7 +133,7 @@ export const BenefitsSection = () => {
                 <h4 className="text-lg sm:text-xl font-bold text-foreground mb-2">L-Arginine HCL</h4>
                 <p className="text-sm text-primary font-semibold mb-3">200mg Clinical Dose</p>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  Converts to nitric oxide, dramatically improving blood flow and oxygen delivery for enhanced performance.
+                  Converts to nitric oxide, flooding muscles with oxygen-rich blood for rock-solid stamina and relentless performance.
                 </p>
               </div>
               
@@ -145,7 +145,7 @@ export const BenefitsSection = () => {
                 <h4 className="text-lg sm:text-xl font-bold text-foreground mb-2">Ashwagandha Root</h4>
                 <p className="text-sm text-primary font-semibold mb-3">150mg Extract</p>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  Powerful adaptogen that reduces cortisol, supports testosterone, and enhances stress resistance.
+                  Clinically proven adaptogen that crushes cortisol while elevating testosterone to fortify strength, focus, and drive.
                 </p>
               </div>
               
@@ -157,7 +157,7 @@ export const BenefitsSection = () => {
                 <h4 className="text-lg sm:text-xl font-bold text-foreground mb-2">Maca Root Extract</h4>
                 <p className="text-sm text-primary font-semibold mb-3">100mg Concentrated</p>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  Ancient Peruvian superfood that boosts energy, stamina, and supports healthy libido naturally.
+                  Concentrated alkaloids recharge cellular energy, sustaining all-day endurance, balanced hormones, and a surging libido.
                 </p>
               </div>
               
@@ -169,7 +169,7 @@ export const BenefitsSection = () => {
                 <h4 className="text-lg sm:text-xl font-bold text-foreground mb-2">Tongkat Ali</h4>
                 <p className="text-sm text-primary font-semibold mb-3">100mg Root Extract</p>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  Malaysian "Ali's Stick" traditionally used to support male vitality and healthy hormone levels.
+                  Malaysian powerhouse shown to amplify free testosterone, muscle density, and primal confidence.
                 </p>
               </div>
               
@@ -181,7 +181,7 @@ export const BenefitsSection = () => {
                 <h4 className="text-lg sm:text-xl font-bold text-foreground mb-2">Horny Goat Weed</h4>
                 <p className="text-sm text-primary font-semibold mb-3">100mg Leaf Extract</p>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  Contains icariin compound that supports healthy circulation and natural male performance.
+                  Icariin intensifies nitric oxide signaling for thicker circulation, stronger function, and unshakable vitality.
                 </p>
               </div>
               
@@ -193,7 +193,7 @@ export const BenefitsSection = () => {
                 <h4 className="text-lg sm:text-xl font-bold text-foreground mb-2">B-Vitamin Complex</h4>
                 <p className="text-sm text-primary font-semibold mb-3">High-Potency Formula</p>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  B-6 (235% DV) & B-12 (4,167% DV) for energy metabolism and nervous system support.
+                  High-potency B6 and B12 ignite energy metabolism, neural resilience, and day-long mental stamina.
                 </p>
               </div>
             </div>
@@ -204,15 +204,15 @@ export const BenefitsSection = () => {
               <div className="grid sm:grid-cols-3 gap-4 text-center">
                 <div>
                   <h5 className="font-semibold text-foreground mb-1">Tribulus Terrestris</h5>
-                  <p className="text-sm text-muted-foreground">40mg whole plant extract for natural testosterone support</p>
+                  <p className="text-sm text-muted-foreground">40mg whole plant extract proven to elevate natural testosterone for amplified strength and virility.</p>
                 </div>
                 <div>
                   <h5 className="font-semibold text-foreground mb-1">Saw Palmetto</h5>
-                  <p className="text-sm text-muted-foreground">40mg berry extract for prostate and hormonal health</p>
+                  <p className="text-sm text-muted-foreground">40mg berry extract that shields the prostate, balances DHT, and preserves unstoppable potency.</p>
                 </div>
                 <div>
                   <h5 className="font-semibold text-foreground mb-1">Premium Quality</h5>
-                  <p className="text-sm text-muted-foreground">All extracts standardized for maximum potency</p>
+                  <p className="text-sm text-muted-foreground">Standardized extracts deliver clinical strength with every dose for dependable male dominance.</p>
                 </div>
               </div>
             </div>
@@ -225,7 +225,7 @@ export const BenefitsSection = () => {
                     <span className="text-white font-bold text-lg sm:text-xl">1</span>
                   </div>
                   <span className="text-sm sm:text-base font-semibold text-foreground">Rapid Absorption</span>
-                  <span className="text-xs sm:text-sm text-muted-foreground">Active compounds enter bloodstream within 30 minutes</span>
+                  <span className="text-xs sm:text-sm text-muted-foreground">Bioavailable delivery saturates your bloodstream in 30 minutes for an immediate power surge.</span>
                 </div>
                 
                 <div className="hidden md:block text-primary">
@@ -237,7 +237,7 @@ export const BenefitsSection = () => {
                     <span className="text-white font-bold text-lg sm:text-xl">2</span>
                   </div>
                   <span className="text-sm sm:text-base font-semibold text-foreground">System Optimization</span>
-                  <span className="text-xs sm:text-sm text-muted-foreground">Hormones balance, circulation improves</span>
+                  <span className="text-xs sm:text-sm text-muted-foreground">Hormones recalibrate, circulation accelerates, and nutrients hit every performance pathway.</span>
                 </div>
                 
                 <div className="hidden md:block text-primary">
@@ -249,7 +249,7 @@ export const BenefitsSection = () => {
                     <span className="text-white font-bold text-lg sm:text-xl">3</span>
                   </div>
                   <span className="text-sm sm:text-base font-semibold text-foreground">Peak Performance</span>
-                  <span className="text-xs sm:text-sm text-muted-foreground">Maximum vitality and confidence achieved</span>
+                  <span className="text-xs sm:text-sm text-muted-foreground">Lock in sustained stamina, unshakeable confidence, and elite-level output.</span>
                 </div>
               </div>
             </div>
