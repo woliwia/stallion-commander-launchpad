@@ -7,33 +7,39 @@ import muscularMenLiftingWeightsBar from "@/assets/muscular-men-lifting-weights-
 const benefits = [
   {
     icon: Zap,
-    title: "Explosive Energy", 
-    description: "Experience unstoppable energy that lasts all day and night, powering through any challenge."
+    title: "Explosive Energy",
+    description:
+      "Ignite unstoppable energy that powers you day and night—conquer every challenge without slowing down."
   },
   {
     icon: Heart,
     title: "Enhanced Circulation",
-    description: "Improved blood flow delivers nutrients where you need them most for peak performance."
+    description:
+      "Boost blood flow for peak performance—delivering vital nutrients exactly where your body needs them most."
   },
   {
     icon: Brain,
     title: "Mental Clarity",
-    description: "Sharp focus and confidence to dominate in every aspect of your life."
+    description:
+      "Unlock sharp focus and unshakable confidence—dominate every decision and every aspect of your life."
   },
   {
     icon: Battery,
     title: "Increased Stamina",
-    description: "Go longer and stronger with enhanced endurance and recovery capabilities."
+    description:
+      "Push beyond your limits with enhanced endurance and rapid recovery to go stronger, longer."
   },
   {
     icon: Target,
     title: "Precision Performance",
-    description: "Targeted results that deliver exactly what you need, when you need it most."
+    description:
+      "Targeted results engineered to give you exactly what you need, precisely when you need it."
   },
   {
     icon: Shield,
     title: "Natural Formula",
-    description: "Premium, science-backed ingredients with no harmful side effects or dependencies."
+    description:
+      "Premium, science-backed ingredients—maximum results with zero harmful side effects or dependencies."
   }
 ];
 
