@@ -47,28 +47,27 @@ export const BenefitsSection = () => {
       
       <div className="container relative">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-responsive">
-          <h2 className="text-responsive-xl font-black text-foreground mb-responsive-sm">
-            EXPERIENCE THE
-            <span className="block bg-gradient-primary bg-clip-text text-transparent">
-              STALLION DIFFERENCE
-            </span>
-          </h2>
-          <p className="text-responsive-lg text-muted-foreground leading-relaxed">
-            Discover why thousands of men choose Stallion Commander to unlock their true potential and dominate in every area of life.
-          </p>
-          
-          {/* Attractive Women Beauty Bar */}
-          <div className="mt-responsive-sm">
-            <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
-              <img 
-                src={muscularMenLiftingWeightsBar}
-                alt="Muscular middle-aged men lifting weights showing strength and determination"
-                className="w-full h-16 sm:h-20 md:h-24 lg:h-32 object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+        <div className="text-center max-w-4xl mx-auto mb-responsive">
+          <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+            <img
+              src={muscularMenLiftingWeightsBar}
+              alt="Muscular middle-aged men lifting weights showing strength and determination"
+              className="w-full h-16 sm:h-20 md:h-24 lg:h-32 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div className="mt-responsive-sm space-y-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-white">
+              <span className="block">EXPERIENCE THE</span>
+              <span className="block text-transparent bg-gradient-to-r from-[#42C6F7] via-[#42C6F7] to-white bg-clip-text">
+                STALLION DIFFERENCE
+              </span>
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground font-semibold leading-relaxed">
+              Experts agree: Stallion Commander is more than a formula—it’s the breakthrough transforming ordinary men into unstoppable forces of strength and vitality.
+            </p>
           </div>
         </div>
         
