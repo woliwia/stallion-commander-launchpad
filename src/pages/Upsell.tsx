@@ -37,7 +37,7 @@ const Upsell = () => {
           {/* Offer Text */}
           <div className="mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-              Get 3 More For only $24.99
+              Get 3 More For only $29.99
             </h2>
             <p className="text-base text-muted-foreground mb-2">
               <span className="text-sm">(per bottle)</span>
@@ -47,7 +47,7 @@ const Upsell = () => {
             </p>
             <p className="mt-6 text-lg md:text-xl font-semibold text-foreground">
               Stallion Commander the Ultimate Male Vitality now—this is your last chance to grab 3
-              more bottles for just $24.99 each before this breakthrough supply
+              more bottles for just $29.99 each before this breakthrough supply
               disappears. Ignite unstoppable strength, explosive performance, and
               faster results that keep you operating at ultimate power. Skip this
               upgrade and you&apos;ll regret it—lock in the savings and smash
