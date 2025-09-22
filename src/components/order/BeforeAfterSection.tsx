@@ -19,7 +19,7 @@ const BeforeAfterSection = () => {
           />
         </div>
         <p className="text-lg text-white max-w-2xl mx-auto mt-4">
-          See the incredible transformations achieved by men who chose <span className="text-primary font-semibold">Stallion Commander</span>
+          See the incredible transformations achieved by men who chose <span className="text-[#21BFF4] font-semibold">Stallion Commander</span>
         </p>
       </div>
       
@@ -47,7 +47,7 @@ const BeforeAfterSection = () => {
               },
               {
                 title: "AFTER",
-                titleClasses: "text-primary",
+                titleClasses: "text-[#21BFF4]",
                 description:
                   "Optimized circulation expands veins, powers stronger blood flow, and unlocks peak stamina for relentless performance every time.",
                 descriptionClasses: "text-foreground font-semibold",

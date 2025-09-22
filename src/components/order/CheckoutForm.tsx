@@ -128,7 +128,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
             2
           </div>
           <h2 className="text-xl sm:text-2xl font-black text-foreground">
-            <span className="text-primary">Tell Us Where To Ship To</span>
+            <span className="text-[#21BFF4]">Tell Us Where To Ship To</span>
           </h2>
         </div>
         <div className="h-1 w-full bg-gradient-to-r from-primary to-primary/30 rounded lg:mb-6"></div>
@@ -153,7 +153,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
 
       <div className="mb-6 flex justify-center">
         <div className="text-center text-2xl font-black uppercase leading-none tracking-[0.3em] sm:text-3xl md:text-4xl">
-          <span className="text-[#0B6BFF]">STALLION</span>{" "}
+          <span className="text-[#21BFF4]">STALLION</span>{" "}
           <span className="text-[#80858F]">COMMANDER</span>
         </div>
       </div>
@@ -384,20 +384,20 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
           </div>
           
           {rushOrder && (
-            <div className="flex justify-between text-primary">
+            <div className="flex justify-between text-[#21BFF4]">
               <span>Rush Processing</span>
               <span>+${rushFee}</span>
             </div>
           )}
-          
+
           {insureOrder && (
-            <div className="flex justify-between text-primary">
+            <div className="flex justify-between text-[#21BFF4]">
               <span>Package Insurance</span>
               <span>+${insuranceFee}</span>
             </div>
           )}
-          
-          <div className="flex justify-between text-primary font-semibold">
+
+          <div className="flex justify-between text-[#21BFF4] font-semibold">
             <span>Shipping</span>
             <span>FREE</span>
           </div>

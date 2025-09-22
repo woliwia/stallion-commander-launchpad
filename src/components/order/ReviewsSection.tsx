@@ -68,7 +68,7 @@ const ReviewsSection = () => {
         </h2>
         <div className="flex items-center justify-center gap-2 mb-4">
           {[...Array(5)].map((_, i) => (
-            <Star key={i} className="w-6 h-6 fill-primary text-primary" />
+            <Star key={i} className="w-6 h-6 fill-[#21BFF4] text-[#21BFF4]" />
           ))}
           <span className="text-lg font-bold text-foreground ml-2">4.9/5 (2,847 reviews)</span>
         </div>
@@ -82,7 +82,7 @@ const ReviewsSection = () => {
           >
             <div className="flex items-center gap-1 mb-4">
               {[...Array(review.rating)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                <Star key={i} className="w-4 h-4 fill-[#21BFF4] text-[#21BFF4]" />
               ))}
             </div>
 
@@ -92,7 +92,7 @@ const ReviewsSection = () => {
               <div className="font-semibold text-foreground">{review.name}</div>
               <div className="text-sm text-muted-foreground">Age {review.age} • {review.location}</div>
               {review.tag ? (
-                <span className="mt-3 inline-flex items-center rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                <span className="mt-3 inline-flex items-center rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-semibold text-[#21BFF4]">
                   “{review.tag}”
                 </span>
               ) : null}

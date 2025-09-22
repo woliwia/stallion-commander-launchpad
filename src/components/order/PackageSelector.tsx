@@ -51,7 +51,7 @@ const PackageSelector = ({
             1
           </div>
           <h2 className="text-xl sm:text-2xl font-black text-foreground">
-            <span className="text-primary">Select Order Quantity</span>
+            <span className="text-[#21BFF4]">Select Order Quantity</span>
           </h2>
         </div>
         <div className="h-1 w-full bg-gradient-to-r from-primary to-primary/30 rounded lg:mb-6"></div>
