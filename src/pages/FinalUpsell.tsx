@@ -62,7 +62,7 @@ const FinalUpsell = () => {
             <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
               Why pay more later when you can lock in this insane deal right now and fuel your transformation to the MAX?
             </p>
-            <p className="text-base md:text-lg font-semibold text-foreground">
+            <p className="text-base md:text-lg font-bold text-foreground" style={{ color: '#21BFF4' }}>
               👉 Hit "COMPLETE MY ORDER" before this deal disappears—once it's gone, it's gone for good!
             </p>
           </div>
