@@ -54,10 +54,10 @@ const FinalUpsell = () => {
           {/* Motivational Text */}
           <div className="mb-8 max-w-3xl mx-auto">
             <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
-              Don't stop now—you're just getting started. For a limited time only, you can grab 3 MORE bottles of Stallion Commander for just $24.99 each!
+              Don't stop now—you're just getting started. For a limited time only, you can grab <span style={{ color: '#21BFF4' }}>3 MORE bottles of Stallion Commander for just $24.99 each!</span>
             </p>
             <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
-              That's a steal compared to the regular price—power, stamina, and unstoppable performance at the lowest price you'll EVER see.
+              That's a steal compared to the regular price—power, stamina, and unstoppable performance at the <span style={{ color: '#21BFF4' }}>lowest price you'll EVER see</span>.
             </p>
             <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
               Why pay more later when you can lock in this insane deal right now and fuel your transformation to the MAX?
