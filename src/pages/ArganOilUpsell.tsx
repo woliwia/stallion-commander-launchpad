@@ -88,8 +88,8 @@ const ArganOilUpsell = () => {
           </div>
           
           {/* Pricing Section */}
-          <div className="mb-8">
-            <div className="flex items-center justify-between">
+          <div className="mb-4">
+            <div className="flex items-center justify-between max-w-2xl mx-auto">
               <div className="flex items-center gap-2">
                 <span className="text-lg text-gray-400 line-through">$105</span>
                 <span className="text-2xl font-bold text-foreground">71% OFF!</span>
