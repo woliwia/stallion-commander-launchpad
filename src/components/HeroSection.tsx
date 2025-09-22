@@ -21,7 +21,7 @@ export const HeroSection = () => {
           <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 xl:gap-12">
             
             {/* Main Content - Full width on mobile, left side on desktop */}
-            <div className="w-full lg:w-3/5 xl:w-2/3 space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1">
+            <div className="w-full lg:w-2/5 xl:w-1/3 space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1">
               {/* Badge and Free Shipping */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-3">
                 <div className="inline-flex items-center gap-2 bg-gradient-card border border-border px-3 py-2 sm:px-4 sm:py-2 rounded-full">
@@ -117,7 +117,7 @@ export const HeroSection = () => {
             </div>
             
             {/* Hero Image - Right side on desktop, top on mobile */}
-            <div className="w-full lg:w-2/5 xl:w-1/3 order-1 lg:order-2">
+            <div className="w-full lg:w-3/5 xl:w-2/3 order-1 lg:order-2">
               <div className="relative bg-gradient-card p-4 sm:p-6 rounded-2xl border border-border shadow-premium max-w-md mx-auto">
                 <img 
                   src={stallionHeroImage} 
