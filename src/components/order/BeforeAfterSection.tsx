@@ -25,9 +25,6 @@ const BeforeAfterSection = () => {
       
       <div className="max-w-4xl mx-auto">
         <div className="bg-gradient-card border border-border rounded-2xl p-6 md:p-8 shadow-premium">
-          <div className="text-center mb-4">
-            <p className="text-xs text-muted-foreground">*AI generated photo for illustrative effects only</p>
-          </div>
           
           <img 
             src={beforeAfterImage}
