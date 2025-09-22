@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import CountdownTimer from "@/components/order/CountdownTimer";
 import { useNavigate } from "react-router-dom";
 import upsell2StallionBottles from "@/assets/upsell2-stallion-bottles.png";
-import stallionLogo from "@/assets/stallion-commander-logo-blue.png";
+import stallionLogo from "@/assets/stallion-commander-logo-text.png";
 
 const FinalUpsell = () => {
   const navigate = useNavigate();
@@ -14,13 +14,13 @@ const FinalUpsell = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Logo Strip */}
-      <div className="bg-white py-6 shadow-sm">
+      {/* Logo Strip - At Very Top */}
+      <div className="bg-white py-4 border-b border-gray-100">
         <div className="container mx-auto px-4 flex justify-center">
           <img 
             src={stallionLogo}
             alt="Stallion Commander"
-            className="h-12 md:h-16 w-auto object-contain"
+            className="h-8 md:h-10 w-auto object-contain"
           />
         </div>
       </div>
