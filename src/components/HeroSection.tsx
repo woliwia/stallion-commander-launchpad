@@ -122,7 +122,10 @@ export const HeroSection = () => {
                 <img 
                   src={coupleImage} 
                   alt="Muscular man with beautiful woman and Stallion Commander supplement bottle with lightning effects - Ultimate male vitality results" 
-                  className="w-full drop-shadow-2xl"
+                  className="w-full"
+                  style={{ 
+                    filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.45))'
+                  }}
                   loading="eager"
                   decoding="async"
                   fetchPriority="high"
