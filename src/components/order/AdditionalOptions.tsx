@@ -32,7 +32,7 @@ const AdditionalOptions = ({
           />
           <div className="flex-1">
             <label htmlFor="rushOrder" className="flex items-center gap-3 cursor-pointer">
-              <Clock className="w-6 h-6 text-primary" />
+              <Clock className="w-6 h-6 text-[#21BFF4]" />
               <div>
                 <div className="font-bold text-foreground text-lg">
                   RUSH My Order (+${rushFee})
@@ -44,7 +44,7 @@ const AdditionalOptions = ({
             </label>
           </div>
           <div className="text-right">
-            <div className="text-lg font-bold text-primary">+${rushFee}</div>
+            <div className="text-lg font-bold text-[#21BFF4]">+${rushFee}</div>
             <div className="text-xs text-muted-foreground">Recommended</div>
           </div>
         </div>
@@ -61,7 +61,7 @@ const AdditionalOptions = ({
           />
           <div className="flex-1">
             <label htmlFor="insureOrder" className="flex items-center gap-3 cursor-pointer">
-              <Shield className="w-6 h-6 text-primary" />
+              <Shield className="w-6 h-6 text-[#21BFF4]" />
               <div>
                 <div className="font-bold text-foreground text-lg">
                   INSURE My Order (+${insuranceFee})
@@ -73,7 +73,7 @@ const AdditionalOptions = ({
             </label>
           </div>
           <div className="text-right">
-            <div className="text-lg font-bold text-primary">+${insuranceFee}</div>
+            <div className="text-lg font-bold text-[#21BFF4]">+${insuranceFee}</div>
             <div className="text-xs text-muted-foreground">Peace of mind</div>
           </div>
         </div>

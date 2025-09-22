@@ -124,25 +124,25 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
     <div className="space-y-6">
       <div className="text-center mb-8 mt-12">
         <div className="inline-flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-black text-lg">
+          <div className="w-10 h-10 bg-white text-[#21BFF4] rounded-full flex items-center justify-center font-black text-lg">
             2
           </div>
           <h2 className="text-xl sm:text-2xl font-black text-foreground">
-            <span className="text-primary">Tell Us Where To Ship To</span>
+            <span className="text-[#21BFF4]">Tell Us Where To Ship To</span>
           </h2>
         </div>
-        <div className="h-1 w-full bg-gradient-to-r from-primary to-primary/30 rounded lg:mb-6"></div>
+        <div className="h-1 w-full bg-white rounded lg:mb-6"></div>
       </div>
 
       {/* PayPal Button */}
-      <Card className="p-6 bg-gradient-primary text-center mb-2">
-        <Button 
-          size="lg" 
+      <Card className="p-6 bg-white text-center mb-2">
+        <Button
+          size="lg"
           className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-lg h-14"
         >
           💳 Pay with PayPal
         </Button>
-        <div className="text-xs text-primary-foreground mt-2 opacity-90">
+        <div className="text-xs text-black mt-2 opacity-90">
           Express checkout with PayPal
         </div>
       </Card>
@@ -151,12 +151,11 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
         OR FILL OUT DETAILS
       </div>
 
-      <div className="text-center p-1 rounded-md bg-background mb-2">
-        <img 
-          src="/lovable-uploads/9a09954a-ad19-47fc-be2a-f1938e036a43.png" 
-          alt="Accepted payment methods: American Express, Mastercard, Visa, Discover"
-          className="w-full h-16 object-contain"
-        />
+      <div className="mb-6 flex justify-center">
+        <div className="text-center text-2xl font-black uppercase leading-none tracking-[0.3em] sm:text-3xl md:text-4xl">
+          <span className="text-[#21BFF4]">STALLION</span>{" "}
+          <span className="text-[#80858F]">COMMANDER</span>
+        </div>
       </div>
       <Card className="p-4 sm:p-6 mt-2">
         <form className="space-y-4" onSubmit={handleSubmit}>
@@ -171,7 +170,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                 value={formData.firstName}
                 onChange={(e) => handleInputChange('firstName', e.target.value)}
                 className={cn(
-                  "mt-2 h-12 border-blue-200 focus:border-blue-400",
+                  "mt-2 h-12 border-white focus:border-white",
                   errors.firstName && "border-red-500 focus:ring-red-500 bg-red-50/20"
                 )}
                 style={{ backgroundColor: !errors.firstName ? '#e0f4ff' : undefined }}
@@ -186,7 +185,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                 value={formData.lastName}
                 onChange={(e) => handleInputChange('lastName', e.target.value)}
                 className={cn(
-                  "mt-2 h-12 border-blue-200 focus:border-blue-400",
+                  "mt-2 h-12 border-white focus:border-white",
                   errors.lastName && "border-red-500 focus:ring-red-500 bg-red-50/20"
                 )}
                 style={{ backgroundColor: !errors.lastName ? '#e0f4ff' : undefined }}
@@ -204,7 +203,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
               value={formData.address}
               onChange={(e) => handleInputChange('address', e.target.value)}
               className={cn(
-                "mt-2 h-12 border-blue-200 focus:border-blue-400",
+                "mt-2 h-12 border-white focus:border-white",
                 errors.address && "border-red-500 focus:ring-red-500 bg-red-50/20"
               )}
               style={{ backgroundColor: !errors.address ? '#e0f4ff' : undefined }}
@@ -218,7 +217,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
               placeholder="Apartment, suite, etc." 
               value={formData.address2}
               onChange={(e) => handleInputChange('address2', e.target.value)}
-              className="mt-2 h-12 border-blue-200 focus:border-blue-400"
+              className="mt-2 h-12 border-white focus:border-white"
               style={{ backgroundColor: '#e0f4ff' }}
             />
           </div>
@@ -233,7 +232,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                 value={formData.city}
                 onChange={(e) => handleInputChange('city', e.target.value)}
                 className={cn(
-                  "mt-2 h-12 border-blue-200 focus:border-blue-400",
+                  "mt-2 h-12 border-white focus:border-white",
                   errors.city && "border-red-500 focus:ring-red-500 bg-red-50/20"
                 )}
                 style={{ backgroundColor: !errors.city ? '#e0f4ff' : undefined }}
@@ -242,7 +241,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
             <div>
               <Label htmlFor="country" className="text-foreground font-medium">Country *</Label>
               <Select value={formData.country} onValueChange={(value) => handleInputChange('country', value)}>
-                <SelectTrigger className="mt-2 h-12 border-blue-200 focus:border-blue-400" style={{ backgroundColor: '#e0f4ff' }}>
+                <SelectTrigger className="mt-2 h-12 border-white focus:border-white" style={{ backgroundColor: '#e0f4ff' }}>
                   <SelectValue placeholder="United States" />
                 </SelectTrigger>
                 <SelectContent>
@@ -261,7 +260,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                 value={formData.postalCode}
                 onChange={(e) => handleInputChange('postalCode', e.target.value)}
                 className={cn(
-                  "mt-2 h-12 border-blue-200 focus:border-blue-400",
+                  "mt-2 h-12 border-white focus:border-white",
                   errors.postalCode && "border-red-500 focus:ring-red-500 bg-red-50/20"
                 )}
                 style={{ backgroundColor: !errors.postalCode ? '#e0f4ff' : undefined }}
@@ -280,7 +279,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
               value={formData.email}
               onChange={(e) => handleInputChange('email', e.target.value)}
               className={cn(
-                "mt-2 h-12 border-blue-200 focus:border-blue-400",
+                "mt-2 h-12 border-white focus:border-white",
                 errors.email && "border-red-500 focus:ring-red-500 bg-red-50/20"
               )}
               style={{ backgroundColor: !errors.email ? '#e0f4ff' : undefined }}
@@ -297,7 +296,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
               value={formData.phone}
               onChange={(e) => handleInputChange('phone', e.target.value)}
               className={cn(
-                "mt-2 h-12 border-blue-200 focus:border-blue-400",
+                "mt-2 h-12 border-white focus:border-white",
                 errors.phone && "border-red-500 focus:ring-red-500 bg-red-50/20"
               )}
               style={{ backgroundColor: !errors.phone ? '#e0f4ff' : undefined }}
@@ -321,7 +320,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                 value={formData.cardNumber}
                 onChange={(e) => handleInputChange('cardNumber', e.target.value)}
                 className={cn(
-                  "mt-2 h-12 border-blue-200 focus:border-blue-400",
+                  "mt-2 h-12 border-white focus:border-white",
                   errors.cardNumber && "border-red-500 focus:ring-red-500 bg-red-50/20"
                 )}
                 style={{ backgroundColor: !errors.cardNumber ? '#e0f4ff' : undefined }}
@@ -338,7 +337,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                   value={formData.expiry}
                   onChange={(e) => handleInputChange('expiry', e.target.value)}
                   className={cn(
-                    "mt-2 h-12 border-blue-200 focus:border-blue-400",
+                    "mt-2 h-12 border-white focus:border-white",
                     errors.expiry && "border-red-500 focus:ring-red-500 bg-red-50/20"
                   )}
                   style={{ backgroundColor: !errors.expiry ? '#e0f4ff' : undefined }}
@@ -353,7 +352,7 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
                   value={formData.cvv}
                   onChange={(e) => handleInputChange('cvv', e.target.value)}
                   className={cn(
-                    "mt-2 h-12 border-blue-200 focus:border-blue-400",
+                    "mt-2 h-12 border-white focus:border-white",
                     errors.cvv && "border-red-500 focus:ring-red-500 bg-red-50/20"
                   )}
                   style={{ backgroundColor: !errors.cvv ? '#e0f4ff' : undefined }}
@@ -385,20 +384,20 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
           </div>
           
           {rushOrder && (
-            <div className="flex justify-between text-primary">
+            <div className="flex justify-between text-[#21BFF4]">
               <span>Rush Processing</span>
               <span>+${rushFee}</span>
             </div>
           )}
-          
+
           {insureOrder && (
-            <div className="flex justify-between text-primary">
+            <div className="flex justify-between text-[#21BFF4]">
               <span>Package Insurance</span>
               <span>+${insuranceFee}</span>
             </div>
           )}
-          
-          <div className="flex justify-between text-primary font-semibold">
+
+          <div className="flex justify-between text-[#21BFF4] font-semibold">
             <span>Shipping</span>
             <span>FREE</span>
           </div>

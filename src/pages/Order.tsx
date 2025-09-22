@@ -58,14 +58,14 @@ const Order = () => {
       <div className="container mx-auto px-4 py-4 sm:py-6 md:py-8">
         <div className="text-center mb-6 sm:mb-8 md:mb-10">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-foreground mb-4 sm:mb-6 md:mb-8 leading-tight">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
+            <span className="text-[#21BFF4]">
               GET UP TO 68% OFF
             </span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
             Hurry, this is the best price you can get on Stallion Commander!
           </p>
-          <p className="text-base sm:text-lg text-primary font-semibold mt-2">
+          <p className="text-base sm:text-lg text-[#21BFF4] font-semibold mt-2">
             If you try Stallion Commander today you'll also get <span className="font-bold">FREE shipping</span>.
           </p>
         </div>
