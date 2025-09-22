@@ -6,7 +6,7 @@ const BeforeAfterSection = () => {
       <div className="text-center mb-6">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-foreground mb-4">
           REAL RESULTS FROM
-          <span className="block bg-gradient-primary bg-clip-text text-transparent">
+          <span className="block text-[#21BFF4]">
             REAL MEN
           </span>
         </h2>

@@ -62,7 +62,7 @@ const ReviewsSection = () => {
       <div className="text-center mb-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-foreground mb-4">
           WHAT OUR CUSTOMERS
-          <span className="block bg-gradient-primary bg-clip-text text-transparent">
+          <span className="block text-[#21BFF4]">
             ARE SAYING
           </span>
         </h2>
