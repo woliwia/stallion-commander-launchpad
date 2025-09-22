@@ -21,7 +21,7 @@ export const HeroSection = () => {
           <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 xl:gap-12">
             
             {/* Main Content - Full width on mobile, left side on desktop */}
-            <div className="w-full lg:w-3/5 xl:w-2/3 space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1">
+            <div className="w-full lg:w-1/2 space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1">
               {/* Badge and Free Shipping */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-3">
                 <div className="inline-flex items-center gap-2 bg-gradient-card border border-border px-3 py-2 sm:px-4 sm:py-2 rounded-full">
@@ -117,12 +117,12 @@ export const HeroSection = () => {
             </div>
             
             {/* Hero Image - Right side on desktop, top on mobile */}
-            <div className="w-full lg:w-2/5 xl:w-1/3 order-1 lg:order-2">
-              <div className="relative bg-gradient-card p-4 sm:p-6 rounded-2xl border border-border shadow-premium max-w-md mx-auto">
+            <div className="w-full lg:w-1/2 order-1 lg:order-2 relative">
+              <div className="relative max-w-lg mx-auto lg:max-w-none">
                 <img 
                   src={coupleImage} 
                   alt="Muscular man with beautiful woman and Stallion Commander supplement bottle with lightning effects - Ultimate male vitality results" 
-                  className="w-full drop-shadow-2xl rounded-xl"
+                  className="w-full drop-shadow-2xl"
                   loading="eager"
                   decoding="async"
                   fetchPriority="high"
@@ -131,10 +131,10 @@ export const HeroSection = () => {
                 <div className="absolute -top-2 -right-2 bg-primary text-primary-foreground px-3 py-1 rounded-full font-bold animate-glow-pulse text-xs sm:text-sm">
                   LIMITED TIME
                 </div>
+                
+                {/* Background Glow */}
+                <div className="absolute inset-0 bg-primary opacity-20 blur-3xl -z-10" />
               </div>
-              
-              {/* Background Glow */}
-              <div className="absolute inset-0 bg-primary opacity-20 blur-3xl -z-10" />
             </div>
             
           </div>
