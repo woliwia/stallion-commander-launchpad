@@ -90,11 +90,11 @@ const ArganOilUpsell = () => {
           {/* Pricing Section */}
           <div className="mb-8">
             <div className="flex items-center justify-between">
-              <span className="text-lg text-gray-400 line-through">$105</span>
               <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-foreground">$30.60</span>
+                <span className="text-lg text-gray-400 line-through">$105</span>
                 <span className="text-2xl font-bold text-foreground">71% OFF!</span>
               </div>
+              <span className="text-2xl font-bold text-foreground">$30.60</span>
             </div>
           </div>
 
