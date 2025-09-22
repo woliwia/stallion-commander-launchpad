@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Activity, Crown, Shield, Star, Truck, Trophy, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-import coupleImage from "@/assets/couple-hero-image.jpg";
+import coupleImage from "@/assets/stallion-commander-hero-final.png";
 import heroImage from "@/assets/confident-man.jpg";
 
 export const HeroSection = () => {
@@ -121,7 +121,7 @@ export const HeroSection = () => {
               <div className="relative bg-gradient-card p-4 sm:p-6 rounded-2xl border border-border shadow-premium max-w-md mx-auto">
                 <img 
                   src={coupleImage} 
-                  alt="Confident mature man with beautiful woman - Stallion Commander results" 
+                  alt="Muscular man with beautiful woman and Stallion Commander supplement bottle with lightning effects - Ultimate male vitality results" 
                   className="w-full drop-shadow-2xl rounded-xl"
                   loading="eager"
                   decoding="async"
