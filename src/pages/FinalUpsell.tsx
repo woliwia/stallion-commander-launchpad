@@ -52,12 +52,26 @@ const FinalUpsell = () => {
           </div>
           
           {/* User Uploaded Image */}
-          <div className="mb-12">
+          <div className="mb-8">
             <img 
               src="/lovable-uploads/616ef652-3715-4dfb-a03b-07b422c0be32.png"
               alt="Satisfied customers"
               className="w-full max-w-2xl mx-auto h-auto object-contain rounded-lg shadow-lg"
             />
+          </div>
+          
+          {/* Pricing Section */}
+          <div className="mb-8">
+            <div className="flex items-center justify-between max-w-2xl mx-auto">
+              <div className="flex items-center gap-2">
+                <span className="text-lg text-gray-400 line-through">$315</span>
+                <span className="text-2xl font-bold text-foreground">76% OFF!</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl font-bold text-foreground">Only: $24.99/each</span>
+                <span className="text-2xl font-bold text-foreground">$74.97 Total</span>
+              </div>
+            </div>
           </div>
           
           {/* Complete Order Button */}
