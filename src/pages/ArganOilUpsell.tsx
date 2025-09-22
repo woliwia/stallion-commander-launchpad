@@ -20,7 +20,7 @@ const ArganOilUpsell = () => {
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4">
               Wait - get Fuller, STRONGER Hair and YOUNGER, Healthier SKIN plus your ULTIMATE 100% Organic Intimacy lubricant...
             </h1>
-            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: '#21BFF4' }}>
               Pure Argan Oil does it all
             </h2>
             <p className="text-xl md:text-2xl font-semibold text-foreground">
