@@ -56,15 +56,15 @@ const ArganOilUpsell = () => {
               <p className="text-lg mb-4 text-foreground font-semibold">Each bottle of Pure Argan Oil is:</p>
               <ul className="space-y-3 text-lg text-foreground">
                 <li className="flex items-start gap-3">
-                  <span className="text-yellow-400 text-xl">✨</span>
+                  <span className="text-green-500 text-xl">✓</span>
                   <span><strong>100% Organic & Natural</strong> — no fillers, no synthetics.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-yellow-400 text-xl">✨</span>
+                  <span className="text-green-500 text-xl">✓</span>
                   <span><strong>Multi-Benefit</strong> — for hair, skin, and intimacy.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-yellow-400 text-xl">✨</span>
+                  <span className="text-green-500 text-xl">✓</span>
                   <span><strong>Gentle & Nourishing</strong> — safe, silky, and effective.</span>
                 </li>
               </ul>
