@@ -82,10 +82,10 @@ const BodyButterUpsell = () => {
             {/* Main CTA Button */}
             <button 
               onClick={handleCompleteOrder}
-              className="w-full bg-[#21bff4] hover:bg-[#1aa8d9] text-white font-bold text-xl py-4 px-8 rounded-lg shadow-lg transition-all duration-300 relative overflow-hidden group mb-4"
+              className="w-full bg-[#2563EB] hover:bg-[#1d4ed8] text-white font-bold text-xl py-4 px-8 rounded-lg shadow-lg transition-all duration-300 relative overflow-hidden group mb-4"
               style={{
-                background: 'linear-gradient(135deg, #21bff4 0%, #1aa8d9 100%)',
-                boxShadow: '0 4px 15px rgba(33, 191, 244, 0.3)'
+                background: 'linear-gradient(135deg, #2563EB 0%, #1d4ed8 100%)',
+                boxShadow: '0 4px 15px rgba(37, 99, 235, 0.3)'
               }}
             >
               <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-white/20 to-transparent rounded-t-lg"></div>
