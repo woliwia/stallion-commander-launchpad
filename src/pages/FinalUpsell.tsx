@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import CountdownTimer from "@/components/order/CountdownTimer";
 import { useNavigate } from "react-router-dom";
-import threeStallionBottles from "@/assets/three-stallion-commander-bottles.png";
+import upsell2StallionBottles from "@/assets/upsell2-stallion-bottles.png";
 
 const FinalUpsell = () => {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ const FinalUpsell = () => {
           {/* Stallion Commander 3 Bottles */}
           <div className="mb-12">
             <img 
-              src={threeStallionBottles}
+              src={upsell2StallionBottles}
               alt="3 Bottles of Stallion Commander"
               className="w-full max-w-md mx-auto h-auto object-contain"
             />
