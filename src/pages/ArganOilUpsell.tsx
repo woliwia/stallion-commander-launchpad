@@ -24,7 +24,7 @@ const ArganOilUpsell = () => {
               Pure Argan Oil does it all
             </h2>
             <p className="text-xl md:text-2xl font-semibold text-foreground">
-              Get yours for only $29.99 <span className="text-lg text-red-500 line-through">(regularly $99.99)</span>
+              Get yours for only $30.60 <span className="text-lg text-red-500 line-through">(regularly $105)</span>
             </p>
           </div>
           
