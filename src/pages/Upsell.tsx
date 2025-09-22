@@ -30,7 +30,7 @@ const Upsell = () => {
             <p className="text-base text-muted-foreground mb-2">
               <span className="text-sm">(per bottle)</span>
             </p>
-            <p className="text-xl md:text-2xl font-semibold text-primary">
+            <p className="text-xl md:text-2xl font-semibold" style={{ color: '#21BFF4' }}>
               and MAXIMIZE Results!
             </p>
             <p className="mt-6 text-lg md:text-xl font-semibold text-foreground">
