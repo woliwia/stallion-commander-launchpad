@@ -43,12 +43,28 @@ const FinalUpsell = () => {
           </div>
           
           {/* Stallion Commander 3 Bottles */}
-          <div className="mb-12">
+          <div className="mb-8">
             <img 
               src={upsell2StallionBottles}
               alt="3 Bottles of Stallion Commander"
               className="w-full max-w-md mx-auto h-auto object-contain"
             />
+          </div>
+          
+          {/* Motivational Text */}
+          <div className="mb-8 max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
+              Don't stop now—you're just getting started. For a limited time only, you can grab 3 MORE bottles of Stallion Commander for just $24.99 each!
+            </p>
+            <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
+              That's a steal compared to the regular price—power, stamina, and unstoppable performance at the lowest price you'll EVER see.
+            </p>
+            <p className="text-base md:text-lg text-foreground leading-relaxed mb-4">
+              Why pay more later when you can lock in this insane deal right now and fuel your transformation to the MAX?
+            </p>
+            <p className="text-base md:text-lg font-semibold text-foreground">
+              👉 Hit "COMPLETE MY ORDER" before this deal disappears—once it's gone, it's gone for good!
+            </p>
           </div>
           
           {/* User Uploaded Image */}
