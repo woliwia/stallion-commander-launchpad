@@ -48,16 +48,9 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* FDA Disclaimer */}
-        <div className="text-center border-t border-border pt-4 sm:pt-6 mb-4 sm:mb-6">
-          <p className="text-xs md:text-sm text-muted-foreground px-4">
-            *These statements have not been reviewed by the FDA
-          </p>
-        </div>
-
         {/* Certification Logos */}
-        <div className="flex items-center justify-center px-4">
-          <img 
+        <div className="flex items-center justify-center px-4 border-t border-border pt-4 sm:pt-6 mt-4 sm:mt-6">
+          <img
             src="/lovable-uploads/06e1c285-a576-46f1-83d3-1334be303b4a.png"
             alt="FDA Registered Facility, Made in USA, GMP Certified, Recyclable"
             className="h-16 sm:h-20 md:h-24 w-auto max-w-full opacity-90 hover:opacity-100 transition-opacity"
