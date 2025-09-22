@@ -63,15 +63,15 @@ const ArganOilUpsell = () => {
             <div className="mb-6">
               <ul className="space-y-3 text-lg text-foreground">
                 <li className="flex items-start gap-3">
-                  <span className="text-xl" style={{ color: '#21BFF4' }}>✅</span>
+                  <span className="text-xl" style={{ color: '#21BFF4' }}>✓</span>
                   <span><strong>Glowing, Youthful Skin</strong> – Hydrates and smooths for a healthy, energized look that turns heads.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-xl" style={{ color: '#21BFF4' }}>✅</span>
+                  <span className="text-xl" style={{ color: '#21BFF4' }}>✓</span>
                   <span><strong>Stronger Hair & Beard</strong> – Nourishes roots and facial hair, keeping it thick, shiny, and full of life.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-xl" style={{ color: '#21BFF4' }}>✅</span>
+                  <span className="text-xl" style={{ color: '#21BFF4' }}>✓</span>
                   <span><strong>Bedroom Confidence</strong> – Doubles as a natural, organic massage oil that's safe, silky, and enhances intimacy like nothing else.</span>
                 </li>
               </ul>
