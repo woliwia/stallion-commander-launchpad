@@ -35,7 +35,7 @@ const CountdownTimer = () => {
         <div className="container mx-auto">
           <div className="flex items-center justify-center gap-2 text-center">
             <div className="flex items-center gap-2">
-              <span className="text-sm font-semibold text-foreground">Time Remaining:</span>
+              <span className="text-sm font-semibold text-foreground">Hurry! Offer ends in</span>
               <div className="flex items-center gap-1 bg-red-600 text-white px-3 py-1 rounded font-mono font-bold text-lg">
                 <span>{formatTime(minutes)}</span>
                 <span className="animate-pulse">:</span>
