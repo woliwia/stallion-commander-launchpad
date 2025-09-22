@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Shield, Star, Trophy } from "lucide-react";
+import { Activity, Crown, Shield, Star, Truck, Trophy, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import coupleImage from "@/assets/couple-hero-image.jpg";
 import heroImage from "@/assets/confident-man.jpg";
@@ -26,36 +26,66 @@ export const HeroSection = () => {
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-3">
                 <div className="inline-flex items-center gap-2 bg-gradient-card border border-border px-3 py-2 sm:px-4 sm:py-2 rounded-full">
                   <Trophy className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                  <span className="text-xs sm:text-sm lg:text-base font-medium text-foreground">#1 Male Vitality Formula</span>
+                  <span className="text-xs sm:text-sm lg:text-base font-semibold text-foreground">
+                    Clinically Proven #1 Male Vitality Formula
+                  </span>
                 </div>
                 <div className="inline-flex items-center gap-2 bg-card border border-border px-3 py-2 sm:px-4 sm:py-2 rounded-full">
-                  <span className="text-xs sm:text-sm lg:text-base font-semibold text-foreground">FREE SHIPPING</span>
+                  <Truck className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                  <span className="text-xs sm:text-sm lg:text-base font-semibold text-foreground">
+                    Free Shipping — Limited Time
+                  </span>
                 </div>
               </div>
             
               {/* Main Headline */}
               <div className="space-y-3 sm:space-y-4">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-foreground leading-tight">
-                  UNLEASH YOUR
-                  <span className="block bg-gradient-primary bg-clip-text text-transparent">
-                    STALLION POWER
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight">
+                  <span className="block">
+                    <span className="text-white font-black">BREAKING:</span>{" "}
+                    <span className="text-[#42C6F7]">STALLION COMMANDER JUST HIT THE MARKET</span>
                   </span>
                 </h1>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  The ultimate male performance enhancer that transforms ordinary men into unstoppable Stallions
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground font-semibold leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  Experts call it the ultimate breakthrough— the ultimate male performance enhancer that transforms ordinary men into unstoppable Stallions.
                 </p>
               </div>
             
               {/* Benefits */}
               <div className="grid grid-cols-1 gap-2 sm:gap-3">
                 {[
-                  { icon: Star, text: "Explosive Energy" },
-                  { icon: Shield, text: "Enhanced Performance" },
-                  { icon: Trophy, text: "Supreme Confidence" }
+                  {
+                    icon: Zap,
+                    title: "Unleash Explosive Energy",
+                    description:
+                      "Ignite your stamina and power through every challenge with unstoppable drive.",
+                  },
+                  {
+                    icon: Activity,
+                    title: "Peak Performance Amplified",
+                    description:
+                      "Boost strength, endurance, and vitality to perform at your absolute best.",
+                  },
+                  {
+                    icon: Crown,
+                    title: "Command Supreme Confidence",
+                    description:
+                      "Elevate your presence, mindset, and performance—inside and outside the gym.",
+                  },
                 ].map((benefit, index) => (
-                  <div key={index} className="flex items-center gap-3 bg-card border border-border p-3 sm:p-4 rounded-lg hover:bg-gradient-card transition-all duration-300">
-                    <benefit.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
-                    <span className="font-bold text-foreground text-sm sm:text-base">{benefit.text}</span>
+                  <div
+                    key={index}
+                    className="flex items-start gap-3 bg-card border border-[#B0B0B0] p-3 sm:p-4 rounded-xl hover:bg-gradient-card transition-all duration-300"
+                  >
+                    <benefit.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
+                    <div className="space-y-1">
+                      <p className="text-sm sm:text-base font-extrabold text-foreground">
+                        {benefit.title}
+                      </p>
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-snug">
+                        {benefit.description}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>

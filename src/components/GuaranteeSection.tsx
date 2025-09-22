@@ -8,7 +8,7 @@ export const GuaranteeSection = () => {
       <div className="container mx-auto px-4 relative">
         <div className="max-w-6xl mx-auto">
           {/* Main Guarantee Card */}
-          <div className="bg-card border-2 border-primary/20 rounded-3xl p-8 sm:p-12 md:p-16 shadow-premium mb-12 sm:mb-16">
+          <div className="bg-card border border-[#42C6F7] rounded-3xl p-8 sm:p-12 md:p-16 shadow-premium mb-12 sm:mb-16">
             <div className="text-center mb-12 sm:mb-16">
               {/* Shield Icon */}
               <div className="bg-primary/10 w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full flex items-center justify-center mx-auto mb-6 sm:mb-8 animate-glow-pulse">
@@ -74,7 +74,10 @@ export const GuaranteeSection = () => {
               { icon: Award, text: "FDA Registered Facility" },
               { icon: CheckCircle, text: "Third-Party Tested" }
             ].map((trust, index) => (
-              <div key={index} className="flex items-center justify-center gap-3 bg-card border border-border p-4 sm:p-6 rounded-xl">
+              <div
+                key={index}
+                className="flex items-center justify-center gap-3 bg-card border border-[#B0B0B0] p-4 sm:p-6 rounded-xl"
+              >
                 <trust.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 <span className="font-semibold text-foreground text-sm sm:text-base">{trust.text}</span>
               </div>

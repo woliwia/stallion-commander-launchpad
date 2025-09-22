@@ -33,6 +33,15 @@ const Upsell = () => {
             <p className="text-xl md:text-2xl font-semibold text-primary">
               and MAXIMIZE Results!
             </p>
+            <p className="mt-6 text-lg md:text-xl font-semibold text-foreground">
+              Snag Male Formula Ultra Potent now—this is your last chance to grab 3
+              more bottles for just $24.99 each before this breakthrough supply
+              disappears. Ignite unstoppable strength, explosive performance, and
+              faster results that keep you operating at ultimate power. Skip this
+              upgrade and you&apos;ll regret it—lock in the savings and smash
+              <span className="mx-1 uppercase text-destructive">Complete My Order</span>
+              now!
+            </p>
           </div>
           
           {/* Three Stallion Commander Bottles */}

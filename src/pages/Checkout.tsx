@@ -100,7 +100,7 @@ const Checkout = () => {
               <div className="space-y-4 mb-6">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-center gap-4">
-                    <div className="border-2 border-blue-500 rounded-xl p-3 bg-blue-50/10 flex-shrink-0">
+                    <div className="border-2 border-white rounded-xl p-3 bg-white flex-shrink-0">
                       <img 
                         src={getImageSrc()}
                         alt={getImageAlt()}
