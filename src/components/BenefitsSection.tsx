@@ -3,7 +3,6 @@ import vascularDiagram from "@/assets/vascular-enhancement-diagram.png";
 import fitMenExercisingBar from "@/assets/fit-men-exercising-bar.png";
 import fullFaceSurprisedOrgasmBar from "@/assets/full-face-surprised-orgasm-bar.png";
 import muscularMenLiftingWeightsBar from "@/assets/muscular-men-lifting-weights-bar.png";
-import benefitsBackground from "@/assets/benefits-background.png";
 
 const benefits = [
   {
@@ -46,18 +45,25 @@ const benefits = [
 
 export const BenefitsSection = () => {
   return (
-    <section className="py-responsive relative">
-      {/* Full Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${benefitsBackground})` }}
-      />
-      {/* Dark Overlay for Text Readability */}
-      <div className="absolute inset-0 bg-black/45" />
+    <section className="py-responsive bg-gradient-card relative">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(45_100%_65%)_1px,transparent_1px)] [background-size:24px_24px]" />
+      </div>
       
-      <div className="container relative z-10">
+      <div className="container relative">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-responsive">
+          <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+            <img
+              src={muscularMenLiftingWeightsBar}
+              alt="Muscular middle-aged men lifting weights showing strength and determination"
+              className="w-full h-16 sm:h-20 md:h-24 lg:h-32 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
           <div className="mt-responsive-sm space-y-4">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-white">
               <span className="block">EXPERIENCE THE</span>
@@ -65,7 +71,7 @@ export const BenefitsSection = () => {
                 STALLION DIFFERENCE
               </span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-white/90 font-semibold leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground font-semibold leading-relaxed">
               Experts agree: Stallion Commander is more than a formula—it’s the breakthrough transforming ordinary men into unstoppable forces of strength and vitality.
             </p>
           </div>
