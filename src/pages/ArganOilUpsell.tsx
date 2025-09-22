@@ -30,12 +30,49 @@ const ArganOilUpsell = () => {
           </div>
           
           {/* Product Image */}
-          <div className="mb-12">
+          <div className="mb-8">
             <img 
               src={arganOilCouple}
               alt="Pure Argan Oil - Fuller hair, younger skin, organic lubricant"
               className="w-full max-w-2xl mx-auto h-auto object-contain rounded-lg shadow-lg"
             />
+          </div>
+          
+          {/* Detailed Sales Copy */}
+          <div className="mb-12 text-left max-w-3xl mx-auto">
+            <p className="text-lg mb-6 text-foreground">
+              This is your one and only chance to upgrade with Pure Argan Oil — the all-in-one formula for vitality, youth, and confidence. Add it today for just $30.60 each (regularly $105) — that's over 70% OFF!
+            </p>
+            
+            <p className="text-lg mb-6 text-foreground font-semibold">
+              Don't pause your progress. Why stop now, when your transformation is just beginning?
+            </p>
+            
+            <p className="text-lg mb-6 text-foreground">
+              Clinical studies show that consistent daily use of Argan Oil delivers lasting results — restoring shine to your hair, smoothing and hydrating skin, and enhancing intimacy like nothing else.
+            </p>
+            
+            <div className="mb-6">
+              <p className="text-lg mb-4 text-foreground font-semibold">Each bottle of Pure Argan Oil is:</p>
+              <ul className="space-y-3 text-lg text-foreground">
+                <li className="flex items-start gap-3">
+                  <span className="text-yellow-400 text-xl">✨</span>
+                  <span><strong>100% Organic & Natural</strong> — no fillers, no synthetics.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-yellow-400 text-xl">✨</span>
+                  <span><strong>Multi-Benefit</strong> — for hair, skin, and intimacy.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-yellow-400 text-xl">✨</span>
+                  <span><strong>Gentle & Nourishing</strong> — safe, silky, and effective.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <p className="text-lg mb-8 text-foreground font-bold">
+              Don't miss this exclusive offer! Once this deal is gone, it's gone for good. Secure your Pure Argan Oil upgrade now and take your results to the next level!
+            </p>
           </div>
           
           {/* Complete Order Button */}
