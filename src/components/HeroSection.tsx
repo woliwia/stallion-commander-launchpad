@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Activity, Crown, Shield, Star, Truck, Trophy, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-import stallionHeroImage from "@/assets/stallion-commander-hero-new.png";
+import stallionHeroImage from "@/assets/stallion-commander-hero.png";
 import heroImage from "@/assets/confident-man.jpg";
 
 export const HeroSection = () => {
@@ -21,7 +21,7 @@ export const HeroSection = () => {
           <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 xl:gap-12">
             
             {/* Main Content - Full width on mobile, left side on desktop */}
-            <div className="w-full lg:w-1/2 xl:w-5/12 space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1">
+            <div className="w-full lg:w-3/5 xl:w-2/3 space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1">
               {/* Badge and Free Shipping */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-3">
                 <div className="inline-flex items-center gap-2 bg-gradient-card border border-border px-3 py-2 sm:px-4 sm:py-2 rounded-full">
@@ -117,26 +117,24 @@ export const HeroSection = () => {
             </div>
             
             {/* Hero Image - Right side on desktop, top on mobile */}
-            <div className="w-full lg:w-1/2 xl:w-7/12 order-1 lg:order-2 relative">
-              <div className="relative lg:absolute lg:inset-0 lg:flex lg:items-stretch">
-                <div className="relative w-full lg:h-full flex items-center justify-center lg:items-stretch">
-                  <img 
-                    src={stallionHeroImage} 
-                    alt="Stallion Commander Ultimate Male Vitality Formula with confident man and woman with lightning effects" 
-                    className="w-full lg:w-auto lg:h-full object-contain object-center drop-shadow-2xl max-w-none"
-                    loading="eager"
-                    decoding="async"
-                    fetchPriority="high"
-                  />
-                  
-                  <div className="absolute -top-2 -right-2 lg:top-4 lg:right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full font-bold animate-glow-pulse text-xs sm:text-sm z-10">
-                    LIMITED TIME
-                  </div>
+            <div className="w-full lg:w-2/5 xl:w-1/3 order-1 lg:order-2">
+              <div className="relative bg-gradient-card p-4 sm:p-6 rounded-2xl border border-border shadow-premium max-w-md mx-auto">
+                <img 
+                  src={stallionHeroImage} 
+                  alt="Stallion Commander Ultimate Male Vitality Formula with lightning effects and confident men" 
+                  className="w-full drop-shadow-2xl rounded-xl"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                />
+                
+                <div className="absolute -top-2 -right-2 bg-primary text-primary-foreground px-3 py-1 rounded-full font-bold animate-glow-pulse text-xs sm:text-sm">
+                  LIMITED TIME
                 </div>
               </div>
               
               {/* Background Glow */}
-              <div className="absolute inset-0 bg-primary opacity-10 blur-3xl -z-10" />
+              <div className="absolute inset-0 bg-primary opacity-20 blur-3xl -z-10" />
             </div>
             
           </div>
