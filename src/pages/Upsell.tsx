@@ -34,7 +34,7 @@ const Upsell = () => {
               and MAXIMIZE Results!
             </p>
             <p className="mt-6 text-lg md:text-xl font-semibold text-foreground">
-              Snag Male Formula Ultra Potent now—this is your last chance to grab 3
+              Stallion Commander the Ultimate Male Vitality now—this is your last chance to grab 3
               more bottles for just $24.99 each before this breakthrough supply
               disappears. Ignite unstoppable strength, explosive performance, and
               faster results that keep you operating at ultimate power. Skip this
