@@ -87,14 +87,33 @@ const ArganOilUpsell = () => {
             </p>
           </div>
           
+          {/* Pricing Section */}
+          <div className="mb-8 p-6 bg-gray-50 rounded-lg border-2 border-gray-200">
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <span className="text-2xl text-gray-500 line-through">$105</span>
+              <span className="text-3xl font-bold text-foreground">$30.60</span>
+              <span className="bg-red-500 text-white px-3 py-1 rounded-full text-lg font-bold">70% OFF!</span>
+            </div>
+          </div>
+
           {/* Complete Order Button */}
           <Button 
             onClick={handleCompleteOrder}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 text-lg font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 text-lg font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 mb-4"
             size="xl"
           >
             COMPLETE MY ORDER
           </Button>
+          
+          {/* No Thanks Link */}
+          <div className="text-center">
+            <button 
+              onClick={handleCompleteOrder}
+              className="text-blue-600 hover:text-blue-700 text-sm underline"
+            >
+              No thanks
+            </button>
+          </div>
         </div>
       </div>
     </div>
