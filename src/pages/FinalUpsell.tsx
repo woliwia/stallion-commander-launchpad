@@ -15,12 +15,12 @@ const FinalUpsell = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Logo Strip */}
-      <div className="bg-white py-4 border-b">
+      <div className="bg-white py-6 shadow-sm">
         <div className="container mx-auto px-4 flex justify-center">
           <img 
             src={stallionLogo}
             alt="Stallion Commander"
-            className="h-8 md:h-10 w-auto object-contain"
+            className="h-12 md:h-16 w-auto object-contain"
           />
         </div>
       </div>
