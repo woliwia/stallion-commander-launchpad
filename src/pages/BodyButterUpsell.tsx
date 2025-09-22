@@ -53,9 +53,9 @@ const BodyButterUpsell = () => {
                 By taking advantage of this VIP for LIFE Promotion, you will get a fresh month's supply of Stallion Commander every 30 days and only pay $19.99 + Shipping — forever.
               </p>
               
-              <p className="text-base md:text-lg leading-relaxed font-semibold">
+              <div className="inline-block bg-[#21bff4] text-white px-4 py-2 rounded-lg font-semibold text-base md:text-lg">
                 No increases. Guaranteed. Lock this in, NOW.
-              </p>
+              </div>
               
               <p className="text-base md:text-lg leading-relaxed">
                 The best part? Your delivery won't start for 30 days, so it arrives right when you need it. Imagine the unstoppable power, stamina, and confidence of Stallion Commander for less than $0.70 a day!
