@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { AlertTriangle } from "lucide-react";
+import stallionLogo from "@/assets/stallion-commander-logo-white.png";
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(300); // 5 minutes in seconds
@@ -22,7 +23,15 @@ const CountdownTimer = () => {
   return (
     <div className="bg-destructive text-destructive-foreground py-3 px-4 sticky top-0 z-50">
       <div className="container mx-auto">
-        <div className="flex flex-col items-center justify-center gap-2 text-center">
+        <div className="flex flex-col items-center justify-center gap-3 text-center">
+          {/* Stallion Commander Logo */}
+          <div className="flex justify-center">
+            <img 
+              src={stallionLogo}
+              alt="Stallion Commander"
+              className="h-6 md:h-8 w-auto object-contain"
+            />
+          </div>
           <div className="flex items-center gap-2 font-bold text-sm md:text-base">
             <AlertTriangle className="w-4 h-4 md:w-5 md:h-5 animate-bounce" />
             <span className="uppercase">Hurry - this is our best deal on Stallion Commander and it expires soon</span>
