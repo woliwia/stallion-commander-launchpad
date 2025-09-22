@@ -124,7 +124,7 @@ export const HeroSection = () => {
                   alt="Muscular man with beautiful woman and Stallion Commander supplement bottle with lightning effects - Ultimate male vitality results" 
                   className="w-full"
                   style={{ 
-                    filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.45))'
+                    filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.45)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.15))'
                   }}
                   loading="eager"
                   decoding="async"
