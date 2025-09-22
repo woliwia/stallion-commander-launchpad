@@ -40,8 +40,8 @@ const BodyButterUpsell = () => {
           {/* Product Image */}
           <div className="mb-8">
             <img 
-              src="/lovable-uploads/2304aa0d-f176-4bcb-b559-3b36fda568d4.png"
-              alt="Argan infused whipped body butter for dry flakey skin"
+              src="/stallion-commander-vip-hero.png"
+              alt="Stallion Commander VIP for Life - Ultimate Male Vitality Supplement"
               className="w-full max-w-2xl mx-auto h-auto object-contain rounded-lg shadow-lg"
             />
           </div>
