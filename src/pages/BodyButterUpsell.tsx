@@ -68,14 +68,14 @@ const BodyButterUpsell = () => {
           </div>
           
           {/* Pricing and CTA Block */}
-          <div className="bg-white rounded-lg shadow-lg p-6 mb-8 max-w-2xl mx-auto border">
+          <div className="rounded-lg p-6 mb-8 max-w-2xl mx-auto">
             {/* Pricing Row */}
             <div className="flex justify-between items-center mb-6">
               <div className="text-left">
-                <span className="text-2xl text-gray-500 line-through font-semibold">$105</span>
+                <span className="text-2xl text-gray-400 line-through font-semibold">$105</span>
               </div>
               <div className="text-right">
-                <span className="text-2xl font-bold text-black">Only: $0 today!</span>
+                <span className="text-2xl font-bold text-white">Only: $0 today!</span>
               </div>
             </div>
             
