@@ -38,12 +38,33 @@ const BodyButterUpsell = () => {
           </div>
           
           {/* Product Image */}
-          <div className="mb-12">
+          <div className="mb-8">
             <img 
               src="/lovable-uploads/2304aa0d-f176-4bcb-b559-3b36fda568d4.png"
               alt="Argan infused whipped body butter for dry flakey skin"
               className="w-full max-w-2xl mx-auto h-auto object-contain rounded-lg shadow-lg"
             />
+          </div>
+          
+          {/* Promotional Text */}
+          <div className="mb-12 max-w-4xl mx-auto">
+            <div className="text-left space-y-4 text-foreground">
+              <p className="text-base md:text-lg leading-relaxed">
+                By taking advantage of this VIP for LIFE Promotion, you will get a fresh month's supply of Stallion Commander every 30 days and only pay $19.99 + Shipping — forever.
+              </p>
+              
+              <p className="text-base md:text-lg leading-relaxed font-semibold">
+                No increases. Guaranteed. Lock this in, NOW.
+              </p>
+              
+              <p className="text-base md:text-lg leading-relaxed">
+                The best part? Your delivery won't start for 30 days, so it arrives right when you need it. Imagine the unstoppable power, stamina, and confidence of Stallion Commander for less than $0.70 a day!
+              </p>
+              
+              <p className="text-base md:text-lg leading-relaxed">
+                With this exclusive offer, you can enjoy peace of mind knowing your supply is always ready — saving you time, hassle, and money. Don't miss out on locking in this incredible deal and taking your performance, vitality, and confidence to the next level.
+              </p>
+            </div>
           </div>
           
           {/* Complete Order Button */}
