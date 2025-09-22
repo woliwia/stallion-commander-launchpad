@@ -131,13 +131,13 @@ const CheckoutForm = ({ selectedPackage }: CheckoutFormProps) => {
             <span className="text-[#21BFF4]">Tell Us Where To Ship To</span>
           </h2>
         </div>
-        <div className="h-1 w-full bg-gradient-to-r from-primary to-primary/30 rounded lg:mb-6"></div>
+        <div className="h-1 w-full bg-white rounded lg:mb-6"></div>
       </div>
 
       {/* PayPal Button */}
-      <Card className="p-6 bg-gradient-primary text-center mb-2">
-        <Button 
-          size="lg" 
+      <Card className="p-6 bg-white text-center mb-2">
+        <Button
+          size="lg"
           className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-lg h-14"
         >
           💳 Pay with PayPal

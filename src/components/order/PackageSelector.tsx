@@ -54,7 +54,7 @@ const PackageSelector = ({
             <span className="text-[#21BFF4]">Select Order Quantity</span>
           </h2>
         </div>
-        <div className="h-1 w-full bg-gradient-to-r from-primary to-primary/30 rounded lg:mb-6"></div>
+        <div className="h-1 w-full bg-white rounded lg:mb-6"></div>
       </div>
 
       <div className="space-y-6">
@@ -65,9 +65,9 @@ const PackageSelector = ({
             <Card
               key={pkg.id}
               className={`relative p-8 cursor-pointer transition-all duration-300 border-2 ${
-                isSelected 
-                  ? 'border-primary bg-primary/5 shadow-glow' 
-                  : 'border-border hover:border-primary/50'
+                isSelected
+                  ? 'border-white bg-primary/5 shadow-glow'
+                  : 'border-white hover:border-white/80'
               }`}
               onClick={() => onPackageSelect(pkg)}
             >
