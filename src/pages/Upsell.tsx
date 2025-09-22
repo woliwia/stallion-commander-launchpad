@@ -57,12 +57,26 @@ const Upsell = () => {
           </div>
           
           {/* Three Stallion Commander Bottles */}
-          <div className="mb-12">
+          <div className="mb-8">
             <img 
               src={upsellStallionBottles}
               alt="3 Bottles of Stallion Commander"
               className="w-full max-w-md mx-auto h-auto object-contain"
             />
+          </div>
+          
+          {/* Pricing Section */}
+          <div className="mb-8">
+            <div className="flex items-center justify-between max-w-2xl mx-auto">
+              <div className="flex items-center gap-2">
+                <span className="text-lg text-gray-400 line-through">$315</span>
+                <span className="text-2xl font-bold text-foreground">72% OFF!</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl font-bold text-foreground">Only: $29.99/each</span>
+                <span className="text-2xl font-bold text-foreground">$89.97 Total</span>
+              </div>
+            </div>
           </div>
           
           {/* Complete Order Button */}
