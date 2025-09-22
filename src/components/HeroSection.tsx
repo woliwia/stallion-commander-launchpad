@@ -45,13 +45,10 @@ export const HeroSection = () => {
                     <span className="text-white font-black">BREAKING:</span>
                   </span>
                   <span className="block">
-                    <span className="text-[#42C6F7]">STALLION</span>
+                    <span className="text-[#42C6F7]">STALLION COMMANDER</span>
                   </span>
                   <span className="block">
-                    <span className="text-[#42C6F7]">COMMANDER JUST</span>
-                  </span>
-                  <span className="block">
-                    <span className="text-[#42C6F7]">HIT THE MARKET</span>
+                    <span className="text-[#42C6F7]">JUST HIT THE MARKET</span>
                   </span>
                 </h1>
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground font-semibold leading-relaxed max-w-xl mx-auto lg:mx-0">
