@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import CountdownTimer from "@/components/order/CountdownTimer";
 import { useNavigate } from "react-router-dom";
 import upsell2StallionBottles from "@/assets/upsell2-stallion-bottles.png";
+import stallionLogo from "@/assets/stallion-commander-logo-black.png";
 
 const FinalUpsell = () => {
   const navigate = useNavigate();
@@ -14,6 +15,15 @@ const FinalUpsell = () => {
   return (
     <div className="min-h-screen bg-background">
       <CountdownTimer />
+      
+      {/* Stallion Commander Logo */}
+      <div className="text-center py-6">
+        <img 
+          src={stallionLogo}
+          alt="Stallion Commander Logo"
+          className="h-16 md:h-20 mx-auto object-contain"
+        />
+      </div>
       
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto text-center">
