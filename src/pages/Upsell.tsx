@@ -68,11 +68,21 @@ const Upsell = () => {
           {/* Complete Order Button */}
           <Button 
             onClick={handleCompleteOrder}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 text-lg font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 text-lg font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 mb-4"
             size="xl"
           >
             COMPLETE MY ORDER
           </Button>
+          
+          {/* No Thanks Link */}
+          <div className="text-center">
+            <button 
+              onClick={handleCompleteOrder}
+              className="text-blue-600 hover:text-blue-700 text-sm underline"
+            >
+              No thanks
+            </button>
+          </div>
         </div>
       </div>
     </div>
