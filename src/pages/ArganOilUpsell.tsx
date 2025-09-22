@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import CountdownTimer from "@/components/order/CountdownTimer";
 import { useNavigate } from "react-router-dom";
 import arganOilCouple from "@/assets/argan-oil-couple.jpg";
+import stallionLogo from "@/assets/stallion-commander-logo-blue.png";
 
 const ArganOilUpsell = () => {
   const navigate = useNavigate();
@@ -12,6 +13,17 @@ const ArganOilUpsell = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Logo Strip */}
+      <div className="bg-white py-4 border-b">
+        <div className="container mx-auto px-4 flex justify-center">
+          <img 
+            src={stallionLogo}
+            alt="Stallion Commander"
+            className="h-8 md:h-10 w-auto object-contain"
+          />
+        </div>
+      </div>
+      
       <CountdownTimer />
       
       <div className="container mx-auto px-4 py-8">
