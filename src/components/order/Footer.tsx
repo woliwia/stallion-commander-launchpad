@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import ContactModal from "@/components/ContactModal";
 
 const Footer = () => {
   const footerLinks = [
@@ -28,12 +29,20 @@ const Footer = () => {
         <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-4 md:gap-8 mb-6 sm:mb-8">
           {footerLinks.map((link, index) => (
             <div key={index} className="flex items-center">
-              <a 
-                href="#" 
-                className="text-xs sm:text-sm md:text-base text-muted-foreground hover:text-primary transition-colors font-semibold px-2 py-1"
-              >
-                {link}
-              </a>
+              {link === "Contact Us" ? (
+                <ContactModal>
+                  <button className="text-xs sm:text-sm md:text-base text-muted-foreground hover:text-primary transition-colors font-semibold px-2 py-1 cursor-pointer">
+                    {link}
+                  </button>
+                </ContactModal>
+              ) : (
+                <a 
+                  href="#" 
+                  className="text-xs sm:text-sm md:text-base text-muted-foreground hover:text-primary transition-colors font-semibold px-2 py-1"
+                >
+                  {link}
+                </a>
+              )}
               {index < footerLinks.length - 1 && (
                 <span className="ml-2 sm:ml-4 md:ml-8 text-muted-foreground">|</span>
               )}
