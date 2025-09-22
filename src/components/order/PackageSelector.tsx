@@ -61,29 +61,45 @@ const PackageSelector = ({
         {packages.map((pkg) => {
           const isSelected = selectedPackage?.id === pkg.id;
 
+          const cardBorderClasses = pkg.popular
+            ? `border-[#21BFF4] ${
+                isSelected ? 'bg-primary/5 shadow-glow' : 'hover:border-[#21BFF4]'
+              }`
+            : isSelected
+              ? 'border-white bg-primary/5 shadow-glow'
+              : 'border-white hover:border-white/80';
+
           return (
             <Card
               key={pkg.id}
-              className={`relative p-8 cursor-pointer transition-all duration-300 border-2 ${
-                isSelected
-                  ? 'border-white bg-primary/5 shadow-glow'
-                  : 'border-white hover:border-white/80'
-              }`}
+              className={`relative p-8 cursor-pointer transition-all duration-300 border-2 ${cardBorderClasses}`}
               onClick={() => onPackageSelect(pkg)}
             >
               {/* Selection Radio Button */}
               <div className="absolute top-4 left-4">
-                <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
-                  isSelected ? 'border-primary bg-primary' : 'border-muted-foreground'
-                }`}>
-                  {isSelected && <Check className="w-3 h-3 text-primary-foreground" />}
+                <div
+                  className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
+                    pkg.popular
+                      ? isSelected
+                        ? 'border-[#21BFF4] bg-[#21BFF4]'
+                        : 'border-[#21BFF4]'
+                      : isSelected
+                        ? 'border-primary bg-primary'
+                        : 'border-muted-foreground'
+                  }`}
+                >
+                  {isSelected && (
+                    <Check
+                      className={`w-3 h-3 ${pkg.popular ? 'text-white' : 'text-primary-foreground'}`}
+                    />
+                  )}
                 </div>
               </div>
 
               {/* Popular Badge */}
               {pkg.popular && (
                 <div className="absolute top-4 right-4">
-                  <Badge className="bg-primary text-primary-foreground font-bold">
+                  <Badge className="bg-[#21BFF4] text-white font-bold">
                     Most Popular
                   </Badge>
                 </div>
