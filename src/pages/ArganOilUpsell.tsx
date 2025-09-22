@@ -70,7 +70,7 @@ const ArganOilUpsell = () => {
               </ul>
             </div>
             
-            <p className="text-lg mb-8 text-foreground font-bold">
+            <p className="text-lg mb-8 text-foreground font-bold" style={{ color: '#21BFF4' }}>
               Don't miss this exclusive offer! Once this deal is gone, it's gone for good. Secure your Pure Argan Oil upgrade now and take your results to the next level!
             </p>
           </div>
