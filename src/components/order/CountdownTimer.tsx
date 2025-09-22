@@ -24,8 +24,7 @@ const CountdownTimer = () => {
       <div className="bg-destructive text-destructive-foreground py-3 px-4 sticky top-0 z-50">
         <div className="container mx-auto">
           <div className="flex flex-col items-center justify-center gap-2 text-center">
-            <div className="flex items-center gap-2 font-bold text-sm md:text-base">
-              <AlertTriangle className="w-4 h-4 md:w-5 md:h-5 animate-bounce" />
+            <div className="font-bold text-sm md:text-base">
               <span className="uppercase">CONGRATULATIONS! You have qualified for our greatest offer!</span>
             </div>
           </div>
