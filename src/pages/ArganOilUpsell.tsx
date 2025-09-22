@@ -53,7 +53,7 @@ const ArganOilUpsell = () => {
           {/* Detailed Sales Copy */}
           <div className="mb-12 text-left max-w-3xl mx-auto">
             <p className="text-lg mb-6 text-foreground">
-              This is your one and only chance to upgrade with Pure Argan Oil — the all-in-one formula for vitality, youth, and confidence. Add it today for just <span style={{ color: '#21BFF4' }}>$30.60 each</span> <span className="text-red-500">(regularly $105)</span> — that's over <span style={{ color: '#21BFF4' }}>70% OFF!</span>
+              This is your one and only chance to upgrade with Pure Argan Oil — the all-in-one formula for vitality, youth, and confidence. Add it today for just <span style={{ color: '#21BFF4' }}>$30.60 each</span> <span className="text-red-500">(regularly $105)</span> — that's over <span style={{ color: '#21BFF4' }}>71% OFF!</span>
             </p>
             
             <p className="text-lg mb-6 text-foreground font-semibold">
