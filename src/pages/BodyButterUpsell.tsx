@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import CountdownTimer from "@/components/order/CountdownTimer";
 import { useNavigate } from "react-router-dom";
+import stallionLogo from "@/assets/stallion-commander-logo-text.png";
 
 const BodyButterUpsell = () => {
   const navigate = useNavigate();
@@ -11,6 +12,17 @@ const BodyButterUpsell = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Logo Strip - At Very Top */}
+      <div className="bg-white py-4 border-b border-gray-100">
+        <div className="container mx-auto px-4 flex justify-center">
+          <img 
+            src={stallionLogo}
+            alt="Stallion Commander"
+            className="h-8 md:h-10 w-auto object-contain"
+          />
+        </div>
+      </div>
+      
       <CountdownTimer message="CONGRATULATIONS! You have qualified for our greatest offer!" />
       
       <div className="container mx-auto px-4 py-8">
