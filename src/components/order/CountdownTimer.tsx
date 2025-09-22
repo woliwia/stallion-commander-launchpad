@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { AlertTriangle } from "lucide-react";
 
-const CountdownTimer = () => {
+interface CountdownTimerProps {
+  message?: string;
+}
+
+const CountdownTimer = ({ message = "Hurry - this is our best deal on Stallion Commander and it expires soon" }: CountdownTimerProps) => {
   const [timeLeft, setTimeLeft] = useState(300); // 5 minutes in seconds
 
   useEffect(() => {
@@ -25,7 +29,7 @@ const CountdownTimer = () => {
         <div className="flex flex-col items-center justify-center gap-2 text-center">
           <div className="flex items-center gap-2 font-bold text-sm md:text-base">
             <AlertTriangle className="w-4 h-4 md:w-5 md:h-5 animate-bounce" />
-            <span className="uppercase">Hurry - this is our best deal on Stallion Commander and it expires soon</span>
+            <span className="uppercase">{message}</span>
           </div>
           
           <div className="flex items-center gap-2">
