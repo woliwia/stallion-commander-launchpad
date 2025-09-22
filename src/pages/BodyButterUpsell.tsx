@@ -67,14 +67,41 @@ const BodyButterUpsell = () => {
             </div>
           </div>
           
-          {/* Complete Order Button */}
-          <Button 
-            onClick={handleCompleteOrder}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 text-lg font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-            size="xl"
-          >
-            COMPLETE MY ORDER
-          </Button>
+          {/* Pricing and CTA Block */}
+          <div className="bg-white rounded-lg shadow-lg p-6 mb-8 max-w-2xl mx-auto border">
+            {/* Pricing Row */}
+            <div className="flex justify-between items-center mb-6">
+              <div className="text-left">
+                <span className="text-2xl text-gray-500 line-through font-semibold">$105</span>
+              </div>
+              <div className="text-right">
+                <span className="text-2xl font-bold text-black">Only: $0 today!</span>
+              </div>
+            </div>
+            
+            {/* Main CTA Button */}
+            <button 
+              onClick={handleCompleteOrder}
+              className="w-full bg-[#21bff4] hover:bg-[#1aa8d9] text-white font-bold text-xl py-4 px-8 rounded-lg shadow-lg transition-all duration-300 relative overflow-hidden group mb-4"
+              style={{
+                background: 'linear-gradient(135deg, #21bff4 0%, #1aa8d9 100%)',
+                boxShadow: '0 4px 15px rgba(33, 191, 244, 0.3)'
+              }}
+            >
+              <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-white/20 to-transparent rounded-t-lg"></div>
+              <span className="relative z-10">YES! SIGN ME UP! &gt;</span>
+            </button>
+            
+            {/* No Thanks Link */}
+            <div className="text-center">
+              <button 
+                onClick={handleCompleteOrder}
+                className="text-[#21bff4] text-sm hover:underline"
+              >
+                No thanks
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
