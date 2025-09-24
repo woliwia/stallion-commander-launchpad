@@ -82,18 +82,18 @@ export const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-card border border-[#42C6F7] p-responsive rounded-xl lg:rounded-2xl hover:bg-gradient-card hover:shadow-premium transition-all duration-300 group animate-slide-up"
+              className="bg-card border border-[#42C6F7] p-responsive rounded-xl lg:rounded-2xl hover:bg-gradient-card hover:shadow-premium transition-all duration-300 group animate-slide-up text-left"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="bg-primary/10 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl flex items-center justify-center mb-responsive-sm group-hover:bg-primary/20 transition-colors">
+              <div className="bg-primary/10 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl flex items-center justify-center mb-responsive-sm group-hover:bg-primary/20 transition-colors md:mx-auto lg:mx-0">
                 <benefit.icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-primary" />
               </div>
               
-              <h3 className="text-responsive-lg font-bold text-foreground mb-responsive-sm">
+              <h3 className="text-responsive-lg font-bold text-foreground mb-responsive-sm md:text-center lg:text-left">
                 {benefit.title}
               </h3>
               
-              <p className="text-responsive-base text-muted-foreground leading-relaxed">
+              <p className="text-responsive-base text-muted-foreground leading-relaxed md:text-center lg:text-left">
                 {benefit.description}
               </p>
             </div>
