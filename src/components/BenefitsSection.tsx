@@ -1,4 +1,4 @@
-import { Battery, Brain, Heart, Zap, Shield, Target } from "lucide-react";
+import { Battery, Brain, Heart, Zap, Shield, Target, Crown, Activity } from "lucide-react";
 import vascularDiagram from "@/assets/vascular-enhancement-diagram.png";
 import fitMenExercisingBar from "@/assets/fit-men-exercising-bar.png";
 import fullFaceSurprisedOrgasmBar from "@/assets/full-face-surprised-orgasm-bar.png";
@@ -43,6 +43,24 @@ const benefits = [
   }
 ];
 
+const keyFeatures = [
+  {
+    icon: Zap,
+    title: "Unleash Explosive Energy",
+    description: "Ignite your stamina and power through every challenge with unstoppable drive."
+  },
+  {
+    icon: Activity,
+    title: "Peak Performance Amplified",
+    description: "Boost strength, endurance, and vitality to perform at your absolute best."
+  },
+  {
+    icon: Crown,
+    title: "Command Supreme Confidence",
+    description: "Elevate your presence, mindset, and performance—inside and outside the gym."
+  }
+];
+
 export const BenefitsSection = () => {
   return (
     <section className="py-responsive bg-gradient-card relative">
@@ -74,6 +92,33 @@ export const BenefitsSection = () => {
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground font-semibold leading-relaxed">
               Experts agree: Stallion Commander is more than a formula—it’s the breakthrough transforming ordinary men into unstoppable forces of strength and vitality.
             </p>
+          </div>
+        </div>
+        
+        {/* Key Features - Responsive Layout */}
+        <div className="mb-responsive">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-responsive max-w-5xl mx-auto">
+            {keyFeatures.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-card to-card/50 border border-[#42C6F7] p-8 md:p-6 lg:p-8 rounded-xl hover:bg-gradient-card hover:shadow-premium transition-all duration-300 group animate-slide-up"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <div className="text-center">
+                  <div className="bg-primary/10 w-16 h-16 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-xl flex items-center justify-center mb-6 md:mb-4 lg:mb-6 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <feature.icon className="w-8 h-8 md:w-7 md:h-7 lg:w-8 lg:h-8 text-primary" />
+                  </div>
+                  
+                  <h3 className="text-xl md:text-lg lg:text-xl font-bold text-foreground mb-4 md:mb-3 lg:mb-4">
+                    {feature.title}
+                  </h3>
+                  
+                  <p className="text-base md:text-sm lg:text-base text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         
