@@ -5,17 +5,17 @@ const tickerMessage =
 
 export const BreakingNewsBar = () => {
   return (
-    <div className="bg-gradient-to-r from-[#7dd3fc] to-[#03B9F2] text-white">
+    <div className="bg-gradient-primary text-primary-foreground">
       <div className="mx-auto flex w-full items-center gap-3 px-4 py-2 sm:gap-4 sm:px-6">
-        <span className="inline-flex shrink-0 items-center rounded-md bg-white px-3 py-1 text-xs font-black uppercase tracking-wide text-black sm:text-sm">
+        <span className="inline-flex shrink-0 items-center rounded-md bg-primary-foreground px-3 py-1 text-xs font-black uppercase tracking-wide text-primary sm:text-sm">
           Breaking News
         </span>
 
         <div className="relative flex flex-1 overflow-hidden">
-          <div className="flex min-w-max items-center whitespace-nowrap text-[13px] font-bold tracking-wide sm:text-sm">
+          <div className="flex min-w-max items-center whitespace-nowrap text-[13px] font-bold tracking-wide text-primary-foreground sm:text-sm">
             <div className="flex items-center motion-safe:animate-news-ticker">
               {[0, 1].map((index) => (
-                <span key={index} className="px-6">
+                <span key={index} className="px-6 text-primary-foreground">
                   {tickerMessage}
                 </span>
               ))}
@@ -25,7 +25,7 @@ export const BreakingNewsBar = () => {
 
         <Link
           to="/order"
-          className="inline-flex shrink-0 items-center rounded-md bg-white px-3 py-1 text-xs font-black uppercase tracking-wide text-black transition hover:bg-white/90 sm:px-4 sm:py-1.5 sm:text-sm"
+          className="inline-flex shrink-0 items-center rounded-md bg-primary-foreground px-3 py-1 text-xs font-black uppercase tracking-wide text-primary transition hover:bg-primary-foreground/90 sm:px-4 sm:py-1.5 sm:text-sm"
           aria-label="Shop Stallion Commander now before it's gone"
         >
           SHOP NOW BEFORE IT'S GONE!
