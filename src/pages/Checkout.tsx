@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ArrowLeft, Shield, Lock, CreditCard } from "lucide-react";
+import { ArrowLeft, Shield, Lock, CreditCard, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -20,6 +20,7 @@ interface Package {
 }
 
 // Product images
+import stallionCommanderLightning from "@/assets/stallion-commander-lightning.png";
 const productImage = "/src/assets/health-commander-bottle.png";
 const commanderPackImage = "/src/assets/commander-pack-3bottles.png";
 const ultimatePackImage = "/src/assets/ultimate-pack-6bottles.png";
@@ -93,80 +94,61 @@ const Checkout = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
             {/* Order Summary - Appears first on mobile */}
-            <Card className="p-6 sm:p-8 bg-card border-2 border-border h-fit order-2 xl:order-1">
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-6">Order Summary</h2>
-              
-              {/* Package Details */}
-              <div className="space-y-4 mb-6">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex items-center gap-4">
-                    <div className="border-2 border-white rounded-xl p-3 bg-white flex-shrink-0">
-                      <img 
-                        src={getImageSrc()}
-                        alt={getImageAlt()}
-                        className="w-20 h-20 sm:w-24 sm:h-24 object-contain drop-shadow-lg"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="min-w-0">
-                      <h3 className="font-bold text-foreground text-lg sm:text-xl">{selectedPackage.name}</h3>
-                      <p className="text-base text-muted-foreground">{selectedPackage.bottles} Bottle{selectedPackage.bottles > 1 ? 's' : ''}</p>
-                    </div>
-                  </div>
-                  {selectedPackage.popular && (
-                    <div className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold flex-shrink-0">
-                      MOST POPULAR
-                    </div>
-                  )}
+            <div className="bg-black border-2 border-red-500 rounded-xl p-6 h-fit order-2 xl:order-1 relative">
+              {/* Top Labels */}
+              <div className="flex justify-between items-start mb-6">
+                {/* Top Left - Red Label */}
+                <div className="bg-red-600 text-white px-3 py-1 rounded-md text-sm font-bold">
+                  BUY 1 BOTTLE
                 </div>
-
-                {/* Price Breakdown */}
-                <div className="bg-muted/50 p-4 sm:p-5 rounded-xl space-y-3">
-                  <div className="flex justify-between text-base">
-                    <span className="text-muted-foreground">Price per bottle:</span>
-                    <div className="text-right">
-                      <span className="font-semibold text-foreground">${pricePerBottle}</span>
-                      <span className="text-muted-foreground line-through ml-2">${originalPricePerBottle}</span>
-                    </div>
+                {/* Top Right - Save Badge and Reg Price */}
+                <div className="text-right">
+                  <div className="bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-bold mb-1">
+                    Save 43%
                   </div>
-                  <div className="flex justify-between text-base">
-                    <span className="text-muted-foreground">Quantity:</span>
-                    <span className="font-semibold text-foreground">{selectedPackage.bottles} bottle{selectedPackage.bottles > 1 ? 's' : ''}</span>
+                  <div className="text-gray-400 text-xs line-through">
+                    Reg: $105
                   </div>
-                  <div className="flex justify-between text-base">
-                    <span className="text-muted-foreground">Subtotal:</span>
-                    <span className="font-semibold text-foreground">${selectedPackage.price}</span>
-                  </div>
-                  <div className="flex justify-between text-base">
-                    <span className="text-muted-foreground">Shipping:</span>
-                    <span className="font-semibold text-primary">FREE</span>
-                  </div>
-                  <Separator />
-                  <div className="flex justify-between">
-                    <span className="font-bold text-foreground text-lg">Total:</span>
-                    <div className="text-right">
-                      <span className="font-black text-foreground text-xl">${selectedPackage.price}</span>
-                      <div className="text-base text-destructive font-semibold">
-                        You save ${selectedPackage.savings}!
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Features */}
-                <div className="space-y-2 mt-4">
-                  <h4 className="font-semibold text-foreground text-base">Included:</h4>
-                  <ul className="space-y-2">
-                    {selectedPackage.features.map((feature, index) => (
-                      <li key={index} className="text-sm text-muted-foreground flex items-center gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </div>
-            </Card>
+
+              {/* Main Content Area */}
+              <div className="flex items-center gap-6 mb-6">
+                {/* Left - Product Image */}
+                <div className="bg-gray-800 rounded-xl p-4 flex-shrink-0">
+                  <img 
+                    src={stallionCommanderLightning}
+                    alt="Stallion Commander with blue lightning effects"
+                    className="w-32 h-32 object-contain"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Right - Price and Button */}
+                <div className="flex-1 text-right">
+                  <div className="text-white text-3xl font-bold mb-1">
+                    $59.99 each
+                  </div>
+                  <div className="text-green-500 text-lg font-semibold mb-4">
+                    Savings $45
+                  </div>
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors">
+                    Selected
+                  </button>
+                </div>
+              </div>
+
+              {/* Bottom - Description and Shipping */}
+              <div className="text-left">
+                <div className="flex items-center gap-2 mb-2">
+                  <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                  <span className="text-white text-base">1x Bottle of Stallion Commander</span>
+                </div>
+                <div className="text-green-500 font-bold text-base">
+                  FREE Shipping
+                </div>
+              </div>
+            </div>
 
             {/* Checkout Form */}
             <Card className="p-6 sm:p-8 md:p-10 bg-card border-2 border-border order-1 xl:order-2">
