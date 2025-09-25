@@ -20,7 +20,7 @@ interface Package {
 }
 
 // Product images
-const productImage = "/src/assets/health-commander-bottle.png";
+import stallionCommanderBlue from "@/assets/stallion-commander-blue-lightning.png";
 const commanderPackImage = "/src/assets/commander-pack-3bottles.png";
 const ultimatePackImage = "/src/assets/ultimate-pack-6bottles.png";
 
@@ -53,7 +53,7 @@ const Checkout = () => {
   const originalPricePerBottle = Math.round(selectedPackage.originalPrice / selectedPackage.bottles);
 
   const getImageSrc = () => {
-    if (selectedPackage.bottles === 1) return productImage;
+    if (selectedPackage.bottles === 1) return stallionCommanderBlue;
     if (selectedPackage.bottles === 3) return commanderPackImage;
     return ultimatePackImage;
   };
@@ -122,20 +122,20 @@ const Checkout = () => {
 
                 {/* Price Breakdown */}
                 <div className="bg-muted/50 p-4 sm:p-5 rounded-xl space-y-3">
-                  <div className="flex justify-between text-base">
-                    <span className="text-muted-foreground">Price per bottle:</span>
+                  <div className="flex justify-between items-center text-base">
+                    <span className="text-muted-foreground">Reg:</span>
+                    <span className="text-muted-foreground line-through text-lg">$105</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-primary font-semibold text-lg">Save 43%</span>
                     <div className="text-right">
-                      <span className="font-semibold text-foreground">${pricePerBottle}</span>
-                      <span className="text-muted-foreground line-through ml-2">${originalPricePerBottle}</span>
+                      <span className="font-black text-foreground text-2xl">$59.99</span>
+                      <div className="text-sm text-muted-foreground">each</div>
                     </div>
                   </div>
                   <div className="flex justify-between text-base">
                     <span className="text-muted-foreground">Quantity:</span>
                     <span className="font-semibold text-foreground">{selectedPackage.bottles} bottle{selectedPackage.bottles > 1 ? 's' : ''}</span>
-                  </div>
-                  <div className="flex justify-between text-base">
-                    <span className="text-muted-foreground">Subtotal:</span>
-                    <span className="font-semibold text-foreground">${selectedPackage.price}</span>
                   </div>
                   <div className="flex justify-between text-base">
                     <span className="text-muted-foreground">Shipping:</span>
