@@ -53,16 +53,45 @@ const Checkout = () => {
   const pricePerBottle = Math.round(selectedPackage.price / selectedPackage.bottles);
   const originalPricePerBottle = Math.round(selectedPackage.originalPrice / selectedPackage.bottles);
 
+  const getOfferLabel = () => {
+    if (selectedPackage.bottles === 1) return "BUY 1 BOTTLE";
+    if (selectedPackage.bottles === 3) return "BUY 2 + GET 1 FREE";
+    return "BUY 3 GET 3 FREE";
+  };
+
+  const getSavePercentage = () => {
+    const savePercent = Math.round(((selectedPackage.originalPrice - selectedPackage.price) / selectedPackage.originalPrice) * 100);
+    return `Save ${savePercent}%`;
+  };
+
   const getImageSrc = () => {
-    if (selectedPackage.bottles === 1) return productImage;
+    if (selectedPackage.bottles === 1) return stallionCommanderLightning;
     if (selectedPackage.bottles === 3) return commanderPackImage;
     return ultimatePackImage;
   };
 
   const getImageAlt = () => {
-    if (selectedPackage.bottles === 1) return "Health Commander Male Formula - Single Bottle";
-    if (selectedPackage.bottles === 3) return "Health Commander Male Formula - Buy 2 Get 1 FREE";
-    return "Health Commander Male Formula - Buy 3 Get 3 FREE";
+    if (selectedPackage.bottles === 1) return "Stallion Commander with blue lightning effects - Single Bottle";
+    if (selectedPackage.bottles === 3) return "Stallion Commander - Buy 2 Get 1 FREE";
+    return "Stallion Commander - Buy 3 Get 3 FREE";
+  };
+
+  const getDescriptionLines = () => {
+    if (selectedPackage.bottles === 1) {
+      return ["1x Bottle of Stallion Commander"];
+    }
+    if (selectedPackage.bottles === 3) {
+      return [
+        "3x Bottles of Stallion Commander",
+        "Like buying 2 and getting 1 FREE",
+        "Great Value Package"
+      ];
+    }
+    return [
+      "6x Bottles of Stallion Commander", 
+      "Like buying 3 and getting 3 FREE",
+      "Our Biggest Discount Ever"
+    ];
   };
 
   return (
@@ -94,20 +123,20 @@ const Checkout = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
             {/* Order Summary - Appears first on mobile */}
-            <div className="bg-black border-2 border-red-500 rounded-xl p-6 h-fit order-2 xl:order-1 relative">
+            <div className="bg-black border-2 border-blue-500 rounded-xl p-6 h-fit order-2 xl:order-1 relative">
               {/* Top Labels */}
               <div className="flex justify-between items-start mb-6">
                 {/* Top Left - Red Label */}
                 <div className="bg-red-600 text-white px-3 py-1 rounded-md text-sm font-bold">
-                  BUY 1 BOTTLE
+                  {getOfferLabel()}
                 </div>
                 {/* Top Right - Save Badge and Reg Price */}
                 <div className="text-right">
                   <div className="bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-bold mb-1">
-                    Save 43%
+                    {getSavePercentage()}
                   </div>
                   <div className="text-gray-400 text-xs line-through">
-                    Reg: $105
+                    Reg: ${selectedPackage.originalPrice}
                   </div>
                 </div>
               </div>
@@ -117,8 +146,8 @@ const Checkout = () => {
                 {/* Left - Product Image */}
                 <div className="bg-gray-800 rounded-xl p-4 flex-shrink-0">
                   <img 
-                    src={stallionCommanderLightning}
-                    alt="Stallion Commander with blue lightning effects"
+                    src={getImageSrc()}
+                    alt={getImageAlt()}
                     className="w-32 h-32 object-contain"
                     loading="lazy"
                   />
@@ -127,10 +156,10 @@ const Checkout = () => {
                 {/* Right - Price and Button */}
                 <div className="flex-1 text-right">
                   <div className="text-white text-3xl font-bold mb-1">
-                    $59.99 each
+                    ${pricePerBottle.toFixed(2)} each
                   </div>
                   <div className="text-green-500 text-lg font-semibold mb-4">
-                    Savings $45
+                    Savings ${selectedPackage.savings.toFixed(2)}
                   </div>
                   <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors">
                     Selected
@@ -139,12 +168,14 @@ const Checkout = () => {
               </div>
 
               {/* Bottom - Description and Shipping */}
-              <div className="text-left">
-                <div className="flex items-center gap-2 mb-2">
-                  <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-                  <span className="text-white text-base">1x Bottle of Stallion Commander</span>
-                </div>
-                <div className="text-green-500 font-bold text-base">
+              <div className="text-left space-y-2">
+                {getDescriptionLines().map((line, index) => (
+                  <div key={index} className="flex items-center gap-2">
+                    <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                    <span className="text-white text-base">{line}</span>
+                  </div>
+                ))}
+                <div className="text-green-500 font-bold text-base mt-3">
                   FREE Shipping
                 </div>
               </div>
