@@ -50,8 +50,9 @@ const Checkout = () => {
     );
   }
 
-  const pricePerBottle = Math.round(selectedPackage.price / selectedPackage.bottles);
+  const pricePerBottle = selectedPackage.bottles === 6 ? 24.99 : Math.round(selectedPackage.price / selectedPackage.bottles);
   const originalPricePerBottle = Math.round(selectedPackage.originalPrice / selectedPackage.bottles);
+  const totalSavings = selectedPackage.bottles === 6 ? 480.06 : selectedPackage.savings;
 
   const getOfferLabel = () => {
     if (selectedPackage.bottles === 1) return "BUY 1 BOTTLE";
@@ -60,8 +61,13 @@ const Checkout = () => {
   };
 
   const getSavePercentage = () => {
+    if (selectedPackage.bottles === 6) return "Save 76%";
     const savePercent = Math.round(((selectedPackage.originalPrice - selectedPackage.price) / selectedPackage.originalPrice) * 100);
     return `Save ${savePercent}%`;
+  };
+
+  const getBestSellerBadge = () => {
+    return selectedPackage.bottles === 6 ? "BEST SELLER" : null;
   };
 
   const getImageSrc = () => {
@@ -135,8 +141,13 @@ const Checkout = () => {
                   <div className="bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-bold mb-1">
                     {getSavePercentage()}
                   </div>
+                  {getBestSellerBadge() && (
+                    <div className="bg-red-600 text-white px-2 py-1 rounded-full text-xs font-bold mb-1">
+                      {getBestSellerBadge()}
+                    </div>
+                  )}
                   <div className="text-gray-400 text-xs line-through">
-                    Reg: ${selectedPackage.originalPrice}
+                    Reg: $105
                   </div>
                 </div>
               </div>
@@ -159,7 +170,7 @@ const Checkout = () => {
                     ${pricePerBottle.toFixed(2)} each
                   </div>
                   <div className="text-green-500 text-lg font-semibold mb-4">
-                    Savings ${selectedPackage.savings.toFixed(2)}
+                    Savings ${totalSavings.toFixed(2)}
                   </div>
                   <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors">
                     Selected
