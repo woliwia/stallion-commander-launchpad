@@ -96,9 +96,9 @@ const Checkout = () => {
             <div className="bg-gray-900 border-2 border-red-600 rounded-2xl p-6 h-fit order-2 xl:order-1">
               {/* Header Row */}
               <div className="flex items-center justify-between mb-6">
-                <button className="bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-sm">
+                <div className="bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-sm">
                   BUY 1 BOTTLE
-                </button>
+                </div>
                 <div className="bg-gray-600 text-white px-3 py-1 rounded text-sm font-semibold">
                   Save 43%
                 </div>
@@ -109,7 +109,7 @@ const Checkout = () => {
                 {/* Product Image */}
                 <div className="bg-gray-800 rounded-xl p-4 flex items-center justify-center w-48 h-48 flex-shrink-0">
                   <img 
-                    src="/src/assets/stallion-commander-bottle.jpg"
+                    src="/src/assets/stallion-commander-lightning.png"
                     alt="Stallion Commander Male Enhancement Supplement with Blue Lightning Effects"
                     className="w-full h-full object-contain"
                     loading="lazy"
@@ -119,7 +119,7 @@ const Checkout = () => {
                 {/* Pricing Section */}
                 <div className="flex-1 flex flex-col justify-between text-right">
                   <div className="space-y-1">
-                    <div className="text-white/70 line-through text-sm">
+                    <div className="text-gray-400 line-through text-sm">
                       Reg: $105
                     </div>
                     <div className="text-white text-2xl font-bold">
