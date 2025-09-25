@@ -92,81 +92,62 @@ const Checkout = () => {
       <div className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
-            {/* Order Summary - Appears first on mobile */}
-            <Card className="p-6 sm:p-8 bg-card border-2 border-border h-fit order-2 xl:order-1">
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-6">Order Summary</h2>
-              
-              {/* Package Details */}
-              <div className="space-y-4 mb-6">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex items-center gap-4">
-                    <div className="border-2 border-white rounded-xl p-3 bg-white flex-shrink-0">
-                      <img 
-                        src={getImageSrc()}
-                        alt={getImageAlt()}
-                        className="w-20 h-20 sm:w-24 sm:h-24 object-contain drop-shadow-lg"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="min-w-0">
-                      <h3 className="font-bold text-foreground text-lg sm:text-xl">{selectedPackage.name}</h3>
-                      <p className="text-base text-muted-foreground">{selectedPackage.bottles} Bottle{selectedPackage.bottles > 1 ? 's' : ''}</p>
-                    </div>
-                  </div>
-                  {selectedPackage.popular && (
-                    <div className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold flex-shrink-0">
-                      MOST POPULAR
-                    </div>
-                  )}
-                </div>
-
-                {/* Price Breakdown */}
-                <div className="bg-muted/50 p-4 sm:p-5 rounded-xl space-y-3">
-                  <div className="flex justify-between text-base">
-                    <span className="text-muted-foreground">Price per bottle:</span>
-                    <div className="text-right">
-                      <span className="font-semibold text-foreground">${pricePerBottle}</span>
-                      <span className="text-muted-foreground line-through ml-2">${originalPricePerBottle}</span>
-                    </div>
-                  </div>
-                  <div className="flex justify-between text-base">
-                    <span className="text-muted-foreground">Quantity:</span>
-                    <span className="font-semibold text-foreground">{selectedPackage.bottles} bottle{selectedPackage.bottles > 1 ? 's' : ''}</span>
-                  </div>
-                  <div className="flex justify-between text-base">
-                    <span className="text-muted-foreground">Subtotal:</span>
-                    <span className="font-semibold text-foreground">${selectedPackage.price}</span>
-                  </div>
-                  <div className="flex justify-between text-base">
-                    <span className="text-muted-foreground">Shipping:</span>
-                    <span className="font-semibold text-primary">FREE</span>
-                  </div>
-                  <Separator />
-                  <div className="flex justify-between">
-                    <span className="font-bold text-foreground text-lg">Total:</span>
-                    <div className="text-right">
-                      <span className="font-black text-foreground text-xl">${selectedPackage.price}</span>
-                      <div className="text-base text-destructive font-semibold">
-                        You save ${selectedPackage.savings}!
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Features */}
-                <div className="space-y-2 mt-4">
-                  <h4 className="font-semibold text-foreground text-base">Included:</h4>
-                  <ul className="space-y-2">
-                    {selectedPackage.features.map((feature, index) => (
-                      <li key={index} className="text-sm text-muted-foreground flex items-center gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+            {/* BloodCommander Style Order Card */}
+            <div className="bg-gray-900 border-2 border-red-600 rounded-2xl p-6 h-fit order-2 xl:order-1">
+              {/* Header Row */}
+              <div className="flex items-center justify-between mb-6">
+                <button className="bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-sm">
+                  BUY 1 BOTTLE
+                </button>
+                <div className="bg-gray-600 text-white px-3 py-1 rounded text-sm font-semibold">
+                  Save 43%
                 </div>
               </div>
-            </Card>
+
+              {/* Main Content Row */}
+              <div className="flex gap-6 mb-6">
+                {/* Product Image */}
+                <div className="bg-gray-800 rounded-xl p-4 flex items-center justify-center w-48 h-48 flex-shrink-0">
+                  <img 
+                    src="/src/assets/stallion-commander-bottle.jpg"
+                    alt="Stallion Commander Male Enhancement Supplement with Blue Lightning Effects"
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Pricing Section */}
+                <div className="flex-1 flex flex-col justify-between text-right">
+                  <div className="space-y-1">
+                    <div className="text-white/70 line-through text-sm">
+                      Reg: $105
+                    </div>
+                    <div className="text-white text-2xl font-bold">
+                      $59.99 <span className="text-lg font-normal">each</span>
+                    </div>
+                    <div className="text-green-400 text-sm font-semibold">
+                      Savings $45
+                    </div>
+                  </div>
+                  
+                  <button className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold text-lg w-full mt-4">
+                    Selected
+                  </button>
+                </div>
+              </div>
+
+              {/* Bottom Section */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-white">
+                  <span className="text-yellow-400">⭐</span>
+                  <span>1x Bottle of Stallion Commander</span>
+                </div>
+                
+                <div className="text-green-400 font-semibold">
+                  FREE Shipping
+                </div>
+              </div>
+            </div>
 
             {/* Checkout Form */}
             <Card className="p-6 sm:p-8 md:p-10 bg-card border-2 border-border order-1 xl:order-2">
